@@ -1,0 +1,1068 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2818A3F660E62775B085C3E5 /* libPods-ChainCircle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A7286E85B60157A5A8671 /* libPods-ChainCircle.a */; };
+		BF854D6720BEAFE400064466 /* NJMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF854D6620BEAFE400064466 /* NJMainVC.m */; };
+		BF854D6A20BEB03E00064466 /* NJLqcVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF854D6920BEB03E00064466 /* NJLqcVC.m */; };
+		BF854D6D20BEB04F00064466 /* NJCheckGroupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF854D6C20BEB04F00064466 /* NJCheckGroupVC.m */; };
+		BF854D7020BEB06100064466 /* NJRobAdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF854D6F20BEB06100064466 /* NJRobAdVC.m */; };
+		BF9E17D520BEA3C700B655EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9E17D320BEA3C700B655EC /* Main.storyboard */; };
+		BF9E17D720BEA3C700B655EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9E17D620BEA3C700B655EC /* Assets.xcassets */; };
+		BF9E17DA20BEA3C700B655EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9E17D820BEA3C700B655EC /* LaunchScreen.storyboard */; };
+		BF9E17DD20BEA3C700B655EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E17DC20BEA3C700B655EC /* main.m */; };
+		BF9E17F020BEAC8C00B655EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E17EB20BEAC8C00B655EC /* AppDelegate.m */; };
+		BF9E188320BEAD8200B655EC /* NetAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E17F720BEAD8100B655EC /* NetAPIManager.m */; };
+		BF9E188420BEAD8200B655EC /* NJEnumSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E17F820BEAD8100B655EC /* NJEnumSet.m */; };
+		BF9E188520BEAD8200B655EC /* FoundationTools.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E17F920BEAD8100B655EC /* FoundationTools.m */; };
+		BF9E188620BEAD8200B655EC /* NetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E17FD20BEAD8100B655EC /* NetRequest.m */; };
+		BF9E188720BEAD8200B655EC /* NJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E180A20BEAD8100B655EC /* NJViewController.m */; };
+		BF9E188820BEAD8200B655EC /* NJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E180B20BEAD8100B655EC /* NJNavigationController.m */; };
+		BF9E188920BEAD8200B655EC /* NJCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E180D20BEAD8100B655EC /* NJCollectionViewController.m */; };
+		BF9E188A20BEAD8200B655EC /* NJTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E180E20BEAD8100B655EC /* NJTableViewController.m */; };
+		BF9E188B20BEAD8200B655EC /* NJSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E181020BEAD8100B655EC /* NJSearchController.m */; };
+		BF9E188C20BEAD8200B655EC /* NJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E181320BEAD8100B655EC /* NJTabBarController.m */; };
+		BF9E188D20BEAD8200B655EC /* XLPaymentLoadingHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E181720BEAD8100B655EC /* XLPaymentLoadingHUD.m */; };
+		BF9E188E20BEAD8200B655EC /* XLPaymentSuccessHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E181820BEAD8100B655EC /* XLPaymentSuccessHUD.m */; };
+		BF9E188F20BEAD8200B655EC /* NJTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E181920BEAD8100B655EC /* NJTextView.m */; };
+		BF9E189020BEAD8200B655EC /* NJVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E181A20BEAD8100B655EC /* NJVerticalButton.m */; };
+		BF9E189120BEAD8200B655EC /* NJHorizontalFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E181B20BEAD8100B655EC /* NJHorizontalFlowLayout.m */; };
+		BF9E189220BEAD8200B655EC /* HooDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E181F20BEAD8100B655EC /* HooDatePicker.m */; };
+		BF9E189320BEAD8200B655EC /* NSDate+HooDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E182020BEAD8100B655EC /* NSDate+HooDatePicker.m */; };
+		BF9E189420BEAD8200B655EC /* NJCenterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E182120BEAD8100B655EC /* NJCenterButton.m */; };
+		BF9E189520BEAD8200B655EC /* NJProductDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E182220BEAD8100B655EC /* NJProductDetailHeader.m */; };
+		BF9E189620BEAD8200B655EC /* NJProductDetailFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E182320BEAD8100B655EC /* NJProductDetailFooter.m */; };
+		BF9E189720BEAD8200B655EC /* NJPwdTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E182420BEAD8100B655EC /* NJPwdTextField.m */; };
+		BF9E18A320BEAD8200B655EC /* NJNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E183C20BEAD8200B655EC /* NJNavigationBar.m */; };
+		BF9E18A420BEAD8200B655EC /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E183E20BEAD8200B655EC /* UITextView+Placeholder.m */; };
+		BF9E18A520BEAD8200B655EC /* NSString+LSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E184220BEAD8200B655EC /* NSString+LSCore.m */; };
+		BF9E18A620BEAD8200B655EC /* UIView+NJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E184420BEAD8200B655EC /* UIView+NJFrame.m */; };
+		BF9E18A720BEAD8200B655EC /* UIImageView+NJDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E184720BEAD8200B655EC /* UIImageView+NJDownload.m */; };
+		BF9E18A820BEAD8200B655EC /* UIImage+NJImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E184820BEAD8200B655EC /* UIImage+NJImage.m */; };
+		BF9E18A920BEAD8200B655EC /* UILabel+NJChangeLineSpaceAndWordSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E184920BEAD8200B655EC /* UILabel+NJChangeLineSpaceAndWordSpace.m */; };
+		BF9E18AA20BEAD8200B655EC /* NSString+NJNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E184B20BEAD8200B655EC /* NSString+NJNormal.m */; };
+		BF9E18AB20BEAD8200B655EC /* UITextField+NJPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E184C20BEAD8200B655EC /* UITextField+NJPlaceHolder.m */; };
+		BF9E18AC20BEAD8200B655EC /* UIView+NJCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E184E20BEAD8200B655EC /* UIView+NJCommon.m */; };
+		BF9E18AD20BEAD8200B655EC /* UIButton+NJCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E185020BEAD8200B655EC /* UIButton+NJCommon.m */; };
+		BF9E18AE20BEAD8200B655EC /* UIBarButtonItem+NJItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E185120BEAD8200B655EC /* UIBarButtonItem+NJItem.m */; };
+		BF9E18AF20BEAD8200B655EC /* NJGlobalConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E185520BEAD8200B655EC /* NJGlobalConst.m */; };
+		BF9E18B020BEAD8200B655EC /* DesNetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E185D20BEAD8200B655EC /* DesNetUtil.m */; };
+		BF9E18B120BEAD8200B655EC /* DESUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E185F20BEAD8200B655EC /* DESUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BF9E18B220BEAD8200B655EC /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E186120BEAD8200B655EC /* GTMBase64.m */; };
+		BF9E18B320BEAD8200B655EC /* LBXScanPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E186320BEAD8200B655EC /* LBXScanPermissions.m */; };
+		BF9E18B420BEAD8200B655EC /* LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E186720BEAD8200B655EC /* LBXAlertAction.m */; };
+		BF9E18B520BEAD8200B655EC /* UIWindow+LBXHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E186D20BEAD8200B655EC /* UIWindow+LBXHierarchy.m */; };
+		BF9E18B620BEAD8200B655EC /* UIActionSheet+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E186E20BEAD8200B655EC /* UIActionSheet+LBXAlertAction.m */; };
+		BF9E18B720BEAD8200B655EC /* UIAlertView+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E186F20BEAD8200B655EC /* UIAlertView+LBXAlertAction.m */; };
+		BF9E18B820BEAD8200B655EC /* UIAlertController+supportedInterfaceOrientations.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E187020BEAD8200B655EC /* UIAlertController+supportedInterfaceOrientations.m */; };
+		BF9E18B920BEAD8200B655EC /* ValuePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E187620BEAD8200B655EC /* ValuePickerView.m */; };
+		BF9E18BA20BEAD8200B655EC /* QFDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E187820BEAD8200B655EC /* QFDatePickerView.m */; };
+		BF9E18BB20BEAD8200B655EC /* NJTimerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E187A20BEAD8200B655EC /* NJTimerTool.m */; };
+		BF9E18BC20BEAD8200B655EC /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E187B20BEAD8200B655EC /* FileManager.m */; };
+		BF9E18BD20BEAD8200B655EC /* NJPayTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E187D20BEAD8200B655EC /* NJPayTool.m */; };
+		BF9E18BE20BEAD8200B655EC /* NJCommonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E187E20BEAD8200B655EC /* NJCommonTool.m */; };
+		BF9E18BF20BEAD8200B655EC /* NJLoginTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E187F20BEAD8200B655EC /* NJLoginTool.m */; };
+		BF9E18C020BEAD8200B655EC /* NJCIQRCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E188120BEAD8200B655EC /* NJCIQRCodeTool.m */; };
+		BF9E18C120BEAD8200B655EC /* FileCacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E188220BEAD8200B655EC /* FileCacheTool.m */; };
+		BF9E18C420BEADF000B655EC /* NJUserItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E18C220BEADF000B655EC /* NJUserItem.m */; };
+		BF9E18D020BEAE7000B655EC /* NJLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E18CE20BEAE7000B655EC /* NJLoginVC.m */; };
+		BF9E18D120BEAE7000B655EC /* NJLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9E18CF20BEAE7000B655EC /* NJLoginVC.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		45C5A135D590678FB56F0E09 /* Pods-ChainCircle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainCircle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChainCircle/Pods-ChainCircle.debug.xcconfig"; sourceTree = "<group>"; };
+		492ECBA248ADE4EE495F8234 /* Pods-ChainCircle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainCircle.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChainCircle/Pods-ChainCircle.release.xcconfig"; sourceTree = "<group>"; };
+		BF854D6520BEAFE400064466 /* NJMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJMainVC.h; sourceTree = "<group>"; };
+		BF854D6620BEAFE400064466 /* NJMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJMainVC.m; sourceTree = "<group>"; };
+		BF854D6820BEB03E00064466 /* NJLqcVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLqcVC.h; sourceTree = "<group>"; };
+		BF854D6920BEB03E00064466 /* NJLqcVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLqcVC.m; sourceTree = "<group>"; };
+		BF854D6B20BEB04F00064466 /* NJCheckGroupVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJCheckGroupVC.h; sourceTree = "<group>"; };
+		BF854D6C20BEB04F00064466 /* NJCheckGroupVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJCheckGroupVC.m; sourceTree = "<group>"; };
+		BF854D6E20BEB06100064466 /* NJRobAdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRobAdVC.h; sourceTree = "<group>"; };
+		BF854D6F20BEB06100064466 /* NJRobAdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRobAdVC.m; sourceTree = "<group>"; };
+		BF9E17CA20BEA3C700B655EC /* ChainCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChainCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF9E17D420BEA3C700B655EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF9E17D620BEA3C700B655EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF9E17D920BEA3C700B655EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF9E17DB20BEA3C700B655EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF9E17DC20BEA3C700B655EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF9E17EA20BEAC8C00B655EC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BF9E17EB20BEAC8C00B655EC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BF9E17F520BEACEF00B655EC /* ChainCircle.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChainCircle.pch; sourceTree = "<group>"; };
+		BF9E17F720BEAD8100B655EC /* NetAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetAPIManager.m; sourceTree = "<group>"; };
+		BF9E17F820BEAD8100B655EC /* NJEnumSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJEnumSet.m; sourceTree = "<group>"; };
+		BF9E17F920BEAD8100B655EC /* FoundationTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationTools.m; sourceTree = "<group>"; };
+		BF9E17FA20BEAD8100B655EC /* NetRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetRequest.h; sourceTree = "<group>"; };
+		BF9E17FB20BEAD8100B655EC /* NJEnumSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJEnumSet.h; sourceTree = "<group>"; };
+		BF9E17FC20BEAD8100B655EC /* NetAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetAPIManager.h; sourceTree = "<group>"; };
+		BF9E17FD20BEAD8100B655EC /* NetRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetRequest.m; sourceTree = "<group>"; };
+		BF9E17FE20BEAD8100B655EC /* FoundationTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationTools.h; sourceTree = "<group>"; };
+		BF9E180020BEAD8100B655EC /* NJVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJVerticalButton.h; sourceTree = "<group>"; };
+		BF9E180120BEAD8100B655EC /* NJTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJTextView.h; sourceTree = "<group>"; };
+		BF9E180220BEAD8100B655EC /* NJCenterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJCenterButton.h; sourceTree = "<group>"; };
+		BF9E180320BEAD8100B655EC /* NJHorizontalFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJHorizontalFlowLayout.h; sourceTree = "<group>"; };
+		BF9E180420BEAD8100B655EC /* NJProductDetailFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJProductDetailFooter.h; sourceTree = "<group>"; };
+		BF9E180520BEAD8100B655EC /* NJProductDetailHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJProductDetailHeader.h; sourceTree = "<group>"; };
+		BF9E180620BEAD8100B655EC /* NJPwdTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJPwdTextField.h; sourceTree = "<group>"; };
+		BF9E180820BEAD8100B655EC /* NJTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJTableViewController.h; sourceTree = "<group>"; };
+		BF9E180920BEAD8100B655EC /* NJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJTabBarController.h; sourceTree = "<group>"; };
+		BF9E180A20BEAD8100B655EC /* NJViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJViewController.m; sourceTree = "<group>"; };
+		BF9E180B20BEAD8100B655EC /* NJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJNavigationController.m; sourceTree = "<group>"; };
+		BF9E180C20BEAD8100B655EC /* NJSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJSearchController.h; sourceTree = "<group>"; };
+		BF9E180D20BEAD8100B655EC /* NJCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJCollectionViewController.m; sourceTree = "<group>"; };
+		BF9E180E20BEAD8100B655EC /* NJTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJTableViewController.m; sourceTree = "<group>"; };
+		BF9E180F20BEAD8100B655EC /* NJCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJCollectionViewController.h; sourceTree = "<group>"; };
+		BF9E181020BEAD8100B655EC /* NJSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJSearchController.m; sourceTree = "<group>"; };
+		BF9E181120BEAD8100B655EC /* NJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJNavigationController.h; sourceTree = "<group>"; };
+		BF9E181220BEAD8100B655EC /* NJViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJViewController.h; sourceTree = "<group>"; };
+		BF9E181320BEAD8100B655EC /* NJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJTabBarController.m; sourceTree = "<group>"; };
+		BF9E181520BEAD8100B655EC /* XLPaymentSuccessHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPaymentSuccessHUD.h; sourceTree = "<group>"; };
+		BF9E181620BEAD8100B655EC /* XLPaymentLoadingHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPaymentLoadingHUD.h; sourceTree = "<group>"; };
+		BF9E181720BEAD8100B655EC /* XLPaymentLoadingHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPaymentLoadingHUD.m; sourceTree = "<group>"; };
+		BF9E181820BEAD8100B655EC /* XLPaymentSuccessHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPaymentSuccessHUD.m; sourceTree = "<group>"; };
+		BF9E181920BEAD8100B655EC /* NJTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJTextView.m; sourceTree = "<group>"; };
+		BF9E181A20BEAD8100B655EC /* NJVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJVerticalButton.m; sourceTree = "<group>"; };
+		BF9E181B20BEAD8100B655EC /* NJHorizontalFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJHorizontalFlowLayout.m; sourceTree = "<group>"; };
+		BF9E181D20BEAD8100B655EC /* HooDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HooDatePicker.h; sourceTree = "<group>"; };
+		BF9E181E20BEAD8100B655EC /* NSDate+HooDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+HooDatePicker.h"; sourceTree = "<group>"; };
+		BF9E181F20BEAD8100B655EC /* HooDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HooDatePicker.m; sourceTree = "<group>"; };
+		BF9E182020BEAD8100B655EC /* NSDate+HooDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HooDatePicker.m"; sourceTree = "<group>"; };
+		BF9E182120BEAD8100B655EC /* NJCenterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJCenterButton.m; sourceTree = "<group>"; };
+		BF9E182220BEAD8100B655EC /* NJProductDetailHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJProductDetailHeader.m; sourceTree = "<group>"; };
+		BF9E182320BEAD8100B655EC /* NJProductDetailFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJProductDetailFooter.m; sourceTree = "<group>"; };
+		BF9E182420BEAD8100B655EC /* NJPwdTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJPwdTextField.m; sourceTree = "<group>"; };
+		BF9E183C20BEAD8200B655EC /* NJNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJNavigationBar.m; sourceTree = "<group>"; };
+		BF9E183E20BEAD8200B655EC /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		BF9E183F20BEAD8200B655EC /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		BF9E184020BEAD8200B655EC /* UIBarButtonItem+NJItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+NJItem.h"; sourceTree = "<group>"; };
+		BF9E184220BEAD8200B655EC /* NSString+LSCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LSCore.m"; sourceTree = "<group>"; };
+		BF9E184320BEAD8200B655EC /* NSString+LSCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LSCore.h"; sourceTree = "<group>"; };
+		BF9E184420BEAD8200B655EC /* UIView+NJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NJFrame.m"; sourceTree = "<group>"; };
+		BF9E184520BEAD8200B655EC /* UIButton+NJCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+NJCommon.h"; sourceTree = "<group>"; };
+		BF9E184620BEAD8200B655EC /* UIView+NJCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NJCommon.h"; sourceTree = "<group>"; };
+		BF9E184720BEAD8200B655EC /* UIImageView+NJDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+NJDownload.m"; sourceTree = "<group>"; };
+		BF9E184820BEAD8200B655EC /* UIImage+NJImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NJImage.m"; sourceTree = "<group>"; };
+		BF9E184920BEAD8200B655EC /* UILabel+NJChangeLineSpaceAndWordSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+NJChangeLineSpaceAndWordSpace.m"; sourceTree = "<group>"; };
+		BF9E184A20BEAD8200B655EC /* NJGlobalConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJGlobalConst.h; sourceTree = "<group>"; };
+		BF9E184B20BEAD8200B655EC /* NSString+NJNormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NJNormal.m"; sourceTree = "<group>"; };
+		BF9E184C20BEAD8200B655EC /* UITextField+NJPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+NJPlaceHolder.m"; sourceTree = "<group>"; };
+		BF9E184D20BEAD8200B655EC /* NJNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJNavigationBar.h; sourceTree = "<group>"; };
+		BF9E184E20BEAD8200B655EC /* UIView+NJCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NJCommon.m"; sourceTree = "<group>"; };
+		BF9E184F20BEAD8200B655EC /* UIView+NJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NJFrame.h"; sourceTree = "<group>"; };
+		BF9E185020BEAD8200B655EC /* UIButton+NJCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+NJCommon.m"; sourceTree = "<group>"; };
+		BF9E185120BEAD8200B655EC /* UIBarButtonItem+NJItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+NJItem.m"; sourceTree = "<group>"; };
+		BF9E185220BEAD8200B655EC /* UIImage+NJImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NJImage.h"; sourceTree = "<group>"; };
+		BF9E185320BEAD8200B655EC /* UIImageView+NJDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+NJDownload.h"; sourceTree = "<group>"; };
+		BF9E185420BEAD8200B655EC /* UITextField+NJPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+NJPlaceHolder.h"; sourceTree = "<group>"; };
+		BF9E185520BEAD8200B655EC /* NJGlobalConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJGlobalConst.m; sourceTree = "<group>"; };
+		BF9E185620BEAD8200B655EC /* NSString+NJNormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NJNormal.h"; sourceTree = "<group>"; };
+		BF9E185720BEAD8200B655EC /* UILabel+NJChangeLineSpaceAndWordSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+NJChangeLineSpaceAndWordSpace.h"; sourceTree = "<group>"; };
+		BF9E185920BEAD8200B655EC /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		BF9E185A20BEAD8200B655EC /* NJTimerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJTimerTool.h; sourceTree = "<group>"; };
+		BF9E185C20BEAD8200B655EC /* DESUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESUtil.h; sourceTree = "<group>"; };
+		BF9E185D20BEAD8200B655EC /* DesNetUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesNetUtil.m; sourceTree = "<group>"; };
+		BF9E185E20BEAD8200B655EC /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		BF9E185F20BEAD8200B655EC /* DESUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESUtil.m; sourceTree = "<group>"; };
+		BF9E186020BEAD8200B655EC /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		BF9E186120BEAD8200B655EC /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		BF9E186220BEAD8200B655EC /* DesNetUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesNetUtil.h; sourceTree = "<group>"; };
+		BF9E186320BEAD8200B655EC /* LBXScanPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanPermissions.m; sourceTree = "<group>"; };
+		BF9E186420BEAD8200B655EC /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		BF9E186520BEAD8200B655EC /* NJLoginTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJLoginTool.h; sourceTree = "<group>"; };
+		BF9E186720BEAD8200B655EC /* LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXAlertAction.m; sourceTree = "<group>"; };
+		BF9E186820BEAD8200B655EC /* LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXAlertAction.h; sourceTree = "<group>"; };
+		BF9E186A20BEAD8200B655EC /* UIActionSheet+LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+LBXAlertAction.h"; sourceTree = "<group>"; };
+		BF9E186B20BEAD8200B655EC /* UIAlertController+supportedInterfaceOrientations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+supportedInterfaceOrientations.h"; sourceTree = "<group>"; };
+		BF9E186C20BEAD8200B655EC /* UIAlertView+LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+LBXAlertAction.h"; sourceTree = "<group>"; };
+		BF9E186D20BEAD8200B655EC /* UIWindow+LBXHierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+LBXHierarchy.m"; sourceTree = "<group>"; };
+		BF9E186E20BEAD8200B655EC /* UIActionSheet+LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+LBXAlertAction.m"; sourceTree = "<group>"; };
+		BF9E186F20BEAD8200B655EC /* UIAlertView+LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+LBXAlertAction.m"; sourceTree = "<group>"; };
+		BF9E187020BEAD8200B655EC /* UIAlertController+supportedInterfaceOrientations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+supportedInterfaceOrientations.m"; sourceTree = "<group>"; };
+		BF9E187120BEAD8200B655EC /* UIWindow+LBXHierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+LBXHierarchy.h"; sourceTree = "<group>"; };
+		BF9E187220BEAD8200B655EC /* NJCommonTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJCommonTool.h; sourceTree = "<group>"; };
+		BF9E187320BEAD8200B655EC /* NJPayTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJPayTool.h; sourceTree = "<group>"; };
+		BF9E187420BEAD8200B655EC /* FileCacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCacheTool.h; sourceTree = "<group>"; };
+		BF9E187520BEAD8200B655EC /* NJCIQRCodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJCIQRCodeTool.h; sourceTree = "<group>"; };
+		BF9E187620BEAD8200B655EC /* ValuePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValuePickerView.m; sourceTree = "<group>"; };
+		BF9E187820BEAD8200B655EC /* QFDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFDatePickerView.m; sourceTree = "<group>"; };
+		BF9E187920BEAD8200B655EC /* QFDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFDatePickerView.h; sourceTree = "<group>"; };
+		BF9E187A20BEAD8200B655EC /* NJTimerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJTimerTool.m; sourceTree = "<group>"; };
+		BF9E187B20BEAD8200B655EC /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		BF9E187C20BEAD8200B655EC /* LBXScanPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanPermissions.h; sourceTree = "<group>"; };
+		BF9E187D20BEAD8200B655EC /* NJPayTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJPayTool.m; sourceTree = "<group>"; };
+		BF9E187E20BEAD8200B655EC /* NJCommonTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJCommonTool.m; sourceTree = "<group>"; };
+		BF9E187F20BEAD8200B655EC /* NJLoginTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJLoginTool.m; sourceTree = "<group>"; };
+		BF9E188020BEAD8200B655EC /* ValuePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValuePickerView.h; sourceTree = "<group>"; };
+		BF9E188120BEAD8200B655EC /* NJCIQRCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJCIQRCodeTool.m; sourceTree = "<group>"; };
+		BF9E188220BEAD8200B655EC /* FileCacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCacheTool.m; sourceTree = "<group>"; };
+		BF9E18C220BEADF000B655EC /* NJUserItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJUserItem.m; sourceTree = "<group>"; };
+		BF9E18C320BEADF000B655EC /* NJUserItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJUserItem.h; sourceTree = "<group>"; };
+		BF9E18CD20BEAE7000B655EC /* NJLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLoginVC.h; sourceTree = "<group>"; };
+		BF9E18CE20BEAE7000B655EC /* NJLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLoginVC.m; sourceTree = "<group>"; };
+		BF9E18CF20BEAE7000B655EC /* NJLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJLoginVC.xib; sourceTree = "<group>"; };
+		EA4A7286E85B60157A5A8671 /* libPods-ChainCircle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainCircle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF9E17C720BEA3C700B655EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2818A3F660E62775B085C3E5 /* libPods-ChainCircle.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4FCA1F4A367595E4BC05F645 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45C5A135D590678FB56F0E09 /* Pods-ChainCircle.debug.xcconfig */,
+				492ECBA248ADE4EE495F8234 /* Pods-ChainCircle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A165BD774669224FD7E8041F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA4A7286E85B60157A5A8671 /* libPods-ChainCircle.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF9E17C120BEA3C700B655EC = {
+			isa = PBXGroup;
+			children = (
+				BF9E17CC20BEA3C700B655EC /* ChainCircle */,
+				BF9E17CB20BEA3C700B655EC /* Products */,
+				4FCA1F4A367595E4BC05F645 /* Pods */,
+				A165BD774669224FD7E8041F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BF9E17CB20BEA3C700B655EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E17CA20BEA3C700B655EC /* ChainCircle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF9E17CC20BEA3C700B655EC /* ChainCircle */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E17E320BEAB8500B655EC /* Classes */,
+				BF9E17D320BEA3C700B655EC /* Main.storyboard */,
+				BF9E17D620BEA3C700B655EC /* Assets.xcassets */,
+				BF9E17D820BEA3C700B655EC /* LaunchScreen.storyboard */,
+				BF9E17DB20BEA3C700B655EC /* Info.plist */,
+				BF9E17DC20BEA3C700B655EC /* main.m */,
+			);
+			path = ChainCircle;
+			sourceTree = "<group>";
+		};
+		BF9E17E320BEAB8500B655EC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E18C520BEAE3A00B655EC /* Main */,
+				BF9E17F120BEACA500B655EC /* LQC */,
+				BF9E17E520BEAC8C00B655EC /* CheckGroup */,
+				BF9E17EC20BEAC8C00B655EC /* RobAD */,
+				BF9E17E920BEAC8C00B655EC /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BF9E17E520BEAC8C00B655EC /* CheckGroup */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E17E720BEAC8C00B655EC /* Controllers */,
+				BF9E17E620BEAC8C00B655EC /* Models */,
+				BF9E17E820BEAC8C00B655EC /* Views */,
+			);
+			path = CheckGroup;
+			sourceTree = "<group>";
+		};
+		BF9E17E620BEAC8C00B655EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF9E17E720BEAC8C00B655EC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF854D6B20BEB04F00064466 /* NJCheckGroupVC.h */,
+				BF854D6C20BEB04F00064466 /* NJCheckGroupVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF9E17E820BEAC8C00B655EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF9E17E920BEAC8C00B655EC /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E17F620BEAD8100B655EC /* NetWork */,
+				BF9E183B20BEAD8200B655EC /* Categorys */,
+				BF9E17FF20BEAD8100B655EC /* subClass */,
+				BF9E185820BEAD8200B655EC /* Tools */,
+				BF9E17EA20BEAC8C00B655EC /* AppDelegate.h */,
+				BF9E17EB20BEAC8C00B655EC /* AppDelegate.m */,
+				BF9E17F520BEACEF00B655EC /* ChainCircle.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		BF9E17EC20BEAC8C00B655EC /* RobAD */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E17EE20BEAC8C00B655EC /* Controllers */,
+				BF9E17ED20BEAC8C00B655EC /* Models */,
+				BF9E17EF20BEAC8C00B655EC /* Views */,
+			);
+			path = RobAD;
+			sourceTree = "<group>";
+		};
+		BF9E17ED20BEAC8C00B655EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF9E17EE20BEAC8C00B655EC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF854D6E20BEB06100064466 /* NJRobAdVC.h */,
+				BF854D6F20BEB06100064466 /* NJRobAdVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF9E17EF20BEAC8C00B655EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF9E17F120BEACA500B655EC /* LQC */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E17F320BEACA500B655EC /* Controllers */,
+				BF9E17F220BEACA500B655EC /* Models */,
+				BF9E17F420BEACA500B655EC /* Views */,
+			);
+			path = LQC;
+			sourceTree = "<group>";
+		};
+		BF9E17F220BEACA500B655EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF9E17F320BEACA500B655EC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF854D6820BEB03E00064466 /* NJLqcVC.h */,
+				BF854D6920BEB03E00064466 /* NJLqcVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF9E17F420BEACA500B655EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF9E17F620BEAD8100B655EC /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E17F720BEAD8100B655EC /* NetAPIManager.m */,
+				BF9E17F820BEAD8100B655EC /* NJEnumSet.m */,
+				BF9E17F920BEAD8100B655EC /* FoundationTools.m */,
+				BF9E17FA20BEAD8100B655EC /* NetRequest.h */,
+				BF9E17FB20BEAD8100B655EC /* NJEnumSet.h */,
+				BF9E17FC20BEAD8100B655EC /* NetAPIManager.h */,
+				BF9E17FD20BEAD8100B655EC /* NetRequest.m */,
+				BF9E17FE20BEAD8100B655EC /* FoundationTools.h */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		BF9E17FF20BEAD8100B655EC /* subClass */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E180020BEAD8100B655EC /* NJVerticalButton.h */,
+				BF9E180120BEAD8100B655EC /* NJTextView.h */,
+				BF9E180220BEAD8100B655EC /* NJCenterButton.h */,
+				BF9E180320BEAD8100B655EC /* NJHorizontalFlowLayout.h */,
+				BF9E180420BEAD8100B655EC /* NJProductDetailFooter.h */,
+				BF9E180520BEAD8100B655EC /* NJProductDetailHeader.h */,
+				BF9E180620BEAD8100B655EC /* NJPwdTextField.h */,
+				BF9E180720BEAD8100B655EC /* BaseController */,
+				BF9E181420BEAD8100B655EC /* XLPaymentHUD */,
+				BF9E181920BEAD8100B655EC /* NJTextView.m */,
+				BF9E181A20BEAD8100B655EC /* NJVerticalButton.m */,
+				BF9E181B20BEAD8100B655EC /* NJHorizontalFlowLayout.m */,
+				BF9E181C20BEAD8100B655EC /* HooDatePicker */,
+				BF9E182120BEAD8100B655EC /* NJCenterButton.m */,
+				BF9E182220BEAD8100B655EC /* NJProductDetailHeader.m */,
+				BF9E182320BEAD8100B655EC /* NJProductDetailFooter.m */,
+				BF9E182420BEAD8100B655EC /* NJPwdTextField.m */,
+			);
+			path = subClass;
+			sourceTree = "<group>";
+		};
+		BF9E180720BEAD8100B655EC /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E180820BEAD8100B655EC /* NJTableViewController.h */,
+				BF9E180920BEAD8100B655EC /* NJTabBarController.h */,
+				BF9E180A20BEAD8100B655EC /* NJViewController.m */,
+				BF9E180B20BEAD8100B655EC /* NJNavigationController.m */,
+				BF9E180C20BEAD8100B655EC /* NJSearchController.h */,
+				BF9E180D20BEAD8100B655EC /* NJCollectionViewController.m */,
+				BF9E180E20BEAD8100B655EC /* NJTableViewController.m */,
+				BF9E180F20BEAD8100B655EC /* NJCollectionViewController.h */,
+				BF9E181020BEAD8100B655EC /* NJSearchController.m */,
+				BF9E181120BEAD8100B655EC /* NJNavigationController.h */,
+				BF9E181220BEAD8100B655EC /* NJViewController.h */,
+				BF9E181320BEAD8100B655EC /* NJTabBarController.m */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		BF9E181420BEAD8100B655EC /* XLPaymentHUD */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E181520BEAD8100B655EC /* XLPaymentSuccessHUD.h */,
+				BF9E181620BEAD8100B655EC /* XLPaymentLoadingHUD.h */,
+				BF9E181720BEAD8100B655EC /* XLPaymentLoadingHUD.m */,
+				BF9E181820BEAD8100B655EC /* XLPaymentSuccessHUD.m */,
+			);
+			path = XLPaymentHUD;
+			sourceTree = "<group>";
+		};
+		BF9E181C20BEAD8100B655EC /* HooDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E181D20BEAD8100B655EC /* HooDatePicker.h */,
+				BF9E181E20BEAD8100B655EC /* NSDate+HooDatePicker.h */,
+				BF9E181F20BEAD8100B655EC /* HooDatePicker.m */,
+				BF9E182020BEAD8100B655EC /* NSDate+HooDatePicker.m */,
+			);
+			path = HooDatePicker;
+			sourceTree = "<group>";
+		};
+		BF9E183B20BEAD8200B655EC /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E183C20BEAD8200B655EC /* NJNavigationBar.m */,
+				BF9E183D20BEAD8200B655EC /* TextView */,
+				BF9E184020BEAD8200B655EC /* UIBarButtonItem+NJItem.h */,
+				BF9E184120BEAD8200B655EC /* 正则表达式 */,
+				BF9E184420BEAD8200B655EC /* UIView+NJFrame.m */,
+				BF9E184520BEAD8200B655EC /* UIButton+NJCommon.h */,
+				BF9E184620BEAD8200B655EC /* UIView+NJCommon.h */,
+				BF9E184720BEAD8200B655EC /* UIImageView+NJDownload.m */,
+				BF9E184820BEAD8200B655EC /* UIImage+NJImage.m */,
+				BF9E184920BEAD8200B655EC /* UILabel+NJChangeLineSpaceAndWordSpace.m */,
+				BF9E184A20BEAD8200B655EC /* NJGlobalConst.h */,
+				BF9E184B20BEAD8200B655EC /* NSString+NJNormal.m */,
+				BF9E184C20BEAD8200B655EC /* UITextField+NJPlaceHolder.m */,
+				BF9E184D20BEAD8200B655EC /* NJNavigationBar.h */,
+				BF9E184E20BEAD8200B655EC /* UIView+NJCommon.m */,
+				BF9E184F20BEAD8200B655EC /* UIView+NJFrame.h */,
+				BF9E185020BEAD8200B655EC /* UIButton+NJCommon.m */,
+				BF9E185120BEAD8200B655EC /* UIBarButtonItem+NJItem.m */,
+				BF9E185220BEAD8200B655EC /* UIImage+NJImage.h */,
+				BF9E185320BEAD8200B655EC /* UIImageView+NJDownload.h */,
+				BF9E185420BEAD8200B655EC /* UITextField+NJPlaceHolder.h */,
+				BF9E185520BEAD8200B655EC /* NJGlobalConst.m */,
+				BF9E185620BEAD8200B655EC /* NSString+NJNormal.h */,
+				BF9E185720BEAD8200B655EC /* UILabel+NJChangeLineSpaceAndWordSpace.h */,
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
+		BF9E183D20BEAD8200B655EC /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E183E20BEAD8200B655EC /* UITextView+Placeholder.m */,
+				BF9E183F20BEAD8200B655EC /* UITextView+Placeholder.h */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
+		BF9E184120BEAD8200B655EC /* 正则表达式 */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E184220BEAD8200B655EC /* NSString+LSCore.m */,
+				BF9E184320BEAD8200B655EC /* NSString+LSCore.h */,
+			);
+			path = "正则表达式";
+			sourceTree = "<group>";
+		};
+		BF9E185820BEAD8200B655EC /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E18C320BEADF000B655EC /* NJUserItem.h */,
+				BF9E18C220BEADF000B655EC /* NJUserItem.m */,
+				BF9E185920BEAD8200B655EC /* FileManager.h */,
+				BF9E185A20BEAD8200B655EC /* NJTimerTool.h */,
+				BF9E185B20BEAD8200B655EC /* DES */,
+				BF9E186320BEAD8200B655EC /* LBXScanPermissions.m */,
+				BF9E186420BEAD8200B655EC /* Singleton.h */,
+				BF9E186520BEAD8200B655EC /* NJLoginTool.h */,
+				BF9E186620BEAD8200B655EC /* LBXAlertAction */,
+				BF9E187220BEAD8200B655EC /* NJCommonTool.h */,
+				BF9E187320BEAD8200B655EC /* NJPayTool.h */,
+				BF9E187420BEAD8200B655EC /* FileCacheTool.h */,
+				BF9E187520BEAD8200B655EC /* NJCIQRCodeTool.h */,
+				BF9E187620BEAD8200B655EC /* ValuePickerView.m */,
+				BF9E187720BEAD8200B655EC /* QFDatePickerView */,
+				BF9E187A20BEAD8200B655EC /* NJTimerTool.m */,
+				BF9E187B20BEAD8200B655EC /* FileManager.m */,
+				BF9E187C20BEAD8200B655EC /* LBXScanPermissions.h */,
+				BF9E187D20BEAD8200B655EC /* NJPayTool.m */,
+				BF9E187E20BEAD8200B655EC /* NJCommonTool.m */,
+				BF9E187F20BEAD8200B655EC /* NJLoginTool.m */,
+				BF9E188020BEAD8200B655EC /* ValuePickerView.h */,
+				BF9E188120BEAD8200B655EC /* NJCIQRCodeTool.m */,
+				BF9E188220BEAD8200B655EC /* FileCacheTool.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		BF9E185B20BEAD8200B655EC /* DES */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E185C20BEAD8200B655EC /* DESUtil.h */,
+				BF9E185D20BEAD8200B655EC /* DesNetUtil.m */,
+				BF9E185E20BEAD8200B655EC /* GTMBase64.h */,
+				BF9E185F20BEAD8200B655EC /* DESUtil.m */,
+				BF9E186020BEAD8200B655EC /* GTMDefines.h */,
+				BF9E186120BEAD8200B655EC /* GTMBase64.m */,
+				BF9E186220BEAD8200B655EC /* DesNetUtil.h */,
+			);
+			path = DES;
+			sourceTree = "<group>";
+		};
+		BF9E186620BEAD8200B655EC /* LBXAlertAction */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E186720BEAD8200B655EC /* LBXAlertAction.m */,
+				BF9E186820BEAD8200B655EC /* LBXAlertAction.h */,
+				BF9E186920BEAD8200B655EC /* Class */,
+			);
+			path = LBXAlertAction;
+			sourceTree = "<group>";
+		};
+		BF9E186920BEAD8200B655EC /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E186A20BEAD8200B655EC /* UIActionSheet+LBXAlertAction.h */,
+				BF9E186B20BEAD8200B655EC /* UIAlertController+supportedInterfaceOrientations.h */,
+				BF9E186C20BEAD8200B655EC /* UIAlertView+LBXAlertAction.h */,
+				BF9E186D20BEAD8200B655EC /* UIWindow+LBXHierarchy.m */,
+				BF9E186E20BEAD8200B655EC /* UIActionSheet+LBXAlertAction.m */,
+				BF9E186F20BEAD8200B655EC /* UIAlertView+LBXAlertAction.m */,
+				BF9E187020BEAD8200B655EC /* UIAlertController+supportedInterfaceOrientations.m */,
+				BF9E187120BEAD8200B655EC /* UIWindow+LBXHierarchy.h */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		BF9E187720BEAD8200B655EC /* QFDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E187820BEAD8200B655EC /* QFDatePickerView.m */,
+				BF9E187920BEAD8200B655EC /* QFDatePickerView.h */,
+			);
+			path = QFDatePickerView;
+			sourceTree = "<group>";
+		};
+		BF9E18C520BEAE3A00B655EC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E18C920BEAE5600B655EC /* LoginVC */,
+				BF9E18C720BEAE3A00B655EC /* Controllers */,
+				BF9E18C620BEAE3A00B655EC /* Models */,
+				BF9E18C820BEAE3A00B655EC /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BF9E18C620BEAE3A00B655EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF9E18C720BEAE3A00B655EC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF854D6520BEAFE400064466 /* NJMainVC.h */,
+				BF854D6620BEAFE400064466 /* NJMainVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF9E18C820BEAE3A00B655EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF9E18C920BEAE5600B655EC /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E18CB20BEAE5600B655EC /* Controllers */,
+				BF9E18CA20BEAE5600B655EC /* Models */,
+				BF9E18CC20BEAE5600B655EC /* Views */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		BF9E18CA20BEAE5600B655EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF9E18CB20BEAE5600B655EC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E18CD20BEAE7000B655EC /* NJLoginVC.h */,
+				BF9E18CE20BEAE7000B655EC /* NJLoginVC.m */,
+				BF9E18CF20BEAE7000B655EC /* NJLoginVC.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF9E18CC20BEAE5600B655EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF9E17C920BEA3C700B655EC /* ChainCircle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF9E17E020BEA3C700B655EC /* Build configuration list for PBXNativeTarget "ChainCircle" */;
+			buildPhases = (
+				88365B853088D8A3746F495A /* [CP] Check Pods Manifest.lock */,
+				BF9E17C620BEA3C700B655EC /* Sources */,
+				BF9E17C720BEA3C700B655EC /* Frameworks */,
+				BF9E17C820BEA3C700B655EC /* Resources */,
+				36317DEF9667099F5342330F /* [CP] Embed Pods Frameworks */,
+				41E85E413C11FB0E87AC5C90 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChainCircle;
+			productName = ChainCircle;
+			productReference = BF9E17CA20BEA3C700B655EC /* ChainCircle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF9E17C220BEA3C700B655EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NJ;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Redirect;
+				TargetAttributes = {
+					BF9E17C920BEA3C700B655EC = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = BF9E17C520BEA3C700B655EC /* Build configuration list for PBXProject "ChainCircle" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF9E17C120BEA3C700B655EC;
+			productRefGroup = BF9E17CB20BEA3C700B655EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF9E17C920BEA3C700B655EC /* ChainCircle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF9E17C820BEA3C700B655EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF9E18D120BEAE7000B655EC /* NJLoginVC.xib in Resources */,
+				BF9E17DA20BEA3C700B655EC /* LaunchScreen.storyboard in Resources */,
+				BF9E17D720BEA3C700B655EC /* Assets.xcassets in Resources */,
+				BF9E17D520BEA3C700B655EC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36317DEF9667099F5342330F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChainCircle/Pods-ChainCircle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41E85E413C11FB0E87AC5C90 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChainCircle/Pods-ChainCircle-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/LBXScan/LBXScan/UI/CodeScan.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CodeScan.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChainCircle/Pods-ChainCircle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88365B853088D8A3746F495A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChainCircle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF9E17C620BEA3C700B655EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF9E18C120BEAD8200B655EC /* FileCacheTool.m in Sources */,
+				BF9E18A620BEAD8200B655EC /* UIView+NJFrame.m in Sources */,
+				BF9E17DD20BEA3C700B655EC /* main.m in Sources */,
+				BF9E188F20BEAD8200B655EC /* NJTextView.m in Sources */,
+				BF9E18BF20BEAD8200B655EC /* NJLoginTool.m in Sources */,
+				BF9E18AB20BEAD8200B655EC /* UITextField+NJPlaceHolder.m in Sources */,
+				BF9E18AC20BEAD8200B655EC /* UIView+NJCommon.m in Sources */,
+				BF9E188B20BEAD8200B655EC /* NJSearchController.m in Sources */,
+				BF9E18AD20BEAD8200B655EC /* UIButton+NJCommon.m in Sources */,
+				BF9E188720BEAD8200B655EC /* NJViewController.m in Sources */,
+				BF9E18BC20BEAD8200B655EC /* FileManager.m in Sources */,
+				BF9E18A420BEAD8200B655EC /* UITextView+Placeholder.m in Sources */,
+				BF9E188920BEAD8200B655EC /* NJCollectionViewController.m in Sources */,
+				BF9E18B920BEAD8200B655EC /* ValuePickerView.m in Sources */,
+				BF9E189620BEAD8200B655EC /* NJProductDetailFooter.m in Sources */,
+				BF9E18D020BEAE7000B655EC /* NJLoginVC.m in Sources */,
+				BF9E18A320BEAD8200B655EC /* NJNavigationBar.m in Sources */,
+				BF9E188620BEAD8200B655EC /* NetRequest.m in Sources */,
+				BF9E188520BEAD8200B655EC /* FoundationTools.m in Sources */,
+				BF854D6720BEAFE400064466 /* NJMainVC.m in Sources */,
+				BF9E18B120BEAD8200B655EC /* DESUtil.m in Sources */,
+				BF9E18B420BEAD8200B655EC /* LBXAlertAction.m in Sources */,
+				BF9E189320BEAD8200B655EC /* NSDate+HooDatePicker.m in Sources */,
+				BF9E18B620BEAD8200B655EC /* UIActionSheet+LBXAlertAction.m in Sources */,
+				BF9E188D20BEAD8200B655EC /* XLPaymentLoadingHUD.m in Sources */,
+				BF9E17F020BEAC8C00B655EC /* AppDelegate.m in Sources */,
+				BF854D6D20BEB04F00064466 /* NJCheckGroupVC.m in Sources */,
+				BF9E188C20BEAD8200B655EC /* NJTabBarController.m in Sources */,
+				BF9E18BA20BEAD8200B655EC /* QFDatePickerView.m in Sources */,
+				BF9E18AE20BEAD8200B655EC /* UIBarButtonItem+NJItem.m in Sources */,
+				BF9E188320BEAD8200B655EC /* NetAPIManager.m in Sources */,
+				BF9E189420BEAD8200B655EC /* NJCenterButton.m in Sources */,
+				BF9E189020BEAD8200B655EC /* NJVerticalButton.m in Sources */,
+				BF9E188E20BEAD8200B655EC /* XLPaymentSuccessHUD.m in Sources */,
+				BF9E18A820BEAD8200B655EC /* UIImage+NJImage.m in Sources */,
+				BF9E18B520BEAD8200B655EC /* UIWindow+LBXHierarchy.m in Sources */,
+				BF9E18A920BEAD8200B655EC /* UILabel+NJChangeLineSpaceAndWordSpace.m in Sources */,
+				BF9E18BD20BEAD8200B655EC /* NJPayTool.m in Sources */,
+				BF9E189720BEAD8200B655EC /* NJPwdTextField.m in Sources */,
+				BF9E18A720BEAD8200B655EC /* UIImageView+NJDownload.m in Sources */,
+				BF9E18A520BEAD8200B655EC /* NSString+LSCore.m in Sources */,
+				BF9E18B020BEAD8200B655EC /* DesNetUtil.m in Sources */,
+				BF9E18AF20BEAD8200B655EC /* NJGlobalConst.m in Sources */,
+				BF9E18B820BEAD8200B655EC /* UIAlertController+supportedInterfaceOrientations.m in Sources */,
+				BF854D7020BEB06100064466 /* NJRobAdVC.m in Sources */,
+				BF9E18B320BEAD8200B655EC /* LBXScanPermissions.m in Sources */,
+				BF9E188420BEAD8200B655EC /* NJEnumSet.m in Sources */,
+				BF9E189520BEAD8200B655EC /* NJProductDetailHeader.m in Sources */,
+				BF9E188820BEAD8200B655EC /* NJNavigationController.m in Sources */,
+				BF9E188A20BEAD8200B655EC /* NJTableViewController.m in Sources */,
+				BF9E18C020BEAD8200B655EC /* NJCIQRCodeTool.m in Sources */,
+				BF9E18B720BEAD8200B655EC /* UIAlertView+LBXAlertAction.m in Sources */,
+				BF9E18AA20BEAD8200B655EC /* NSString+NJNormal.m in Sources */,
+				BF854D6A20BEB03E00064466 /* NJLqcVC.m in Sources */,
+				BF9E18C420BEADF000B655EC /* NJUserItem.m in Sources */,
+				BF9E189220BEAD8200B655EC /* HooDatePicker.m in Sources */,
+				BF9E18BE20BEAD8200B655EC /* NJCommonTool.m in Sources */,
+				BF9E189120BEAD8200B655EC /* NJHorizontalFlowLayout.m in Sources */,
+				BF9E18B220BEAD8200B655EC /* GTMBase64.m in Sources */,
+				BF9E18BB20BEAD8200B655EC /* NJTimerTool.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF9E17D320BEA3C700B655EC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF9E17D420BEA3C700B655EC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF9E17D820BEA3C700B655EC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF9E17D920BEA3C700B655EC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF9E17DE20BEA3C700B655EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BF9E17DF20BEA3C700B655EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF9E17E120BEA3C700B655EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C5A135D590678FB56F0E09 /* Pods-ChainCircle.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J8M2RU6Q22;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ChainCircle/Classes/Other/SDK",
+				);
+				GCC_PREFIX_HEADER = ChainCircle/Classes/Other/ChainCircle.pch;
+				INFOPLIST_FILE = ChainCircle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Redirect.ChainCircle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BF9E17E220BEA3C700B655EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 492ECBA248ADE4EE495F8234 /* Pods-ChainCircle.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J8M2RU6Q22;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ChainCircle/Classes/Other/SDK",
+				);
+				GCC_PREFIX_HEADER = ChainCircle/Classes/Other/ChainCircle.pch;
+				INFOPLIST_FILE = ChainCircle/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Redirect.ChainCircle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF9E17C520BEA3C700B655EC /* Build configuration list for PBXProject "ChainCircle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF9E17DE20BEA3C700B655EC /* Debug */,
+				BF9E17DF20BEA3C700B655EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF9E17E020BEA3C700B655EC /* Build configuration list for PBXNativeTarget "ChainCircle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF9E17E120BEA3C700B655EC /* Debug */,
+				BF9E17E220BEA3C700B655EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF9E17C220BEA3C700B655EC /* Project object */;
+}

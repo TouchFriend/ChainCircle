@@ -1,0 +1,273 @@
+//
+//  ChainCircle.pch
+//  ChainCircle
+//
+//  Created by TouchWorld on 2018/5/30.
+//  Copyright © 2018年 Redirect. All rights reserved.
+//
+
+/*
+ 1.公共的宏
+ 2.头文件
+ 3.NSLog
+ */
+#import "UIView+NJFrame.h"
+#import "UIView+NJCommon.h"
+#import "UIBarButtonItem+NJItem.h"
+#import "NJGlobalConst.h"
+#import "NetRequest.h"
+#import "FoundationTools.h"
+#import "NJLoginTool.h"
+#import "NSString+NJNormal.h"
+#import "LBXAlertAction.h"
+#import "NJEnumSet.h"
+#import "UIView+NJCommon.h"
+#import <SVProgressHUD.h>
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+
+//define this constant if you want to use Masonry without the 'mas_' prefix
+#define MAS_SHORTHAND
+
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+
+#import "Masonry.h"
+#endif
+
+#define NJFunc NJLog(@"%s",__func__)
+//弱引用
+#define NJWeakSelf __weak typeof(self) weakSelf = self;
+
+//数据保存为plist
+//#abc == "abc"
+#define NJDataWriteToPlist(plistName) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/TouchWorld/desktop/%@.plist",@#plistName] atomically:YES]
+//MainBundle路径
+#define NJPlistPath [[NSBundle mainBundle] pathForResource:@"Info.plist" ofType:nil]
+//缓存路径
+#define NJCachePath NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)
+//Document路径
+#define NJDocumentPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+
+/*************** 设置颜色 *********************/
+#define NJRandomColor NJColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+#define NJColor(r,g,b) [UIColor colorWithRed:(r) / 256.0 green:(g) / 256.0 blue:(b) / 256.0 alpha:1.0]
+#define NJColorAlpha(r,g,b,a) [UIColor colorWithRed:(r) / 256.0 green:(g) / 256.0 blue:(b) / 256.0 alpha:a]
+#define NJGrayColor(n) NJColor(n,n,n)
+#define NJGrayColorAlpha(n,a) NJColorAlpha(n,n,n,a)
+/*************** 设置颜色 *********************/
+
+/*************** 屏幕适配 *********************/
+#define NJScreenW [UIScreen mainScreen].bounds.size.width
+#define NJScreenH [UIScreen mainScreen].bounds.size.height
+#define iphone6P (NJScreenH == 736)
+#define iphone6 (NJScreenH == 667)
+#define iphone5 (NJScreenH == 568)
+#define iphone4 (NJScreenH == 480)
+
+#define NJiPhone6PlusWidth 375
+#define NJiPhone6PlusHeight 667
+#define NJScreenScaleX NJScreenW * 1.0 / NJiPhone6PlusWidth
+#define NJScreenScaleY NJScreenH * 1.0 / NJiPhone6PlusHeight
+/*************** 屏幕适配 *********************/
+
+/*************** 颜色 *********************/
+//蓝色
+#define NJBlueColor NJColor(18, 140, 239)
+//橙色
+#define NJOrangeColor NJColor(255, 80, 4)
+//绿色
+#define NJGreenColor NJColor(128, 194, 105)
+//灰色
+#define NJGrayTextColor NJGrayColor(179)
+//分割线颜色
+#define NJSeperatorColor NJGrayColor(241)
+//背景颜色（灰色）
+#define NJBgColor NJGrayColor(245)
+
+/*************** 颜色 *********************/
+
+/*************** 字体 *********************/
+#define NJFont(s) NJFontR(s)
+
+#define NJFontR(s) [UIFont systemFontOfSize:s weight:UIFontWeightRegular]
+
+#define NJFontL(s) [UIFont systemFontOfSize:s weight:UIFontWeightLight]
+
+#define NJFontB(s) [UIFont systemFontOfSize:s weight:UIFontWeightBold]
+
+#define NJFontT(s) [UIFont systemFontOfSize:s weight:UIFontWeightThin]
+
+
+/*************** 字体 *********************/
+
+#ifdef DEBUG // 调试
+
+#define NJLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define NJLog(...)
+#endif
+
+/*************** 网络 ******************s***/
+#define NJUrlPrefix @"http://smart.chongdx.com/api"
+#define NJImageUrlPrefix @"http://smart.chongdx.com/uploads/"
+#define NJIconUrlPrefix @"http://121.42.200.25:8818/api"
+//资讯h5
+#define NJInfoH5UrlPrefix @"http://smart.chongdx.com/wap/info.html?id="
+//旅游和美食
+#define NJTourismH5UrlPrefix @"http://smart.chongdx.com/wap/travel.html?id="
+//服务详情
+#define NJServiceH5UrlPrefix @"http://smart.chongdx.com/wap/server.html?id="
+//商品详情
+#define NJProductH5UrlPrefix @"http://smart.chongdx.com/wap/goods.html?id="
+
+
+/*************** 网络 *********************/
+
+
+/*************** 登陆 *********************/
+//用户token
+#define NJUserDefaultLoginUserToken @"NJUserDefaultLoginUserToken"
+
+//用户类型
+#define NJUserDefaultLoginUserType @"NJUserDefaultLoginUserType"
+
+//用户状态
+#define NJUserDefaultLoginStatus @"NJUserDefaultLoginStatus"
+//用户数据
+#define NJUserDefaultLoginUserData @"NJUserDefaultLoginUserData"
+//用户ID
+#define NJUserDefaultLoginUserID @"NJUserDefaultLoginUserID"
+
+//开关状态 0:审核，1：正式上线
+#define NJUserDefaultSwitchStatus @"NJUserDefaultSwitchStatus"
+
+//选择工程
+#define NJUserDefaultProjectData @"NJUserDefaultProjectData"
+
+//工程名
+#define NJUserDefaultProjectName @"NJUserDefaultProjectName"
+
+/*************** 登陆 *********************/
+/*************** 二维码 *********************/
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#define LBXScan_Define_Native  //下载了native模块
+#define LBXScan_Define_UI     //下载了界面模块
+#endif
+/*************** 二维码 *********************/
+
+
+/*************** 适配iPhone X *********************/
+// 判断是否是iPhone X
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+// 状态栏高度
+#define STATUS_BAR_HEIGHT (iPhoneX ? 44.f : 20.f)
+// 导航栏高度
+#define NAVIGATION_BAR_Max_Y (iPhoneX ? 88.f : 64.f)
+// tabBar高度
+#define TAB_BAR_HEIGHT (iPhoneX ? (49.f+34.f) : 49.f)
+// home indicator
+#define HOME_INDICATOR_HEIGHT (iPhoneX ? 34.f : 0.f)
+
+/*************** 适配iPhone X *********************/
+
+/*************** 通知 *********************/
+//token改变
+#define NJTokenChangeNotification @"tokenChangeNotification"
+
+//网络错误
+#define NotificationNetworkError @"NotificationNetworkError"
+
+#define NotificationLocationChange @"NotificationLocationChange"
+
+//退出登录
+#define NotificationUserLogout @"NotificationUserLogout"
+
+//登录成功
+#define NotificationLoginSuccess @"NotificationLoginSuccess"
+
+//修改了用户信息
+#define NotificationUpdateInfo @"NotificationUpdateInfo"
+
+//支付结果
+#define Notification_PayStyle  @"Notification_PayStyle"
+/*************** 通知 *********************/
+
+/*************** 字典key *********************/
+#define DictionaryKeyData @"data"
+#define DictionaryKeyCode @"code"
+
+#define DictionaryKeyPayType @"payType"
+#define DictionarykeyPayResult @"payResult"
+/*************** 字典key *********************/
+
+/*************** FTP *********************/
+//地址
+#define NJFTP_Service_Image_Address @"ftp://139.224.197.67"
+//端口
+#define NJFTP_Service_Image_Port @"3427"
+//FTP账号
+#define NJFTP_Service_Image_Account @"smart_images"
+//FTP密码
+#define NJFtp_service_Image_Pwd @"123456"
+/*************** FTP *********************/
+
+/*************** UserDefault *********************/
+//纬度
+#define NJUserDefaultLocationLatitute @"NJUserDefaultLocationLatitute"
+
+//经度
+#define NJUserDefaultLocationLongitute @"NJUserDefaultLocationLongitute"
+
+//地址
+#define NJUserDefaultLocationAddress @"NJUserDefaultLocationAddress"
+
+//城市
+#define NJUserDefaultLocationCity @"NJUserDefaultLocationCity"
+
+//小区
+#define NJSelectedVillage @"NJSelectedVillage"
+/*************** UserDefault *********************/
+
+/*************** 用runtime实现NSCoding的自动归档和解档 *********************/
+
+#define encodeRuntime(A) \
+\
+unsigned int count = 0;\
+Ivar *ivars = class_copyIvarList([A class], &count);\
+for (int i = 0; i<count; i++) {\
+Ivar ivar = ivars[i];\
+const char *name = ivar_getName(ivar);\
+NSString *key = [NSString stringWithUTF8String:name];\
+id value = [self valueForKey:key];\
+[aCoder encodeObject:value forKey:key];\
+}\
+free(ivars);\
+\
+
+#define initCoderRuntime(A) \
+\
+if (self = [super init]) {\
+unsigned int count = 0;\
+Ivar *ivars = class_copyIvarList([A class], &count);\
+for (int i = 0; i<count; i++) {\
+Ivar ivar = ivars[i];\
+const char *name = ivar_getName(ivar);\
+NSString *key = [NSString stringWithUTF8String:name];\
+id value = [aDecoder decodeObjectForKey:key];\
+[self setValue:value forKey:key];\
+}\
+free(ivars);\
+}\
+return self;\
+\
+/*************** 用runtime实现NSCoding的自动归档和解档 *********************/
+
