@@ -78,7 +78,7 @@
 //蓝色
 #define NJBlueColor NJColor(18, 140, 239)
 //橙色
-#define NJOrangeColor NJColor(255, 80, 4)
+#define NJOrangeColor NJColor(253, 111, 10)
 //绿色
 #define NJGreenColor NJColor(128, 194, 105)
 //灰色
@@ -86,7 +86,7 @@
 //分割线颜色
 #define NJSeperatorColor NJGrayColor(241)
 //背景颜色（灰色）
-#define NJBgColor NJGrayColor(245)
+#define NJBgColor NJGrayColor(239)
 
 /*************** 颜色 *********************/
 

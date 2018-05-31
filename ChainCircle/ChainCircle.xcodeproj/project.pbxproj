@@ -72,6 +72,17 @@
 		BF9E18C420BEADF000B655EC /* NJUserItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E18C220BEADF000B655EC /* NJUserItem.m */; };
 		BF9E18D020BEAE7000B655EC /* NJLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9E18CE20BEAE7000B655EC /* NJLoginVC.m */; };
 		BF9E18D120BEAE7000B655EC /* NJLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9E18CF20BEAE7000B655EC /* NJLoginVC.xib */; };
+		BFA7AED420BF94C90029DE12 /* NJLqcCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AED220BF94C90029DE12 /* NJLqcCell.m */; };
+		BFA7AED520BF94C90029DE12 /* NJLqcCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AED320BF94C90029DE12 /* NJLqcCell.xib */; };
+		BFA7AED920BF98440029DE12 /* NJLqcHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AED720BF98440029DE12 /* NJLqcHeaderView.m */; };
+		BFA7AEDA20BF98440029DE12 /* NJLqcHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AED820BF98440029DE12 /* NJLqcHeaderView.xib */; };
+		BFA7AEDE20BF9D520029DE12 /* NJLqcFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AEDC20BF9D520029DE12 /* NJLqcFooterView.m */; };
+		BFA7AEE320BFA0BD0029DE12 /* NJMethodCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AEE120BFA0BD0029DE12 /* NJMethodCell.m */; };
+		BFA7AEE420BFA0BD0029DE12 /* NJMethodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AEE220BFA0BD0029DE12 /* NJMethodCell.xib */; };
+		BFA7AEE720BFA3490029DE12 /* NJMethodHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AEE620BFA3490029DE12 /* NJMethodHeaderView.m */; };
+		BFA7AEE920BFA3570029DE12 /* NJMethodHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AEE820BFA3570029DE12 /* NJMethodHeaderView.xib */; };
+		BFA7AEEC20BFA4AA0029DE12 /* NJMethodFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AEEB20BFA4AA0029DE12 /* NJMethodFooterView.m */; };
+		BFA7AEEE20BFA4B20029DE12 /* NJMethodFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AEED20BFA4B20029DE12 /* NJMethodFooterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -205,6 +216,23 @@
 		BF9E18CD20BEAE7000B655EC /* NJLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLoginVC.h; sourceTree = "<group>"; };
 		BF9E18CE20BEAE7000B655EC /* NJLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLoginVC.m; sourceTree = "<group>"; };
 		BF9E18CF20BEAE7000B655EC /* NJLoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJLoginVC.xib; sourceTree = "<group>"; };
+		BFA7AED120BF94C90029DE12 /* NJLqcCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLqcCell.h; sourceTree = "<group>"; };
+		BFA7AED220BF94C90029DE12 /* NJLqcCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLqcCell.m; sourceTree = "<group>"; };
+		BFA7AED320BF94C90029DE12 /* NJLqcCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJLqcCell.xib; sourceTree = "<group>"; };
+		BFA7AED620BF98440029DE12 /* NJLqcHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLqcHeaderView.h; sourceTree = "<group>"; };
+		BFA7AED720BF98440029DE12 /* NJLqcHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLqcHeaderView.m; sourceTree = "<group>"; };
+		BFA7AED820BF98440029DE12 /* NJLqcHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJLqcHeaderView.xib; sourceTree = "<group>"; };
+		BFA7AEDB20BF9D520029DE12 /* NJLqcFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLqcFooterView.h; sourceTree = "<group>"; };
+		BFA7AEDC20BF9D520029DE12 /* NJLqcFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLqcFooterView.m; sourceTree = "<group>"; };
+		BFA7AEE020BFA0BD0029DE12 /* NJMethodCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJMethodCell.h; sourceTree = "<group>"; };
+		BFA7AEE120BFA0BD0029DE12 /* NJMethodCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJMethodCell.m; sourceTree = "<group>"; };
+		BFA7AEE220BFA0BD0029DE12 /* NJMethodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJMethodCell.xib; sourceTree = "<group>"; };
+		BFA7AEE520BFA3490029DE12 /* NJMethodHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJMethodHeaderView.h; sourceTree = "<group>"; };
+		BFA7AEE620BFA3490029DE12 /* NJMethodHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJMethodHeaderView.m; sourceTree = "<group>"; };
+		BFA7AEE820BFA3570029DE12 /* NJMethodHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJMethodHeaderView.xib; sourceTree = "<group>"; };
+		BFA7AEEA20BFA4AA0029DE12 /* NJMethodFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJMethodFooterView.h; sourceTree = "<group>"; };
+		BFA7AEEB20BFA4AA0029DE12 /* NJMethodFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJMethodFooterView.m; sourceTree = "<group>"; };
+		BFA7AEED20BFA4B20029DE12 /* NJMethodFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJMethodFooterView.xib; sourceTree = "<group>"; };
 		EA4A7286E85B60157A5A8671 /* libPods-ChainCircle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainCircle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -389,6 +417,23 @@
 		BF9E17F420BEACA500B655EC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BFA7AED120BF94C90029DE12 /* NJLqcCell.h */,
+				BFA7AED220BF94C90029DE12 /* NJLqcCell.m */,
+				BFA7AED320BF94C90029DE12 /* NJLqcCell.xib */,
+				BFA7AED620BF98440029DE12 /* NJLqcHeaderView.h */,
+				BFA7AED720BF98440029DE12 /* NJLqcHeaderView.m */,
+				BFA7AED820BF98440029DE12 /* NJLqcHeaderView.xib */,
+				BFA7AEDB20BF9D520029DE12 /* NJLqcFooterView.h */,
+				BFA7AEDC20BF9D520029DE12 /* NJLqcFooterView.m */,
+				BFA7AEE020BFA0BD0029DE12 /* NJMethodCell.h */,
+				BFA7AEE120BFA0BD0029DE12 /* NJMethodCell.m */,
+				BFA7AEE220BFA0BD0029DE12 /* NJMethodCell.xib */,
+				BFA7AEE520BFA3490029DE12 /* NJMethodHeaderView.h */,
+				BFA7AEE620BFA3490029DE12 /* NJMethodHeaderView.m */,
+				BFA7AEE820BFA3570029DE12 /* NJMethodHeaderView.xib */,
+				BFA7AEEA20BFA4AA0029DE12 /* NJMethodFooterView.h */,
+				BFA7AEEB20BFA4AA0029DE12 /* NJMethodFooterView.m */,
+				BFA7AEED20BFA4B20029DE12 /* NJMethodFooterView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -730,9 +775,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA7AEEE20BFA4B20029DE12 /* NJMethodFooterView.xib in Resources */,
 				BF9E18D120BEAE7000B655EC /* NJLoginVC.xib in Resources */,
+				BFA7AED520BF94C90029DE12 /* NJLqcCell.xib in Resources */,
+				BFA7AEE420BFA0BD0029DE12 /* NJMethodCell.xib in Resources */,
 				BF9E17DA20BEA3C700B655EC /* LaunchScreen.storyboard in Resources */,
+				BFA7AEE920BFA3570029DE12 /* NJMethodHeaderView.xib in Resources */,
 				BF9E17D720BEA3C700B655EC /* Assets.xcassets in Resources */,
+				BFA7AEDA20BF98440029DE12 /* NJLqcHeaderView.xib in Resources */,
 				BF9E17D520BEA3C700B655EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -808,6 +858,7 @@
 				BF9E18A620BEAD8200B655EC /* UIView+NJFrame.m in Sources */,
 				BF9E17DD20BEA3C700B655EC /* main.m in Sources */,
 				BF9E188F20BEAD8200B655EC /* NJTextView.m in Sources */,
+				BFA7AEEC20BFA4AA0029DE12 /* NJMethodFooterView.m in Sources */,
 				BF9E18BF20BEAD8200B655EC /* NJLoginTool.m in Sources */,
 				BF9E18AB20BEAD8200B655EC /* UITextField+NJPlaceHolder.m in Sources */,
 				BF9E18AC20BEAD8200B655EC /* UIView+NJCommon.m in Sources */,
@@ -827,14 +878,19 @@
 				BF9E18B120BEAD8200B655EC /* DESUtil.m in Sources */,
 				BF9E18B420BEAD8200B655EC /* LBXAlertAction.m in Sources */,
 				BF9E189320BEAD8200B655EC /* NSDate+HooDatePicker.m in Sources */,
+				BFA7AED420BF94C90029DE12 /* NJLqcCell.m in Sources */,
+				BFA7AED920BF98440029DE12 /* NJLqcHeaderView.m in Sources */,
 				BF9E18B620BEAD8200B655EC /* UIActionSheet+LBXAlertAction.m in Sources */,
 				BF9E188D20BEAD8200B655EC /* XLPaymentLoadingHUD.m in Sources */,
 				BF9E17F020BEAC8C00B655EC /* AppDelegate.m in Sources */,
+				BFA7AEE720BFA3490029DE12 /* NJMethodHeaderView.m in Sources */,
 				BF854D6D20BEB04F00064466 /* NJCheckGroupVC.m in Sources */,
 				BF9E188C20BEAD8200B655EC /* NJTabBarController.m in Sources */,
 				BF9E18BA20BEAD8200B655EC /* QFDatePickerView.m in Sources */,
+				BFA7AEDE20BF9D520029DE12 /* NJLqcFooterView.m in Sources */,
 				BF9E18AE20BEAD8200B655EC /* UIBarButtonItem+NJItem.m in Sources */,
 				BF9E188320BEAD8200B655EC /* NetAPIManager.m in Sources */,
+				BFA7AEE320BFA0BD0029DE12 /* NJMethodCell.m in Sources */,
 				BF9E189420BEAD8200B655EC /* NJCenterButton.m in Sources */,
 				BF9E189020BEAD8200B655EC /* NJVerticalButton.m in Sources */,
 				BF9E188E20BEAD8200B655EC /* XLPaymentSuccessHUD.m in Sources */,
@@ -1013,7 +1069,10 @@
 				GCC_PREFIX_HEADER = ChainCircle/Classes/Other/ChainCircle.pch;
 				INFOPLIST_FILE = ChainCircle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Redirect.ChainCircle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1034,7 +1093,10 @@
 				GCC_PREFIX_HEADER = ChainCircle/Classes/Other/ChainCircle.pch;
 				INFOPLIST_FILE = ChainCircle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Redirect.ChainCircle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
