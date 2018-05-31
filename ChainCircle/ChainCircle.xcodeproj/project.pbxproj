@@ -92,6 +92,8 @@
 		BFA7AF0420BFCE450029DE12 /* NJInviteFriendTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AF0320BFCE450029DE12 /* NJInviteFriendTableHeaderView.m */; };
 		BFA7AF0620BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AF0520BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib */; };
 		BFA7AF0D20BFECBC0029DE12 /* NJBindInviteCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AF0C20BFECBC0029DE12 /* NJBindInviteCodeVC.m */; };
+		BFA7AF1420C022620029DE12 /* NJInviteCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AF1220C022620029DE12 /* NJInviteCodeVC.m */; };
+		BFA7AF1520C022620029DE12 /* NJInviteCodeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AF1320C022620029DE12 /* NJInviteCodeVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -256,6 +258,9 @@
 		BFA7AF0520BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJInviteFriendTableHeaderView.xib; sourceTree = "<group>"; };
 		BFA7AF0B20BFECBC0029DE12 /* NJBindInviteCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJBindInviteCodeVC.h; sourceTree = "<group>"; };
 		BFA7AF0C20BFECBC0029DE12 /* NJBindInviteCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJBindInviteCodeVC.m; sourceTree = "<group>"; };
+		BFA7AF1120C022620029DE12 /* NJInviteCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJInviteCodeVC.h; sourceTree = "<group>"; };
+		BFA7AF1220C022620029DE12 /* NJInviteCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJInviteCodeVC.m; sourceTree = "<group>"; };
+		BFA7AF1320C022620029DE12 /* NJInviteCodeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJInviteCodeVC.xib; sourceTree = "<group>"; };
 		EA4A7286E85B60157A5A8671 /* libPods-ChainCircle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainCircle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -762,6 +767,9 @@
 			children = (
 				BFA7AEF520BFC2520029DE12 /* NJInviteFriendVC.h */,
 				BFA7AEF620BFC2520029DE12 /* NJInviteFriendVC.m */,
+				BFA7AF1120C022620029DE12 /* NJInviteCodeVC.h */,
+				BFA7AF1220C022620029DE12 /* NJInviteCodeVC.m */,
+				BFA7AF1320C022620029DE12 /* NJInviteCodeVC.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -882,6 +890,7 @@
 				BFA7AED520BF94C90029DE12 /* NJLqcCell.xib in Resources */,
 				BFA7AEE420BFA0BD0029DE12 /* NJMethodCell.xib in Resources */,
 				BF9E17DA20BEA3C700B655EC /* LaunchScreen.storyboard in Resources */,
+				BFA7AF1520C022620029DE12 /* NJInviteCodeVC.xib in Resources */,
 				BFA7AF0620BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib in Resources */,
 				BFA7AEE920BFA3570029DE12 /* NJMethodHeaderView.xib in Resources */,
 				BFA7AF0120BFCA990029DE12 /* NJInviteRecordHeaderView.xib in Resources */,
@@ -981,6 +990,7 @@
 				BF9E18A320BEAD8200B655EC /* NJNavigationBar.m in Sources */,
 				BF9E188620BEAD8200B655EC /* NetRequest.m in Sources */,
 				BF9E188520BEAD8200B655EC /* FoundationTools.m in Sources */,
+				BFA7AF1420C022620029DE12 /* NJInviteCodeVC.m in Sources */,
 				BF854D6720BEAFE400064466 /* NJMainVC.m in Sources */,
 				BFA7AF0D20BFECBC0029DE12 /* NJBindInviteCodeVC.m in Sources */,
 				BF9E18B120BEAD8200B655EC /* DESUtil.m in Sources */,

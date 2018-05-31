@@ -10,4 +10,8 @@
 
 @interface NJLqcHeaderView : UICollectionReusableView
 
+/********* <#注释#> *********/
+@property(nonatomic,copy)void (^receiveBlock)(void);
+
+@property (weak, nonatomic) IBOutlet UILabel *canReceiveNumLabel;
 @end

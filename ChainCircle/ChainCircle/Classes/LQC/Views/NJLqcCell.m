@@ -7,7 +7,11 @@
 //
 
 #import "NJLqcCell.h"
+@interface NJLqcCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageV;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
+@end
 @implementation NJLqcCell
 
 - (void)awakeFromNib {
@@ -15,4 +19,12 @@
     // Initialization code
 }
 
+- (void)setDataDic:(NSDictionary *)dataDic
+{
+    _dataDic = dataDic;
+    
+    self.iconImageV.image = [UIImage imageNamed:dataDic[@"icon"]];
+    
+    self.titleLabel.text = dataDic[@"title"];
+}
 @end

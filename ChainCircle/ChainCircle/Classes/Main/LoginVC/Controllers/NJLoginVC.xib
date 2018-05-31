@@ -13,9 +13,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NJLoginVC">
             <connections>
+                <outlet property="getVeriCodeBtn" destination="pga-d6-2W5" id="hWT-HK-DZe"/>
                 <outlet property="loginBtn" destination="Ckq-Un-sng" id="Xte-Mp-FVD"/>
                 <outlet property="phoneNumTextF" destination="foV-y5-O3u" id="Akf-Uy-bhz"/>
-                <outlet property="timeBtn" destination="pga-d6-2W5" id="MmR-Ld-4Mn"/>
                 <outlet property="verificationCodeTextF" destination="OH8-0m-9Aw" id="Tgq-os-Gvp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -76,9 +76,9 @@
                                 <constraint firstAttribute="height" constant="42" id="u0y-Ou-Qn9"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <state key="normal" title="60s"/>
+                            <state key="normal" title="获取验证码"/>
                             <connections>
-                                <action selector="timeBtnClick" destination="-1" eventType="touchUpInside" id="CxR-rz-gSk"/>
+                                <action selector="getVeriCodeBtnClick" destination="-1" eventType="touchUpInside" id="2Sz-Oq-ovl"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ckq-Un-sng">

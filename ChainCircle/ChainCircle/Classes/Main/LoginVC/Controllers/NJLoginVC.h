@@ -9,5 +9,8 @@
 #import "NJViewController.h"
 
 @interface NJLoginVC : NJViewController
+/********* 是否modal *********/
+@property(nonatomic,assign)BOOL isModal;
+
 
 @end

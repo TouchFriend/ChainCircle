@@ -46,7 +46,6 @@
         [userDefaults setObject:userData forKey:NJUserDefaultLoginUserData];
     }
     
-    
     //保存用户ID
     [userDefaults setObject:item.ID forKey:NJUserDefaultLoginUserID];
     

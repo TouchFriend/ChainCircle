@@ -10,4 +10,7 @@
 
 @interface NJLqcCell : UICollectionViewCell
 
+/********* <#注释#> *********/
+@property(nonatomic,strong)NSDictionary * dataDic;
+
 @end

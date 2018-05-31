@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NJMainVC.h"
+#import <IQKeyboardManager.h>
 
 @interface AppDelegate ()
 
@@ -32,6 +33,11 @@
     //TabBar
     [self setupTabBaritem];
     
+    //设置键盘
+    [self setupIQKeyboardManager];
+    
+    [self setupSVProgressHUD];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     NJMainVC * mainVC = [[NJMainVC alloc] init];
@@ -55,7 +61,21 @@
     [item setTitleTextAttributes:attriSelectedDic forState:UIControlStateSelected];
 }
 
+#pragma mark - 设置键盘
+- (void)setupIQKeyboardManager
+{
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+    [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
+    [IQKeyboardManager sharedManager].toolbarDoneBarButtonItemText = @"完成";
+    
+    [IQKeyboardManager sharedManager].shouldShowToolbarPlaceholder = NO;
+}
 
+#pragma mark - SVProgressHUD
+- (void)setupSVProgressHUD
+{
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+}
 
 
 @end

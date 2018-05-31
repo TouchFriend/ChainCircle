@@ -35,7 +35,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6898.88" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHO-Mf-dgl">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHO-Mf-dgl">
                                     <rect key="frame" x="0.0" y="47" width="375" height="67"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="67" id="glI-4R-ijK"/>
@@ -102,8 +102,8 @@
                             <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="012.08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukH-tm-EFj">
-                            <rect key="frame" x="128.5" y="15" width="52" height="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ukH-tm-EFj">
+                            <rect key="frame" x="128.5" y="15" width="34" height="20"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -148,6 +148,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
             <connections>
+                <outlet property="canReceiveNumLabel" destination="ukH-tm-EFj" id="2G0-Hn-wb3"/>
+                <outlet property="myLqcNumLabel" destination="eHO-Mf-dgl" id="B0e-nw-dvl"/>
+                <outlet property="myRedBagLabel" destination="GaU-ZD-t93" id="FyP-D8-HPL"/>
                 <outlet property="receiveBtn" destination="SxI-2t-j7n" id="oUk-6O-uxu"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="53.5"/>

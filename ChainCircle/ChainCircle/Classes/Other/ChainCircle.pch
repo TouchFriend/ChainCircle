@@ -114,7 +114,7 @@
 #endif
 
 /*************** 网络 ******************s***/
-#define NJUrlPrefix @"http://smart.chongdx.com/api"
+#define NJUrlPrefix @"http://lianquan.chongdx.com/api"
 #define NJImageUrlPrefix @"http://smart.chongdx.com/uploads/"
 #define NJIconUrlPrefix @"http://121.42.200.25:8818/api"
 //资讯h5

@@ -11,12 +11,13 @@
 #import "NJInviteRecordCell.h"
 #import "NJInviteRecordHeaderView.h"
 #import "NJInviteFriendTableHeaderView.h"
+#import "NJInviteCodeVC.h"
 
 @interface NJInviteFriendVC () <UITableViewDataSource, UITableViewDelegate>
 /********* <#注释#> *********/
 @property(nonatomic,weak)UITableView * tableView;
 /********* <#注释#> *********/
-@property(nonatomic,strong)NJInviteFriendTableHeaderView * tableHeaderView;
+@property(nonatomic,strong)UIView * tableHeaderView;
 
 @end
 
@@ -71,6 +72,7 @@ static NSString * const headerID = @"NJInviteRecordHeaderView";
     tableView.rowHeight = 31;
     tableView.backgroundColor = [UIColor clearColor];
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    tableView.contentInset = UIEdgeInsetsMake(30, 0, 0, 0);
     tableView.tableHeaderView = self.tableHeaderView;
     
     
@@ -96,6 +98,11 @@ static NSString * const headerID = @"NJInviteRecordHeaderView";
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     NJInviteRecordHeaderView * headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:headerID];
+    
+    NJWeakSelf;
+    headerView.myInviteBlock = ^{
+        [weakSelf myInviteBtnClick];
+    };
     return headerView;
 }
 
@@ -119,7 +126,7 @@ static NSString * const headerID = @"NJInviteRecordHeaderView";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 161.0;
+    return 191.0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
@@ -133,13 +140,20 @@ static NSString * const headerID = @"NJInviteRecordHeaderView";
     
 }
 
+- (void)myInviteBtnClick
+{
+    NJInviteCodeVC * inviteCodeVC = [[NJInviteCodeVC alloc] init];
+    [self.navigationController pushViewController:inviteCodeVC animated:YES];
+}
+
 #pragma mark - 懒加载
-- (NJInviteFriendTableHeaderView *)tableHeaderView
+- (UIView *)tableHeaderView
 {
     if(_tableHeaderView == nil)
     {
-        _tableHeaderView = [NJInviteFriendTableHeaderView NJ_loadViewFromXib];
-        _tableHeaderView.frame = CGRectMake(0, 0, NJScreenW - 30, 563);
+        _tableHeaderView = [[UIView alloc] init];
+        _tableHeaderView.frame = CGRectMake(0, 0, NJScreenW - 30, 30);
+        _tableView.backgroundColor = [UIColor clearColor];
     }
     return _tableHeaderView;
 }

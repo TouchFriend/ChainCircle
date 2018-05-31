@@ -7,12 +7,15 @@
 //
 
 #import "NJLoginVC.h"
+#import <MJExtension.h>
+#import "NJUserItem.h"
+#import "UIImage+NJImage.h"
 
 @interface NJLoginVC ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumTextF;
 @property (weak, nonatomic) IBOutlet UITextField *verificationCodeTextF;
-@property (weak, nonatomic) IBOutlet UIButton *timeBtn;
-- (IBAction)timeBtnClick;
+@property (weak, nonatomic) IBOutlet UIButton *getVeriCodeBtn;
+- (IBAction)getVeriCodeBtnClick;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 - (IBAction)loginBtnClick;
 
@@ -30,6 +33,8 @@
 #pragma mark - 设置初始化
 - (void)setupInit
 {
+    [self setupNaviBar];
+    
     NSDictionary * placeholderDic = @{
                                       NSFontAttributeName : [UIFont systemFontOfSize:14.0],
                                       NSForegroundColorAttributeName : NJGrayColor(136),
@@ -41,13 +46,179 @@
     
     self.verificationCodeTextF.attributedPlaceholder = veriCodeAttr;
     
-    [self.timeBtn addAllCornerRadius:4.0];
+    [self.getVeriCodeBtn addAllCornerRadius:4.0];
     
     [self.loginBtn addAllCornerRadius:4.0];
+    
+    [self.getVeriCodeBtn setBackgroundImage:[UIImage imageWithColor:NJOrangeColor] forState:UIControlStateNormal];
+    
+    [self.getVeriCodeBtn setBackgroundImage:[UIImage imageWithColor:NJGrayColor(215)] forState:UIControlStateSelected];
+    
+    [self setupTimer];
 }
 
-- (IBAction)timeBtnClick {
+#pragma mark - 导航条
+- (void)setupNaviBar
+{
+    self.title = @"登录";
 }
+
+#pragma mark - 设置定时器
+- (void)setupTimer
+{
+    UIApplication * app = [UIApplication sharedApplication];
+    __block    UIBackgroundTaskIdentifier bgTask;
+    bgTask = [app beginBackgroundTaskWithExpirationHandler:^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (bgTask != UIBackgroundTaskInvalid)
+            {
+                bgTask = UIBackgroundTaskInvalid;
+            }
+        });
+    }];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (bgTask != UIBackgroundTaskInvalid)
+            {
+                bgTask = UIBackgroundTaskInvalid;
+            }
+        });
+    });
+}
+//启动定时器
+- (void)startTime
+{
+    __block int timeout = 60; //倒计时时间
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
+    dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
+    dispatch_source_set_event_handler(_timer, ^{
+        
+        if(timeout <= 0)
+        { //倒计时结束，关闭
+            dispatch_source_cancel(_timer);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //定时结束后的UI处理
+                self.getVeriCodeBtn.selected = NO;
+                
+                [self.getVeriCodeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
+                self.getVeriCodeBtn.userInteractionEnabled = YES;
+            });
+        }
+        else
+        {
+            NSLog(@"时间 = %d",timeout);
+            NSString *strTime = [NSString stringWithFormat:@"发送验证码(%dS)",timeout];
+            NSLog(@"strTime = %@",strTime);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //定时过程中的UI处理
+                self.getVeriCodeBtn.selected = YES;
+                self.getVeriCodeBtn.userInteractionEnabled = NO;
+                
+                NSString * titleStr = [[NSString alloc] initWithFormat:@"重新发送(%dS)", timeout];
+                [self.getVeriCodeBtn setTitle:titleStr forState:UIControlStateNormal];
+            });
+            
+            timeout--;
+        }
+    });
+    dispatch_resume(_timer);
+    
+}
+
+
+
+
+#pragma mark - 网络请求
+//获取验证码
+- (void)getVeriCode
+{
+    
+    
+    [NetRequest getVeriCodeWithMobile:self.phoneNumTextF.text completed:^(id data, int flag) {
+        if(flag == GetVeriCode)
+        {
+            if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
+            {
+                [self startTime];
+            }
+            else
+            {
+                
+                [SVProgressHUD showErrorWithStatus:getStringInDict(data, DictionaryKeyData)];
+                [SVProgressHUD dismissWithDelay:1.5];
+            }
+        }
+    }];
+}
+
+
+- (void)userLoginRequest
+{
+    [NetRequest userLoginWithAccount:self.phoneNumTextF.text code:self.verificationCodeTextF.text completed:^(id data, int flag) {
+        if(flag == UserLogin)
+        {
+            if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
+            {
+                NSDictionary * dataDic = getDictionaryInDict(data, DictionaryKeyData);
+                NJUserItem * userItem = [NJUserItem mj_objectWithKeyValues:dataDic];
+                [NJLoginTool doLoginWithItem:userItem];
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginSuccess object:nil];
+                
+                [self.view endEditing:YES];
+                
+                [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+                [SVProgressHUD dismissWithDelay:1.0 completion:^{
+                    if(self.isModal)
+                    {
+                        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+                    }
+                    else
+                    {
+                        [self.navigationController popViewControllerAnimated:YES];
+                    }
+                    
+                }];
+            }
+            else
+            {
+                
+                [SVProgressHUD showErrorWithStatus:getStringInDict(data, DictionaryKeyData)];
+                [SVProgressHUD dismissWithDelay:1.5];
+            }
+        }
+    }];
+}
+#pragma mark - 事件
+- (IBAction)getVeriCodeBtnClick {
+    if(self.phoneNumTextF.text.length == 0)
+    {
+        [SVProgressHUD showErrorWithStatus:@"手机号不能为空"];
+        [SVProgressHUD dismissWithDelay:1.5];
+        return;
+    }
+    
+    [self getVeriCode];
+    
+}
+
 - (IBAction)loginBtnClick {
+    if(self.phoneNumTextF.text.length == 0)
+    {
+        [SVProgressHUD showErrorWithStatus:@"请输入手机号"];
+        [SVProgressHUD dismissWithDelay:1.5];
+        return;
+    }
+    
+    if(self.verificationCodeTextF.text.length == 0)
+    {
+        [SVProgressHUD showErrorWithStatus:@"请输入验证码"];
+        [SVProgressHUD dismissWithDelay:1.5];
+        return;
+    }
+    
+    [self userLoginRequest];
 }
 @end

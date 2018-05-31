@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NJInviteRecordHeaderView : UITableViewHeaderFooterView
+/********* <#注释#> *********/
+@property(nonatomic,copy)void (^myInviteBlock)(void);
 
 @end

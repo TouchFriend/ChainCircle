@@ -56,6 +56,10 @@
                 <constraint firstItem="8sU-6l-pa3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uNq-tj-cRh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <connections>
+                <outlet property="iconImageV" destination="JAg-ES-o8L" id="g4l-2b-moc"/>
+                <outlet property="titleLabel" destination="z4R-cM-dYJ" id="zww-PN-6Ix"/>
+            </connections>
         </collectionViewCell>
     </objects>
     <resources>

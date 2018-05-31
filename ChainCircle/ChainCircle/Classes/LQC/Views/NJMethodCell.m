@@ -7,7 +7,11 @@
 //
 
 #import "NJMethodCell.h"
+@interface NJMethodCell ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
+
+@end
 @implementation NJMethodCell
 
 - (void)awakeFromNib {
@@ -20,6 +24,12 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setTitleStr:(NSString *)titleStr
+{
+    _titleStr = titleStr;
+    self.titleLabel.text = titleStr;
 }
 
 - (void)setFrame:(CGRect)frame

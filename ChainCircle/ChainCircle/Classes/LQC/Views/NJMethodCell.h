@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NJMethodCell : UITableViewCell
+/********* <#注释#> *********/
+@property(nonatomic,strong)NSString * titleStr;
 
 @end

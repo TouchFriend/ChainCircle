@@ -14,6 +14,10 @@
 @interface NJLqcFooterView () <UITableViewDataSource, UITableViewDelegate>
 /********* <#注释#> *********/
 @property(nonatomic,weak)UITableView * tableView;
+
+/********* <#注释#> *********/
+@property(nonatomic,strong)NSArray<NSString *> * dataArr;
+
 @end
 @implementation NJLqcFooterView
 static NSString * const ID = @"NJMethodCell";
@@ -54,12 +58,14 @@ static NSString * const footerID = @"NJMethodFooterView";
 #pragma mark - UITableViewDataSource方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return self.dataArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NJMethodCell * cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
+    NSString * titleStr = self.dataArr[indexPath.row];
+    cell.titleStr = titleStr;
     return cell;
 }
 
@@ -93,5 +99,20 @@ static NSString * const footerID = @"NJMethodFooterView";
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return 238;
+}
+
+#pragma mark - 懒加载
+- (NSArray<NSString *> *)dataArr
+{
+    if(_dataArr == nil)
+    {
+        _dataArr = @[
+                     @"初次登录免费获得",
+                     @"邀请朋友获得2级奖励",
+                     @"绑定朋友邀请码获得",
+                     @"提交微信群或者QQ群获得"
+                     ];
+    }
+    return _dataArr;
 }
 @end

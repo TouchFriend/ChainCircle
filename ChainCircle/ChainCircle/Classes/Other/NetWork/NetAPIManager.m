@@ -39,7 +39,7 @@ static NetAPIManager * sharedManager = nil;
     if(userID != nil && userID.length > 0)
     {
         
-        parametersDicM[@"memberid"] = userID;
+        parametersDicM[@"member_id"] = userID;
     }
     
     return parametersDicM;
@@ -89,7 +89,8 @@ static NetAPIManager * sharedManager = nil;
  @param parameters 参数
  @param completed 回调函数
  */
-- (void)Post:(NSString *)path parameters:(id)parameters completed:(ReturnBlock)completed
+- (void)
+Post:(NSString *)path parameters:(id)parameters completed:(ReturnBlock)completed
 {
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",  nil];
