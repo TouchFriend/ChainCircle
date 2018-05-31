@@ -12,6 +12,8 @@
 #import "NJLqcFooterView.h"
 #import "UIImage+NJImage.h"
 #import "NJInviteFriendVC.h"
+#import "NJLoginVC.h"
+#import "NJBindInviteCodeVC.h"
 
 @interface NJLqcVC () <UICollectionViewDataSource, UICollectionViewDelegate>
 /********* <#注释#> *********/
@@ -133,7 +135,8 @@ static NSString * const footerID = @"NJLqcFooterView";
 #pragma mark - 事件
 - (void)personBtnClick
 {
-    
+    NJLoginVC * loginVC = [[NJLoginVC alloc] init];
+    [self.navigationController pushViewController:loginVC animated:YES];
 }
 
 - (void)methodClick:(NSInteger)index
@@ -152,7 +155,8 @@ static NSString * const footerID = @"NJLqcFooterView";
             break;
         case 2://绑定朋友邀请码获得
         {
-            
+            NJBindInviteCodeVC * bindInviteCodeVC = [[NJBindInviteCodeVC alloc] init];
+            [self.navigationController pushViewController:bindInviteCodeVC animated:YES];
         }
             break;
         case 3://提交微信群或者QQ群获得

@@ -9,6 +9,12 @@
 #import "NJLoginVC.h"
 
 @interface NJLoginVC ()
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumTextF;
+@property (weak, nonatomic) IBOutlet UITextField *verificationCodeTextF;
+@property (weak, nonatomic) IBOutlet UIButton *timeBtn;
+- (IBAction)timeBtnClick;
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+- (IBAction)loginBtnClick;
 
 @end
 
@@ -17,21 +23,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self setupInit];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - 设置初始化
+- (void)setupInit
+{
+    NSDictionary * placeholderDic = @{
+                                      NSFontAttributeName : [UIFont systemFontOfSize:14.0],
+                                      NSForegroundColorAttributeName : NJGrayColor(136),
+                                      };
+    NSAttributedString * phoneNumAttr = [[NSAttributedString alloc] initWithString:@"请输入你的手机号码" attributes:placeholderDic];
+    self.phoneNumTextF.attributedPlaceholder = phoneNumAttr;
+    
+    NSAttributedString * veriCodeAttr = [[NSAttributedString alloc] initWithString:@"输入验证码" attributes:placeholderDic];
+    
+    self.verificationCodeTextF.attributedPlaceholder = veriCodeAttr;
+    
+    [self.timeBtn addAllCornerRadius:4.0];
+    
+    [self.loginBtn addAllCornerRadius:4.0];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)timeBtnClick {
 }
-*/
-
+- (IBAction)loginBtnClick {
+}
 @end

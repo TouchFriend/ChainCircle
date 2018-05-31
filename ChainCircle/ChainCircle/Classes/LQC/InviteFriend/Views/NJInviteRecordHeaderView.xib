@@ -13,51 +13,196 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NJInviteRecordHeaderView">
-            <rect key="frame" x="0.0" y="0.0" width="345" height="130"/>
+            <rect key="frame" x="0.0" y="0.0" width="345" height="161"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfF-pg-fK7">
-                    <rect key="frame" x="0.0" y="0.0" width="345" height="130"/>
+                    <rect key="frame" x="0.0" y="0.0" width="345" height="161"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发起邀请的人可持续获得受邀绑定的人每天获得总LQC的20%奖励，及他的下级受邀者每天获得总LQC的10%奖励。当前活动：每邀请一人绑定邀请码，绑定双方各获得100个LQC奖励。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNR-a9-TL9">
-                            <rect key="frame" x="15" y="15" width="315" height="57.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <color key="textColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNR-a9-TL9">
+                            <rect key="frame" x="15" y="10" width="315" height="67"/>
+                            <attributedString key="attributedText">
+                                <fragment content="发起邀请的人可持续获得受邀绑定的人每天获得总">
+                                    <attributes>
+                                        <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="LQC">
+                                    <attributes>
+                                        <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="cellTitle"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="的">
+                                    <attributes>
+                                        <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="20%">
+                                    <attributes>
+                                        <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="cellTitle"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="奖励，及他的下级受邀者每天获得总">
+                                    <attributes>
+                                        <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="LQC">
+                                    <attributes>
+                                        <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="cellTitle"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="的">
+                                    <attributes>
+                                        <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="10%">
+                                    <attributes>
+                                        <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="cellTitle"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="奖励。当前活动：每邀请一人绑定邀请码，绑定双方各获得">
+                                    <attributes>
+                                        <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="100">
+                                    <attributes>
+                                        <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="cellTitle"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="个">
+                                    <attributes>
+                                        <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="LQC">
+                                    <attributes>
+                                        <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" metaFont="cellTitle"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="奖励。">
+                                    <attributes>
+                                        <color key="NSColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9e-Hg-SYs">
-                            <rect key="frame" x="101" y="101" width="8" height="17"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" red="0.98431372549019602" green="0.2196078431372549" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eY-5s-vbi">
-                            <rect key="frame" x="15" y="128" width="315" height="2"/>
-                            <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="2" id="P5X-w0-l1v"/>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="jeh-rJ-k99"/>
-                            </constraints>
-                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已邀请人数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3H0-ia-YOC">
-                            <rect key="frame" x="15" y="101" width="86" height="17"/>
+                            <rect key="frame" x="15" y="92" width="86" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9e-Hg-SYs">
+                            <rect key="frame" x="101" y="92.5" width="8.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.98431372549019602" green="0.2196078431372549" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Pr-eN-we8">
+                            <rect key="frame" x="15" y="128" width="315" height="33"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cw-rE-6Z3">
+                                    <rect key="frame" x="0.0" y="0.0" width="315" height="1"/>
+                                    <color key="backgroundColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="5xS-9d-qxp"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nb9-lB-sKd">
+                                    <rect key="frame" x="0.0" y="32" width="315" height="1"/>
+                                    <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="2I6-wq-f1c"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="N3g-Wa-UKC">
+                                    <rect key="frame" x="0.0" y="2" width="315" height="29"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-bx-YyP">
+                                            <rect key="frame" x="0.0" y="0.0" width="79" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="受邀请人" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FE6-tq-u4R">
+                                            <rect key="frame" x="79" y="0.0" width="78.5" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="奖励项" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czD-WS-zmv">
+                                            <rect key="frame" x="157.5" y="0.0" width="79" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LQC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atL-sz-Lke">
+                                            <rect key="frame" x="236.5" y="0.0" width="78.5" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="nb9-lB-sKd" firstAttribute="leading" secondItem="7Pr-eN-we8" secondAttribute="leading" id="4We-1w-x2m"/>
+                                <constraint firstAttribute="trailing" secondItem="0cw-rE-6Z3" secondAttribute="trailing" id="7Md-Eb-ZOu"/>
+                                <constraint firstItem="N3g-Wa-UKC" firstAttribute="leading" secondItem="7Pr-eN-we8" secondAttribute="leading" id="7mf-ye-5Aa"/>
+                                <constraint firstAttribute="trailing" secondItem="N3g-Wa-UKC" secondAttribute="trailing" id="Mjq-xW-6Sw"/>
+                                <constraint firstItem="N3g-Wa-UKC" firstAttribute="top" secondItem="7Pr-eN-we8" secondAttribute="top" constant="2" id="PRK-Us-NWF"/>
+                                <constraint firstItem="0cw-rE-6Z3" firstAttribute="leading" secondItem="7Pr-eN-we8" secondAttribute="leading" id="X0a-f2-9al"/>
+                                <constraint firstAttribute="bottom" secondItem="N3g-Wa-UKC" secondAttribute="bottom" constant="2" id="elT-yL-rYJ"/>
+                                <constraint firstAttribute="bottom" secondItem="nb9-lB-sKd" secondAttribute="bottom" id="h2e-W5-sUn"/>
+                                <constraint firstAttribute="trailing" secondItem="nb9-lB-sKd" secondAttribute="trailing" id="hCV-X7-4EQ"/>
+                                <constraint firstAttribute="height" constant="33" id="mRO-8v-r2E"/>
+                                <constraint firstItem="0cw-rE-6Z3" firstAttribute="top" secondItem="7Pr-eN-we8" secondAttribute="top" id="rkY-Fb-Eh7"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="tNR-a9-TL9" firstAttribute="top" secondItem="gfF-pg-fK7" secondAttribute="top" constant="15" id="34S-NE-pKg"/>
-                        <constraint firstItem="5eY-5s-vbi" firstAttribute="leading" secondItem="gfF-pg-fK7" secondAttribute="leading" constant="15" id="7tF-Ww-AzP"/>
+                        <constraint firstItem="tNR-a9-TL9" firstAttribute="top" secondItem="gfF-pg-fK7" secondAttribute="top" constant="10" id="34S-NE-pKg"/>
                         <constraint firstAttribute="trailing" secondItem="tNR-a9-TL9" secondAttribute="trailing" constant="15" id="8yG-ln-QXN"/>
-                        <constraint firstItem="5eY-5s-vbi" firstAttribute="top" secondItem="3H0-ia-YOC" secondAttribute="bottom" constant="10" id="PQ0-CI-tgv"/>
+                        <constraint firstItem="7Pr-eN-we8" firstAttribute="leading" secondItem="gfF-pg-fK7" secondAttribute="leading" constant="15" id="HdG-Fy-NLo"/>
+                        <constraint firstAttribute="bottom" secondItem="7Pr-eN-we8" secondAttribute="bottom" id="S3E-8J-hgm"/>
                         <constraint firstItem="a9e-Hg-SYs" firstAttribute="leading" secondItem="3H0-ia-YOC" secondAttribute="trailing" id="SvI-Au-FgL"/>
                         <constraint firstItem="3H0-ia-YOC" firstAttribute="leading" secondItem="gfF-pg-fK7" secondAttribute="leading" constant="15" id="cw7-rF-MHP"/>
-                        <constraint firstAttribute="trailing" secondItem="5eY-5s-vbi" secondAttribute="trailing" constant="15" id="ec9-9h-yAC"/>
                         <constraint firstItem="a9e-Hg-SYs" firstAttribute="centerY" secondItem="3H0-ia-YOC" secondAttribute="centerY" id="i7h-f6-Qhg"/>
+                        <constraint firstAttribute="trailing" secondItem="7Pr-eN-we8" secondAttribute="trailing" constant="15" id="kkO-fk-KzF"/>
                         <constraint firstItem="tNR-a9-TL9" firstAttribute="leading" secondItem="gfF-pg-fK7" secondAttribute="leading" constant="15" id="sYE-rn-W8P"/>
-                        <constraint firstAttribute="bottom" secondItem="5eY-5s-vbi" secondAttribute="bottom" id="taj-83-QXB"/>
+                        <constraint firstItem="3H0-ia-YOC" firstAttribute="top" secondItem="tNR-a9-TL9" secondAttribute="bottom" constant="15" id="tGt-pd-ul1"/>
                     </constraints>
                 </view>
             </subviews>
@@ -69,7 +214,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="33.5" y="54"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>

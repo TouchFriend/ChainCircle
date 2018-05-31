@@ -18,7 +18,7 @@
     [super awakeFromNib];
     
     CAShapeLayer * circleCornerLayer = [CAShapeLayer layer];
-    circleCornerLayer.frame = CGRectMake(0, 0, NJScreenW - 30, 130);
+    circleCornerLayer.frame = CGRectMake(0, 0, NJScreenW - 30, 161);
     UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:circleCornerLayer.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(8.0, 8.0)];
     circleCornerLayer.fillColor = [UIColor whiteColor].CGColor;
     circleCornerLayer.path = path.CGPath;

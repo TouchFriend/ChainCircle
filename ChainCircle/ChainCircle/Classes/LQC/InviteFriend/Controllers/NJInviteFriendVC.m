@@ -119,7 +119,7 @@ static NSString * const headerID = @"NJInviteRecordHeaderView";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 130.0;
+    return 161.0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section

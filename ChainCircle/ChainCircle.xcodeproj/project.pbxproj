@@ -91,6 +91,7 @@
 		BFA7AF0120BFCA990029DE12 /* NJInviteRecordHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AF0020BFCA990029DE12 /* NJInviteRecordHeaderView.xib */; };
 		BFA7AF0420BFCE450029DE12 /* NJInviteFriendTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AF0320BFCE450029DE12 /* NJInviteFriendTableHeaderView.m */; };
 		BFA7AF0620BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AF0520BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib */; };
+		BFA7AF0D20BFECBC0029DE12 /* NJBindInviteCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AF0C20BFECBC0029DE12 /* NJBindInviteCodeVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -253,6 +254,8 @@
 		BFA7AF0220BFCE450029DE12 /* NJInviteFriendTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJInviteFriendTableHeaderView.h; sourceTree = "<group>"; };
 		BFA7AF0320BFCE450029DE12 /* NJInviteFriendTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJInviteFriendTableHeaderView.m; sourceTree = "<group>"; };
 		BFA7AF0520BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJInviteFriendTableHeaderView.xib; sourceTree = "<group>"; };
+		BFA7AF0B20BFECBC0029DE12 /* NJBindInviteCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJBindInviteCodeVC.h; sourceTree = "<group>"; };
+		BFA7AF0C20BFECBC0029DE12 /* NJBindInviteCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJBindInviteCodeVC.m; sourceTree = "<group>"; };
 		EA4A7286E85B60157A5A8671 /* libPods-ChainCircle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainCircle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -412,6 +415,7 @@
 		BF9E17F120BEACA500B655EC /* LQC */ = {
 			isa = PBXGroup;
 			children = (
+				BFA7AF0720BFEC960029DE12 /* BindInviteCode */,
 				BFA7AEF120BFC2320029DE12 /* InviteFriend */,
 				BF9E17F320BEACA500B655EC /* Controllers */,
 				BF9E17F220BEACA500B655EC /* Models */,
@@ -778,6 +782,39 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BFA7AF0720BFEC960029DE12 /* BindInviteCode */ = {
+			isa = PBXGroup;
+			children = (
+				BFA7AF0920BFEC960029DE12 /* Controllers */,
+				BFA7AF0820BFEC960029DE12 /* Models */,
+				BFA7AF0A20BFEC960029DE12 /* Views */,
+			);
+			path = BindInviteCode;
+			sourceTree = "<group>";
+		};
+		BFA7AF0820BFEC960029DE12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFA7AF0920BFEC960029DE12 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFA7AF0B20BFECBC0029DE12 /* NJBindInviteCodeVC.h */,
+				BFA7AF0C20BFECBC0029DE12 /* NJBindInviteCodeVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BFA7AF0A20BFEC960029DE12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -945,6 +982,7 @@
 				BF9E188620BEAD8200B655EC /* NetRequest.m in Sources */,
 				BF9E188520BEAD8200B655EC /* FoundationTools.m in Sources */,
 				BF854D6720BEAFE400064466 /* NJMainVC.m in Sources */,
+				BFA7AF0D20BFECBC0029DE12 /* NJBindInviteCodeVC.m in Sources */,
 				BF9E18B120BEAD8200B655EC /* DESUtil.m in Sources */,
 				BF9E18B420BEAD8200B655EC /* LBXAlertAction.m in Sources */,
 				BF9E189320BEAD8200B655EC /* NSDate+HooDatePicker.m in Sources */,
