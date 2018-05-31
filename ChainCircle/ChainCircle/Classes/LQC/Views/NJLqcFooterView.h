@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NJLqcFooterView : UICollectionReusableView
+/********* <#注释#> *********/
+@property(nonatomic,copy)void (^methodClick)(NSInteger index);
 
 @end

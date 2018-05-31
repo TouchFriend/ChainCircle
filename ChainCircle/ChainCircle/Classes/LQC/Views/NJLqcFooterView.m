@@ -67,7 +67,10 @@ static NSString * const footerID = @"NJMethodFooterView";
 #pragma mark - UITableViewDataDelegate方法
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if(self.methodClick != nil)
+    {
+        self.methodClick(indexPath.row);
+    }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section

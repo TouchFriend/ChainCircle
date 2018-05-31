@@ -83,6 +83,14 @@
 		BFA7AEE920BFA3570029DE12 /* NJMethodHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AEE820BFA3570029DE12 /* NJMethodHeaderView.xib */; };
 		BFA7AEEC20BFA4AA0029DE12 /* NJMethodFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AEEB20BFA4AA0029DE12 /* NJMethodFooterView.m */; };
 		BFA7AEEE20BFA4B20029DE12 /* NJMethodFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AEED20BFA4B20029DE12 /* NJMethodFooterView.xib */; };
+		BFA7AEF020BFC0B20029DE12 /* NJRobAdVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AEEF20BFC0B20029DE12 /* NJRobAdVC.xib */; };
+		BFA7AEF720BFC2520029DE12 /* NJInviteFriendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AEF620BFC2520029DE12 /* NJInviteFriendVC.m */; };
+		BFA7AEFB20BFC80A0029DE12 /* NJInviteRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AEF920BFC80A0029DE12 /* NJInviteRecordCell.m */; };
+		BFA7AEFC20BFC80A0029DE12 /* NJInviteRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AEFA20BFC80A0029DE12 /* NJInviteRecordCell.xib */; };
+		BFA7AEFF20BFCA910029DE12 /* NJInviteRecordHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AEFE20BFCA910029DE12 /* NJInviteRecordHeaderView.m */; };
+		BFA7AF0120BFCA990029DE12 /* NJInviteRecordHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AF0020BFCA990029DE12 /* NJInviteRecordHeaderView.xib */; };
+		BFA7AF0420BFCE450029DE12 /* NJInviteFriendTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AF0320BFCE450029DE12 /* NJInviteFriendTableHeaderView.m */; };
+		BFA7AF0620BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AF0520BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -233,6 +241,18 @@
 		BFA7AEEA20BFA4AA0029DE12 /* NJMethodFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJMethodFooterView.h; sourceTree = "<group>"; };
 		BFA7AEEB20BFA4AA0029DE12 /* NJMethodFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJMethodFooterView.m; sourceTree = "<group>"; };
 		BFA7AEED20BFA4B20029DE12 /* NJMethodFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJMethodFooterView.xib; sourceTree = "<group>"; };
+		BFA7AEEF20BFC0B20029DE12 /* NJRobAdVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJRobAdVC.xib; sourceTree = "<group>"; };
+		BFA7AEF520BFC2520029DE12 /* NJInviteFriendVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJInviteFriendVC.h; sourceTree = "<group>"; };
+		BFA7AEF620BFC2520029DE12 /* NJInviteFriendVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJInviteFriendVC.m; sourceTree = "<group>"; };
+		BFA7AEF820BFC80A0029DE12 /* NJInviteRecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJInviteRecordCell.h; sourceTree = "<group>"; };
+		BFA7AEF920BFC80A0029DE12 /* NJInviteRecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJInviteRecordCell.m; sourceTree = "<group>"; };
+		BFA7AEFA20BFC80A0029DE12 /* NJInviteRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJInviteRecordCell.xib; sourceTree = "<group>"; };
+		BFA7AEFD20BFCA910029DE12 /* NJInviteRecordHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJInviteRecordHeaderView.h; sourceTree = "<group>"; };
+		BFA7AEFE20BFCA910029DE12 /* NJInviteRecordHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJInviteRecordHeaderView.m; sourceTree = "<group>"; };
+		BFA7AF0020BFCA990029DE12 /* NJInviteRecordHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJInviteRecordHeaderView.xib; sourceTree = "<group>"; };
+		BFA7AF0220BFCE450029DE12 /* NJInviteFriendTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJInviteFriendTableHeaderView.h; sourceTree = "<group>"; };
+		BFA7AF0320BFCE450029DE12 /* NJInviteFriendTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJInviteFriendTableHeaderView.m; sourceTree = "<group>"; };
+		BFA7AF0520BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJInviteFriendTableHeaderView.xib; sourceTree = "<group>"; };
 		EA4A7286E85B60157A5A8671 /* libPods-ChainCircle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainCircle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -377,6 +397,7 @@
 			children = (
 				BF854D6E20BEB06100064466 /* NJRobAdVC.h */,
 				BF854D6F20BEB06100064466 /* NJRobAdVC.m */,
+				BFA7AEEF20BFC0B20029DE12 /* NJRobAdVC.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -391,6 +412,7 @@
 		BF9E17F120BEACA500B655EC /* LQC */ = {
 			isa = PBXGroup;
 			children = (
+				BFA7AEF120BFC2320029DE12 /* InviteFriend */,
 				BF9E17F320BEACA500B655EC /* Controllers */,
 				BF9E17F220BEACA500B655EC /* Models */,
 				BF9E17F420BEACA500B655EC /* Views */,
@@ -714,6 +736,48 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BFA7AEF120BFC2320029DE12 /* InviteFriend */ = {
+			isa = PBXGroup;
+			children = (
+				BFA7AEF320BFC2320029DE12 /* Controllers */,
+				BFA7AEF220BFC2320029DE12 /* Models */,
+				BFA7AEF420BFC2320029DE12 /* Views */,
+			);
+			path = InviteFriend;
+			sourceTree = "<group>";
+		};
+		BFA7AEF220BFC2320029DE12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFA7AEF320BFC2320029DE12 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFA7AEF520BFC2520029DE12 /* NJInviteFriendVC.h */,
+				BFA7AEF620BFC2520029DE12 /* NJInviteFriendVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BFA7AEF420BFC2320029DE12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFA7AEF820BFC80A0029DE12 /* NJInviteRecordCell.h */,
+				BFA7AEF920BFC80A0029DE12 /* NJInviteRecordCell.m */,
+				BFA7AEFA20BFC80A0029DE12 /* NJInviteRecordCell.xib */,
+				BFA7AEFD20BFCA910029DE12 /* NJInviteRecordHeaderView.h */,
+				BFA7AEFE20BFCA910029DE12 /* NJInviteRecordHeaderView.m */,
+				BFA7AF0020BFCA990029DE12 /* NJInviteRecordHeaderView.xib */,
+				BFA7AF0220BFCE450029DE12 /* NJInviteFriendTableHeaderView.h */,
+				BFA7AF0320BFCE450029DE12 /* NJInviteFriendTableHeaderView.m */,
+				BFA7AF0520BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -776,14 +840,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFA7AEEE20BFA4B20029DE12 /* NJMethodFooterView.xib in Resources */,
+				BFA7AEFC20BFC80A0029DE12 /* NJInviteRecordCell.xib in Resources */,
 				BF9E18D120BEAE7000B655EC /* NJLoginVC.xib in Resources */,
 				BFA7AED520BF94C90029DE12 /* NJLqcCell.xib in Resources */,
 				BFA7AEE420BFA0BD0029DE12 /* NJMethodCell.xib in Resources */,
 				BF9E17DA20BEA3C700B655EC /* LaunchScreen.storyboard in Resources */,
+				BFA7AF0620BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib in Resources */,
 				BFA7AEE920BFA3570029DE12 /* NJMethodHeaderView.xib in Resources */,
+				BFA7AF0120BFCA990029DE12 /* NJInviteRecordHeaderView.xib in Resources */,
 				BF9E17D720BEA3C700B655EC /* Assets.xcassets in Resources */,
 				BFA7AEDA20BF98440029DE12 /* NJLqcHeaderView.xib in Resources */,
 				BF9E17D520BEA3C700B655EC /* Main.storyboard in Resources */,
+				BFA7AEF020BFC0B20029DE12 /* NJRobAdVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,9 +929,11 @@
 				BFA7AEEC20BFA4AA0029DE12 /* NJMethodFooterView.m in Sources */,
 				BF9E18BF20BEAD8200B655EC /* NJLoginTool.m in Sources */,
 				BF9E18AB20BEAD8200B655EC /* UITextField+NJPlaceHolder.m in Sources */,
+				BFA7AEF720BFC2520029DE12 /* NJInviteFriendVC.m in Sources */,
 				BF9E18AC20BEAD8200B655EC /* UIView+NJCommon.m in Sources */,
 				BF9E188B20BEAD8200B655EC /* NJSearchController.m in Sources */,
 				BF9E18AD20BEAD8200B655EC /* UIButton+NJCommon.m in Sources */,
+				BFA7AF0420BFCE450029DE12 /* NJInviteFriendTableHeaderView.m in Sources */,
 				BF9E188720BEAD8200B655EC /* NJViewController.m in Sources */,
 				BF9E18BC20BEAD8200B655EC /* FileManager.m in Sources */,
 				BF9E18A420BEAD8200B655EC /* UITextView+Placeholder.m in Sources */,
@@ -894,6 +964,7 @@
 				BF9E189420BEAD8200B655EC /* NJCenterButton.m in Sources */,
 				BF9E189020BEAD8200B655EC /* NJVerticalButton.m in Sources */,
 				BF9E188E20BEAD8200B655EC /* XLPaymentSuccessHUD.m in Sources */,
+				BFA7AEFB20BFC80A0029DE12 /* NJInviteRecordCell.m in Sources */,
 				BF9E18A820BEAD8200B655EC /* UIImage+NJImage.m in Sources */,
 				BF9E18B520BEAD8200B655EC /* UIWindow+LBXHierarchy.m in Sources */,
 				BF9E18A920BEAD8200B655EC /* UILabel+NJChangeLineSpaceAndWordSpace.m in Sources */,
@@ -905,6 +976,7 @@
 				BF9E18AF20BEAD8200B655EC /* NJGlobalConst.m in Sources */,
 				BF9E18B820BEAD8200B655EC /* UIAlertController+supportedInterfaceOrientations.m in Sources */,
 				BF854D7020BEB06100064466 /* NJRobAdVC.m in Sources */,
+				BFA7AEFF20BFCA910029DE12 /* NJInviteRecordHeaderView.m in Sources */,
 				BF9E18B320BEAD8200B655EC /* LBXScanPermissions.m in Sources */,
 				BF9E188420BEAD8200B655EC /* NJEnumSet.m in Sources */,
 				BF9E189520BEAD8200B655EC /* NJProductDetailHeader.m in Sources */,

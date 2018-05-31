@@ -51,8 +51,8 @@
     [btn setImage:selectedImage forState:UIControlStateSelected];
     //绑定事件
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    [btn sizeToFit];
-//    btn.frame = CGRectMake(0, 0, 30, 44);
+//    [btn sizeToFit];
+    btn.frame = CGRectMake(0, 0, 30, 44);
     
     //为btn添加一个容器，解决按钮点范围的问题
     UIView * viewContainer = [[UIView alloc]initWithFrame:btn.frame];

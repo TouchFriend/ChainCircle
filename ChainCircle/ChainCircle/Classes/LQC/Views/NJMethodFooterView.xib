@@ -77,7 +77,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="DT3-jd-0BH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1ge-Wv-9yo"/>
                 <constraint firstItem="DT3-jd-0BH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Bt8-jF-8yy"/>

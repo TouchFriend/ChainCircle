@@ -11,6 +11,7 @@
 #import "NJLqcHeaderView.h"
 #import "NJLqcFooterView.h"
 #import "UIImage+NJImage.h"
+#import "NJInviteFriendVC.h"
 
 @interface NJLqcVC () <UICollectionViewDataSource, UICollectionViewDelegate>
 /********* <#注释#> *********/
@@ -31,7 +32,7 @@ static NSString * const footerID = @"NJLqcFooterView";
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:NJOrangeColor] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:NJColor(255, 132, 3)] forBarMetrics:UIBarMetricsDefault];
     
 }
 
@@ -121,6 +122,10 @@ static NSString * const footerID = @"NJLqcFooterView";
     else
     {
         NJLqcFooterView * footerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerID forIndexPath:indexPath];
+        NJWeakSelf;
+        footerView.methodClick = ^(NSInteger index) {
+            [weakSelf methodClick:index];
+        };
         return footerView;
     }
 }
@@ -129,5 +134,35 @@ static NSString * const footerID = @"NJLqcFooterView";
 - (void)personBtnClick
 {
     
+}
+
+- (void)methodClick:(NSInteger)index
+{
+    switch (index) {
+        case 0://初次登录免费获得
+        {
+            
+        }
+            break;
+        case 1://邀请朋友获得2级奖励
+        {
+            NJInviteFriendVC * inviteFriendVC = [[NJInviteFriendVC alloc] init];
+            [self.navigationController pushViewController:inviteFriendVC animated:YES];
+        }
+            break;
+        case 2://绑定朋友邀请码获得
+        {
+            
+        }
+            break;
+        case 3://提交微信群或者QQ群获得
+        {
+            
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 @end
