@@ -11,6 +11,7 @@
 #import "NJUserItem.h"
 #import "UIImage+NJImage.h"
 #import <JPUSHService.h>
+#import "NSString+NJNormal.h"
 
 @interface NJLoginVC ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumTextF;
@@ -204,6 +205,13 @@
         return;
     }
     
+    if(![NSString checkPhoneNumFormatter:self.phoneNumTextF.text])
+    {
+        [SVProgressHUD showErrorWithStatus:@"请检查所填号码是否有误"];
+        [SVProgressHUD dismissWithDelay:1.5];
+        return;
+    }
+    
     [self getVeriCode];
     
 }
@@ -225,6 +233,8 @@
     
     [self userLoginRequest];
 }
+
+
     
 #pragma mark - 其他
 #pragma mark - 设置别名

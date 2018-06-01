@@ -160,4 +160,52 @@
     return distanceStr;
 }
 
+
++ (BOOL)checkPhoneNumFormatter:(NSString *)numStr
+{
+    //去掉空格
+    numStr = [numStr stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    //手机号长度
+    if(numStr.length != 11)
+    {
+        return NO;
+    }
+    
+    NSString * MOBILE = @"^1(3[0-9]|5[0-35-9]|7[06-8]|8[0-9])\\d{8}$";
+    
+    NSString * CM = @"^1(34[0-8]|(3[5-9]|5[017-9]|78|8[2-478])\\d)\\d{7}$";
+    
+    NSString * CU = @"^1(3[0-2]|5[256]|7[06]|8[56])\\d{8}$";
+    
+    NSString * CT = @"^1((33|53|77|8[019])[0-9]|349)\\d{7}$";
+    
+    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
+    
+    NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM];
+    
+    NSPredicate *regextestcu = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CU];
+    
+    NSPredicate *regextestct = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CT];
+    
+    BOOL res1 = [regextestmobile evaluateWithObject:numStr];
+    
+    BOOL res2 = [regextestcm evaluateWithObject:numStr];
+    
+    BOOL res3 = [regextestcu evaluateWithObject:numStr];
+    
+    BOOL res4 = [regextestct evaluateWithObject:numStr];
+    
+    if (res1 || res2 || res3 || res4 )
+    {
+        
+        return YES;
+        
+    }
+    else
+    {
+        return NO;
+    }
+}
+
 @end

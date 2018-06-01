@@ -81,4 +81,13 @@
  @return 距离字符串
  */
 + (NSString *)distanceChange:(CGFloat)distance;
+
+
+/**
+ 手机号格式是否正确 （正则表达式）
+
+ @param numStr 手机号
+ @return yes or no
+ */
++ (BOOL)checkPhoneNumFormatter:(NSString *)numStr;
 @end
