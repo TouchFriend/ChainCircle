@@ -10,6 +10,7 @@
 #import <MJExtension.h>
 #import "NJUserItem.h"
 #import "UIImage+NJImage.h"
+#import <JPUSHService.h>
 
 @interface NJLoginVC ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumTextF;
@@ -169,7 +170,10 @@
                 
                 [self.view endEditing:YES];
                 
+                //绑定别名
+                [self setAlias];
                 [SVProgressHUD showSuccessWithStatus:@"登录成功"];
+                
                 [SVProgressHUD dismissWithDelay:1.0 completion:^{
                     if(self.isModal)
                     {
@@ -221,4 +225,27 @@
     
     [self userLoginRequest];
 }
+    
+#pragma mark - 其他
+#pragma mark - 设置别名
+- (void)setAlias
+{
+    //设置别名
+    NJUserItem * userItem = [NJLoginTool getCurrentUser];
+    if(userItem != nil && userItem.account.length > 0)
+    {
+        NSInteger seqIndex = 123;
+        //添加别名
+        [JPUSHService setAlias:userItem.account completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
+            if(seq == seqIndex)
+            {
+                if([iAlias isEqualToString:@"0"])
+                {
+                    NSLog(@"设置别名成功");
+                }
+            }
+        } seq:seqIndex];
+    }
+}
+    
 @end

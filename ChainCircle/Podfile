@@ -1,4 +1,4 @@
-# Uncomment the next line to define a global platform for your project
+
 platform :ios, '9.0'
 
 target 'ChainCircle' do
@@ -16,12 +16,15 @@ target 'ChainCircle' do
     pod 'YYCache', '~> 1.0.4'
     pod 'SGPagingView', '~> 1.3.6'
 
+    pod 'JPush', '~> 3.0.9'
+
     pod 'mob_sharesdk', '~> 4.1.1'
     pod 'MOBFoundation', '~> 3.1.2'
     pod 'mob_sharesdk/ShareSDKUI'
     pod 'mob_sharesdk/ShareSDKPlatforms/QQ'
     pod 'mob_sharesdk/ShareSDKPlatforms/WeChat'
     pod 'mob_sharesdk/ShareSDKExtension'
+
 
 
 end
