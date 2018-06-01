@@ -62,6 +62,10 @@
 }
 
 - (IBAction)duplicateBtnClick {
+    UIPasteboard * pasteboard = [UIPasteboard generalPasteboard];
+    pasteboard.string = self.inviteCodeLabel.text;
+    [SVProgressHUD showSuccessWithStatus:@"复制成功"];
+    [SVProgressHUD dismissWithDelay:1.2];
 }
 
 @end

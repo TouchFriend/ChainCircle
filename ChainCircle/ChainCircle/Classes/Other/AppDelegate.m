@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "NJMainVC.h"
 #import <IQKeyboardManager.h>
+#import <AFNetworkReachabilityManager.h>
 
 @interface AppDelegate ()
 
@@ -36,7 +37,11 @@
     //设置键盘
     [self setupIQKeyboardManager];
     
+    //HUD
     [self setupSVProgressHUD];
+    
+    //监听网络状态
+    [self observeNetworkState];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -77,5 +82,51 @@
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
 }
 
+#pragma mark - 监听网络状态
+- (void)observeNetworkState
+{
+    AFNetworkReachabilityManager * manager = [AFNetworkReachabilityManager sharedManager];
+    //开始监听
+    [manager startMonitoring];
+    
+    
+    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusNotReachable:{
+                NSLog(@"无网络");
+                [SVProgressHUD showErrorWithStatus:@"网络错误"];
+                [SVProgressHUD dismissWithDelay:1.2];
+                break;
+            }
+                
+            case AFNetworkReachabilityStatusReachableViaWiFi:{
+                NSLog(@"WiFi网络");
+                //重发数据
+
+                break;
+                
+            }
+                
+            case AFNetworkReachabilityStatusReachableViaWWAN:{
+                NSLog(@"无线网络");
+                //重发数据
+
+                break;
+                
+            }
+                
+            default:
+            {
+                [SVProgressHUD showErrorWithStatus:@"网络错误"];
+                [SVProgressHUD dismissWithDelay:1.2];
+            }
+                break;
+                
+        }
+        
+        
+    }];
+    
+}
 
 @end

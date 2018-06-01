@@ -9,6 +9,9 @@
 #import "NJBindInviteCodeVC.h"
 
 @interface NJBindInviteCodeVC ()
+/********* <#注释#> *********/
+@property(nonatomic,weak)UITextField * inviteTextF;
+
 
 @end
 
@@ -68,7 +71,7 @@
         make.right.mas_equalTo(self.view).mas_equalTo(-15.0);
         make.height.mas_equalTo(42);
     }];
-    
+    self.inviteTextF = inviteTextF;
     inviteTextF.backgroundColor = NJGrayColor(223);
     inviteTextF.borderStyle = UITextBorderStyleRoundedRect;
     
@@ -92,10 +95,51 @@
     bindBtn.backgroundColor = NJOrangeColor;
     [bindBtn setTitle:@"绑定" forState:UIControlStateNormal];
     [bindBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [bindBtn addTarget:self action:@selector(bindBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [bindBtn addAllCornerRadius:4.0];
 }
 
 
+- (void)bindBtnClick
+{
+    if(self.inviteTextF.text.length == 0)
+    {
+        [SVProgressHUD showErrorWithStatus:@"请输入邀请码"];
+        [SVProgressHUD dismissWithDelay:1.2];
+        return;
+    }
+    
+    [self bindCodeRequest];
+}
 
+#pragma mark - 网络请求
+- (void)loadDatas
+{
+
+}
+
+- (void)bindCodeRequest
+{
+    [SVProgressHUD show];
+    [NetRequest bindFriendCodeWithInvite_code:self.inviteTextF.text completed:^(id data, int flag) {
+        [SVProgressHUD dismiss];
+        if(flag == BindeFriendCode)
+        {
+            if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
+            {
+                [SVProgressHUD showSuccessWithStatus:@"绑定成功"];
+                [SVProgressHUD dismissWithDelay:1.5];
+                
+            }
+            else
+            {
+                
+                [SVProgressHUD showErrorWithStatus:getStringInDict(data, DictionaryKeyData)];
+                [SVProgressHUD dismissWithDelay:1.5];
+            }
+        }
+        
+    }];
+}
 
 @end

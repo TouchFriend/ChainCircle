@@ -48,6 +48,13 @@ static NSString * const footerID = @"NJLqcFooterView";
     [self.navigationController.navigationBar setTitleTextAttributes:@{
                                                                       NSForegroundColorAttributeName : [UIColor whiteColor],
                                                                       }];
+    
+    if([NJLoginTool isLogin])
+    {
+        [self loadDatas];
+    }
+    
+    
 }
 
 
@@ -117,6 +124,11 @@ static NSString * const footerID = @"NJLqcFooterView";
 }
 
 #pragma mark - 网络请求
+- (void)loadDatas
+{
+    [self getMyAwardNumRequest];
+}
+
 //首次登录奖励
 - (void)firstLoginRewardRequest
 {
@@ -253,7 +265,7 @@ static NSString * const footerID = @"NJLqcFooterView";
             }
         }];
         
-        
+        return;
     }
     
     [self gotoLoginVC];
