@@ -14,4 +14,7 @@
 @property(nonatomic,copy)void (^receiveBlock)(void);
 
 @property (weak, nonatomic) IBOutlet UILabel *canReceiveNumLabel;
+
+/********* 标题数据 *********/
+@property(nonatomic,strong)NSArray<NSString *> * titleArr;
 @end

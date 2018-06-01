@@ -19,6 +19,7 @@
 #import "NJUserItem.h"
 #import "FileManager.h"
 #import <MJExtension.h>
+#import "NJScrollTitleItem.h"
 
 @interface NJLqcVC () <UICollectionViewDataSource, UICollectionViewDelegate>
 /********* <#注释#> *********/
@@ -29,6 +30,10 @@
 
 /********* <#注释#> *********/
 @property(nonatomic,weak)NJLqcHeaderView * headerView;
+
+/********* <#注释#> *********/
+@property(nonatomic,strong)NSArray<NJScrollTitleItem *> * titleArr;
+
 @end
 
 @implementation NJLqcVC
@@ -55,7 +60,6 @@ static NSString * const footerID = @"NJLqcFooterView";
         [self getMyAwardNumRequest];
     }
     
-    
 }
 
 
@@ -79,6 +83,8 @@ static NSString * const footerID = @"NJLqcFooterView";
     [self setupCollectionView];
     
     [self pwdLoginRequest];
+    
+     [self getScrollTitleDataRequest];
     
 }
 
@@ -228,8 +234,44 @@ static NSString * const footerID = @"NJLqcFooterView";
             if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
             {
                 self.headerView.canReceiveNumLabel.text = @"0";
+                
+                NJUserItem * userItem = [NJLoginTool getCurrentUser];
+                userItem.total_get = @(0);
+                
+                [NJLoginTool setCurrentUser:userItem];
+                
                 [SVProgressHUD showSuccessWithStatus:@"领取成功"];
                 [SVProgressHUD dismissWithDelay:1.5];
+            }
+            else
+            {
+                
+                [SVProgressHUD showErrorWithStatus:getStringInDict(data, DictionaryKeyData)];
+                [SVProgressHUD dismissWithDelay:1.5];
+            }
+        }
+    }];
+}
+
+//滚动标题数据
+- (void)getScrollTitleDataRequest
+{
+    [NetRequest getScrollTitleDataWithCompleted:^(id data, int flag) {
+        if(flag == GetScrollTitle)
+        {
+            if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
+            {
+                NSArray * dataArr = getArrayInDict(data, DictionaryKeyData);
+                self.titleArr = [NJScrollTitleItem mj_objectArrayWithKeyValuesArray:dataArr];
+                
+                NSMutableArray<NSString *> * titleArrM = [NSMutableArray array];
+                [self.titleArr enumerateObjectsUsingBlock:^(NJScrollTitleItem * _Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
+                    [titleArrM addObject:item.title];
+                }];
+                
+                self.headerView.titleArr = [NSArray arrayWithArray:titleArrM];
+                
+                [self.collectionView reloadData];
             }
             else
             {

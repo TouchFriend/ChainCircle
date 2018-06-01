@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2818A3F660E62775B085C3E5 /* libPods-ChainCircle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A7286E85B60157A5A8671 /* libPods-ChainCircle.a */; };
+		BF44291320C140D300B5B471 /* NJScrollTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF44291220C140D300B5B471 /* NJScrollTitleView.m */; };
+		BF44291620C1445D00B5B471 /* NJScrollTitleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF44291520C1445D00B5B471 /* NJScrollTitleItem.m */; };
 		BF854D6720BEAFE400064466 /* NJMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF854D6620BEAFE400064466 /* NJMainVC.m */; };
 		BF854D6A20BEB03E00064466 /* NJLqcVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF854D6920BEB03E00064466 /* NJLqcVC.m */; };
 		BF854D6D20BEB04F00064466 /* NJCheckGroupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF854D6C20BEB04F00064466 /* NJCheckGroupVC.m */; };
@@ -99,6 +101,10 @@
 /* Begin PBXFileReference section */
 		45C5A135D590678FB56F0E09 /* Pods-ChainCircle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainCircle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChainCircle/Pods-ChainCircle.debug.xcconfig"; sourceTree = "<group>"; };
 		492ECBA248ADE4EE495F8234 /* Pods-ChainCircle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChainCircle.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChainCircle/Pods-ChainCircle.release.xcconfig"; sourceTree = "<group>"; };
+		BF44291120C140D300B5B471 /* NJScrollTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJScrollTitleView.h; sourceTree = "<group>"; };
+		BF44291220C140D300B5B471 /* NJScrollTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJScrollTitleView.m; sourceTree = "<group>"; };
+		BF44291420C1445D00B5B471 /* NJScrollTitleItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJScrollTitleItem.h; sourceTree = "<group>"; };
+		BF44291520C1445D00B5B471 /* NJScrollTitleItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJScrollTitleItem.m; sourceTree = "<group>"; };
 		BF47E45120C0FA4B002C1747 /* ChainCircle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChainCircle.entitlements; sourceTree = "<group>"; };
 		BF68B81E20C0EDE10085FA0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		BF68B81F20C0EDE20085FA0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -437,6 +443,8 @@
 		BF9E17F220BEACA500B655EC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BF44291420C1445D00B5B471 /* NJScrollTitleItem.h */,
+				BF44291520C1445D00B5B471 /* NJScrollTitleItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -492,6 +500,8 @@
 		BF9E17FF20BEAD8100B655EC /* subClass */ = {
 			isa = PBXGroup;
 			children = (
+				BF44291120C140D300B5B471 /* NJScrollTitleView.h */,
+				BF44291220C140D300B5B471 /* NJScrollTitleView.m */,
 				BF9E180020BEAD8100B655EC /* NJVerticalButton.h */,
 				BF9E180120BEAD8100B655EC /* NJTextView.h */,
 				BF9E180220BEAD8100B655EC /* NJCenterButton.h */,
@@ -983,6 +993,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF9E18C120BEAD8200B655EC /* FileCacheTool.m in Sources */,
+				BF44291320C140D300B5B471 /* NJScrollTitleView.m in Sources */,
 				BF9E18A620BEAD8200B655EC /* UIView+NJFrame.m in Sources */,
 				BF9E17DD20BEA3C700B655EC /* main.m in Sources */,
 				BF9E188F20BEAD8200B655EC /* NJTextView.m in Sources */,
@@ -1025,6 +1036,7 @@
 				BFA7AEE320BFA0BD0029DE12 /* NJMethodCell.m in Sources */,
 				BF9E189420BEAD8200B655EC /* NJCenterButton.m in Sources */,
 				BF9E189020BEAD8200B655EC /* NJVerticalButton.m in Sources */,
+				BF44291620C1445D00B5B471 /* NJScrollTitleItem.m in Sources */,
 				BF9E188E20BEAD8200B655EC /* XLPaymentSuccessHUD.m in Sources */,
 				BFA7AEFB20BFC80A0029DE12 /* NJInviteRecordCell.m in Sources */,
 				BF9E18A820BEAD8200B655EC /* UIImage+NJImage.m in Sources */,
