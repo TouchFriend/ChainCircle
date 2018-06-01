@@ -56,7 +56,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    [NSThread sleepForTimeInterval:2.0];
+    
     [self setupInit:launchOptions];
+    
     
     return YES;
 }
@@ -170,15 +173,16 @@
             case AFNetworkReachabilityStatusReachableViaWiFi:{
                 NSLog(@"WiFi网络");
                 //重发数据
-
+                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWifiNetwork object:nil];
                 break;
                 
             }
                 
             case AFNetworkReachabilityStatusReachableViaWWAN:{
                 NSLog(@"无线网络");
+                
                 //重发数据
-
+                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationWWAN_Networkd object:nil];
                 break;
                 
             }

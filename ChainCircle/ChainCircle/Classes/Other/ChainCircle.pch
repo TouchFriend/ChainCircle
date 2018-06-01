@@ -188,6 +188,10 @@
 
 #define NotificationLocationChange @"NotificationLocationChange"
 
+//重新联网 wifi
+#define NotificationWifiNetwork @"NotificationWifiNetwork"
+//重新联网 移动网络
+#define NotificationWWAN_Networkd @"NotificationWWAN_Networkd"
 //退出登录
 #define NotificationUserLogout @"NotificationUserLogout"
 
@@ -196,6 +200,8 @@
 
 //修改了用户信息
 #define NotificationUpdateInfo @"NotificationUpdateInfo"
+
+
 
 //支付结果
 #define Notification_PayStyle  @"Notification_PayStyle"

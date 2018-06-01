@@ -60,6 +60,10 @@ static NSString * const footerID = @"NJLqcFooterView";
         [self getMyAwardNumRequest];
     }
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChange) name:NotificationWifiNetwork object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChange) name:NotificationWWAN_Networkd object:nil];
+    
 }
 
 
@@ -216,8 +220,8 @@ static NSString * const footerID = @"NJLqcFooterView";
             }
             else
             {
-                [SVProgressHUD showErrorWithStatus:getStringInDict(data, DictionaryKeyData)];
-                [SVProgressHUD dismissWithDelay:1.5];
+//                [SVProgressHUD showErrorWithStatus:getStringInDict(data, DictionaryKeyData)];
+//                [SVProgressHUD dismissWithDelay:1.5];
             }
         }
     }];
@@ -327,7 +331,7 @@ static NSString * const footerID = @"NJLqcFooterView";
     }
 }
 
-#pragma mark - 事件
+#pragma mark - 事件 && 通知
 - (void)personBtnClick
 {
     if([NJLoginTool isLogin])
@@ -410,6 +414,16 @@ static NSString * const footerID = @"NJLqcFooterView";
     [self firstLoginRewardRequest];
 }
 
+//重新联网
+- (void)networkChange
+{
+    [self pwdLoginRequest];
+    
+    [self getMyAwardNumRequest];
+    
+    [self getScrollTitleDataRequest];
+}
+
 
 #pragma mark - 懒加载
 - (NSArray *)dataArr
@@ -459,5 +473,12 @@ static NSString * const footerID = @"NJLqcFooterView";
     
     [self getMyAwardRequest];
     
+}
+
+
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end
