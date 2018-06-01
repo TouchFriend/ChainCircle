@@ -154,6 +154,30 @@
     }];
 }
 
+#pragma mark 密码登录
++ (void)userPwdLoginWithAccount:(NSString *)account pwd:(NSString *)pwd completed:(completedBlock)completed
+{
+    NSDictionary * parametersDic = @{
+                                     @"account" : account,
+                                     @"pwd" : pwd,
+                                     
+                                     };
+    
+    [[NetAPIManager sharedManager] Post:@"/user/loginByPwd" parameters:parametersDic completed:^(id data, NSError *error) {
+        if(completed != nil)
+        {
+            if(error == nil)
+            {
+                completed(data, PwdLogin);
+            }
+            else
+            {
+                completed(data, RequestError);
+            }
+        }
+    }];
+}
+
 #pragma mark - Lqc
 #pragma mark 滚动标题
 + (void)getScrollTitleDataWithCompleted:(completedBlock)completed

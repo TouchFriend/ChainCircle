@@ -11,11 +11,36 @@
 #import <IQKeyboardManager.h>
 #import <AFNetworkReachabilityManager.h>
 
+//微信
+#import <WXApi.h>
+
+
+//mob分享
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+
+//QQ
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
+/** 微信分享AppID */
+#define WeiXinAppID @"wx2cfdcda5eb394acb"
+/** 微信分享AppSecrect */
+#define WeiXinAppSecrect @"d38fa2c02e0224c0fafacbd8c1ad6e37"
+
+
+
+/** QQ分享AppID */
+#define QQAppID @"1106745570"
+/** QQ分享AppKey */
+#define QQAppKey @"EBhVIUQ8UuwBBixj"
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -39,6 +64,9 @@
     
     //HUD
     [self setupSVProgressHUD];
+    
+    //社交分享
+    [self setupSocialShare];
     
     //监听网络状态
     [self observeNetworkState];
@@ -128,5 +156,49 @@
     }];
     
 }
+
+#pragma mark - 社交分享
+- (void)setupSocialShare
+{
+    
+    [ShareSDK registerActivePlatforms:@[
+                                        @(SSDKPlatformTypeWechat),
+                                        @(SSDKPlatformTypeQQ),
+                                        ]
+                             onImport:^(SSDKPlatformType platformType)
+     {
+         switch (platformType)
+         {
+             case SSDKPlatformTypeWechat:
+                 [ShareSDKConnector connectWeChat:[WXApi class]];
+                 break;
+             case SSDKPlatformTypeQQ:
+                 [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+                 break;
+             default:
+                 break;
+         }
+     }
+                      onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
+     {
+         
+         switch (platformType)
+         {
+             case SSDKPlatformTypeWechat:
+                 [appInfo SSDKSetupWeChatByAppId:WeiXinAppID
+                                       appSecret:WeiXinAppSecrect];
+                 break;
+             case SSDKPlatformTypeQQ:
+                 [appInfo SSDKSetupQQByAppId:QQAppID
+                                      appKey:QQAppKey
+                                    authType:SSDKAuthTypeBoth];
+                 break;
+             default:
+                 break;
+         }
+         
+     }];
+}
+
 
 @end

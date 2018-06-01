@@ -18,6 +18,7 @@
 #import <MJRefresh.h>
 #import "NJUserItem.h"
 #import "FileManager.h"
+#import <MJExtension.h>
 
 @interface NJLqcVC () <UICollectionViewDataSource, UICollectionViewDelegate>
 /********* <#注释#> *********/
@@ -51,7 +52,7 @@ static NSString * const footerID = @"NJLqcFooterView";
     
     if([NJLoginTool isLogin])
     {
-        [self loadDatas];
+        [self getMyAwardNumRequest];
     }
     
     
@@ -77,7 +78,7 @@ static NSString * const footerID = @"NJLqcFooterView";
     
     [self setupCollectionView];
     
-
+    [self pwdLoginRequest];
     
 }
 
@@ -126,7 +127,42 @@ static NSString * const footerID = @"NJLqcFooterView";
 #pragma mark - 网络请求
 - (void)loadDatas
 {
-    [self getMyAwardNumRequest];
+//    [self getMyAwardNumRequest];
+//    [self pwdLoginRequest];
+}
+
+- (void)pwdLoginRequest
+{
+    
+    if(![NJLoginTool isLogin])
+    {
+        return;
+    }
+    
+    NJUserItem * userItem = [NJLoginTool getCurrentUser];
+    
+    [NetRequest userPwdLoginWithAccount:userItem.account pwd:userItem.password completed:^(id data, int flag) {
+        if(flag == PwdLogin)
+        {
+            if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
+            {
+                NSDictionary * dataDic = getDictionaryInDict(data, DictionaryKeyData);
+                NJUserItem * userItem = [NJUserItem mj_objectWithKeyValues:dataDic];
+                [NJLoginTool doLoginWithItem:userItem];
+                
+                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginSuccess object:nil];
+                
+                NJLog(@"再次登录成功");
+                
+            }
+            else
+            {
+                
+                [SVProgressHUD showErrorWithStatus:getStringInDict(data, DictionaryKeyData)];
+                [SVProgressHUD dismissWithDelay:1.5];
+            }
+        }
+    }];
 }
 
 //首次登录奖励
@@ -166,10 +202,10 @@ static NSString * const footerID = @"NJLqcFooterView";
         {
             if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
             {
-                NSNumber * num = getNumberInDict(data, DictionaryKeyCode);
-                
+                NSDictionary * dataDic = (NSDictionary *)data;
+                NSNumber * num = dataDic[@"data"];
                 NJLog(@"num:%@", num);
-                
+//
                 self.headerView.canReceiveNumLabel.text = num.stringValue;
             }
             else

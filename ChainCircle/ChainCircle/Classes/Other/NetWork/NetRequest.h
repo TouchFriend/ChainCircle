@@ -28,6 +28,7 @@ typedef enum : NSUInteger {
     VersionUpdate,//版本升级
     GetVeriCode,//获取验证码
     UserLogin,//用户登录
+    PwdLogin,//密码登录
     GetScrollTitle,//滚动标题
     GetInviteInfo,//获取邀请信息
     BindeFriendCode,//绑定朋友邀请码
@@ -119,4 +120,14 @@ typedef enum : NSUInteger {
  @param completed 回调
  */
 + (void)getMyAwardNumWithCompleted:(completedBlock)completed;
+
+
+/**
+ 密码登录
+
+ @param account 账号
+ @param pwd 密码
+ @param completed 回调
+ */
++ (void)userPwdLoginWithAccount:(NSString *)account pwd:(NSString *)pwd completed:(completedBlock)completed;
 @end

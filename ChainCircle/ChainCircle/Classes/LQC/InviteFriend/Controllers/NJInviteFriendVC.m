@@ -12,6 +12,7 @@
 #import "NJInviteRecordHeaderView.h"
 #import "NJInviteFriendTableHeaderView.h"
 #import "NJInviteCodeVC.h"
+#import "NJUserItem.h"
 
 @interface NJInviteFriendVC () <UITableViewDataSource, UITableViewDelegate>
 /********* <#注释#> *********/
@@ -137,7 +138,10 @@ static NSString * const headerID = @"NJInviteRecordHeaderView";
 #pragma mark - 事件
 - (void)shareItemClick
 {
-    
+    NJUserItem * userItem = [NJLoginTool getCurrentUser];
+    NSString * url = [@"http://lianquan.chongdx.com/wap/share.html?id=" stringByAppendingString:userItem.ID];
+
+    [self socialShareWithContent:@"加入LQC" images:@[@"side"] url:url title:@"加入LQC"];
 }
 
 - (void)myInviteBtnClick
