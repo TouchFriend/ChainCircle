@@ -205,7 +205,7 @@
         return;
     }
     
-    if(![NSString checkPhoneNumFormatter:self.phoneNumTextF.text])
+    if(self.phoneNumTextF.text.length != 11)
     {
         [SVProgressHUD showErrorWithStatus:@"请检查所填号码是否有误"];
         [SVProgressHUD dismissWithDelay:1.5];
