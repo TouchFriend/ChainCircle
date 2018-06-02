@@ -183,8 +183,9 @@
     
     index = (self.scrollView.contentOffset.y + scrollViewSize.height * 0.5) / scrollViewSize.height;
     
-    NSInteger currentIdx = MAX(0, index - 1);
-    return MAX(0, currentIdx);
+    index = MAX(0, index - 1);
+    index = MIN(index, self.dataArr.count - 3);
+    return MAX(0, index);
 }
 
 - (void)setTitleArr:(NSArray<NSString *> *)titleArr

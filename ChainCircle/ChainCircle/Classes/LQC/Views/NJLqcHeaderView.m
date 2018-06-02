@@ -76,7 +76,7 @@
 #pragma mark - NJScrollTitleViewDelegate方法
 - (void)scrollTitleView:(NJScrollTitleView *)scrollTitleView didSelectItemAtIndex:(NSInteger)index
 {
-//    NSLog(@"%s--%ld", __func__, index);
+    NSLog(@"%s--%ld", __func__, index);
 }
 
 - (void)scrollTitleView:(NJScrollTitleView *)scrollTitleView didScrollToIndex:(NSInteger)index
