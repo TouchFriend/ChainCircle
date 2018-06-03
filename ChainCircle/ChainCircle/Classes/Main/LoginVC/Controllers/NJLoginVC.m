@@ -136,9 +136,10 @@
 //获取验证码
 - (void)getVeriCode
 {
-    
+    [SVProgressHUD show];
     
     [NetRequest getVeriCodeWithMobile:self.phoneNumTextF.text completed:^(id data, int flag) {
+        [SVProgressHUD dismiss];
         if(flag == GetVeriCode)
         {
             if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
@@ -158,7 +159,9 @@
 
 - (void)userLoginRequest
 {
+    [SVProgressHUD show];
     [NetRequest userLoginWithAccount:self.phoneNumTextF.text code:self.verificationCodeTextF.text completed:^(id data, int flag) {
+        [SVProgressHUD dismiss];
         if(flag == UserLogin)
         {
             if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
