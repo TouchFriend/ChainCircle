@@ -13,6 +13,7 @@
 #import "NJInviteFriendTableHeaderView.h"
 #import "NJInviteCodeVC.h"
 #import "NJUserItem.h"
+#import "NJInviteCodeListVC.h"
 
 @interface NJInviteFriendVC () <UITableViewDataSource, UITableViewDelegate>
 /********* <#注释#> *********/
@@ -146,8 +147,11 @@ static NSString * const headerID = @"NJInviteRecordHeaderView";
 
 - (void)myInviteBtnClick
 {
-    NJInviteCodeVC * inviteCodeVC = [[NJInviteCodeVC alloc] init];
-    [self.navigationController pushViewController:inviteCodeVC animated:YES];
+//    NJInviteCodeVC * inviteCodeVC = [[NJInviteCodeVC alloc] init];
+//    [self.navigationController pushViewController:inviteCodeVC animated:YES];
+    NJInviteCodeListVC * inviteCodeListVC = [[NJInviteCodeListVC alloc] init];
+    [self.navigationController pushViewController:inviteCodeListVC animated:YES];
+    
 }
 
 #pragma mark - 懒加载

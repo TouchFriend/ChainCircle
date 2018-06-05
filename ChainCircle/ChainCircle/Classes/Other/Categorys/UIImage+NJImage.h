@@ -19,4 +19,13 @@
 
 //根据颜色生成图片
 + (UIImage *)imageWithColor:(UIColor *)color;
+
+
+/**
+ 长截图
+
+ @param scrollView 继承scrollView
+ @return 长截图
+ */
++ (UIImage *)longPic:(UIScrollView *)scrollView;
 @end

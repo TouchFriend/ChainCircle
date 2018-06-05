@@ -15,6 +15,12 @@
 		BF737A6920C6385B0095F3DF /* NJDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF737A6720C6385B0095F3DF /* NJDetailCell.xib */; };
 		BF737A7020C658C40095F3DF /* NJPosterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A6F20C658C40095F3DF /* NJPosterVC.m */; };
 		BF737A7320C665500095F3DF /* NJDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A7220C665500095F3DF /* NJDetailItem.m */; };
+		BF737A7620C66E530095F3DF /* NJInviteCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A7520C66E530095F3DF /* NJInviteCardView.m */; };
+		BF737A7820C66E5A0095F3DF /* NJInviteCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF737A7720C66E5A0095F3DF /* NJInviteCardView.xib */; };
+		BF737A7B20C674090095F3DF /* NJPosterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A7A20C674090095F3DF /* NJPosterView.m */; };
+		BF737A7E20C67A5F0095F3DF /* NJInviteCodeListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A7D20C67A5F0095F3DF /* NJInviteCodeListVC.m */; };
+		BF737A8120C67E7D0095F3DF /* NJInviteCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A8020C67E7D0095F3DF /* NJInviteCardCell.m */; };
+		BF737A8420C682310095F3DF /* NJPosterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A8320C682310095F3DF /* NJPosterItem.m */; };
 		BF79E83120C6267E002834B7 /* NJLqcDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF79E83020C6267E002834B7 /* NJLqcDetailVC.m */; };
 		BF854D6720BEAFE400064466 /* NJMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF854D6620BEAFE400064466 /* NJMainVC.m */; };
 		BF854D6A20BEB03E00064466 /* NJLqcVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF854D6920BEB03E00064466 /* NJLqcVC.m */; };
@@ -123,6 +129,17 @@
 		BF737A6F20C658C40095F3DF /* NJPosterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJPosterVC.m; sourceTree = "<group>"; };
 		BF737A7120C665500095F3DF /* NJDetailItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJDetailItem.h; sourceTree = "<group>"; };
 		BF737A7220C665500095F3DF /* NJDetailItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJDetailItem.m; sourceTree = "<group>"; };
+		BF737A7420C66E530095F3DF /* NJInviteCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJInviteCardView.h; sourceTree = "<group>"; };
+		BF737A7520C66E530095F3DF /* NJInviteCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJInviteCardView.m; sourceTree = "<group>"; };
+		BF737A7720C66E5A0095F3DF /* NJInviteCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJInviteCardView.xib; sourceTree = "<group>"; };
+		BF737A7920C674090095F3DF /* NJPosterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJPosterView.h; sourceTree = "<group>"; };
+		BF737A7A20C674090095F3DF /* NJPosterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJPosterView.m; sourceTree = "<group>"; };
+		BF737A7C20C67A5F0095F3DF /* NJInviteCodeListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJInviteCodeListVC.h; sourceTree = "<group>"; };
+		BF737A7D20C67A5F0095F3DF /* NJInviteCodeListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJInviteCodeListVC.m; sourceTree = "<group>"; };
+		BF737A7F20C67E7D0095F3DF /* NJInviteCardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJInviteCardCell.h; sourceTree = "<group>"; };
+		BF737A8020C67E7D0095F3DF /* NJInviteCardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJInviteCardCell.m; sourceTree = "<group>"; };
+		BF737A8220C682310095F3DF /* NJPosterItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJPosterItem.h; sourceTree = "<group>"; };
+		BF737A8320C682310095F3DF /* NJPosterItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJPosterItem.m; sourceTree = "<group>"; };
 		BF79E82F20C6267E002834B7 /* NJLqcDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLqcDetailVC.h; sourceTree = "<group>"; };
 		BF79E83020C6267E002834B7 /* NJLqcDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLqcDetailVC.m; sourceTree = "<group>"; };
 		BF854D6520BEAFE400064466 /* NJMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJMainVC.h; sourceTree = "<group>"; };
@@ -348,6 +365,11 @@
 		BF737A6D20C658B50095F3DF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF737A7420C66E530095F3DF /* NJInviteCardView.h */,
+				BF737A7520C66E530095F3DF /* NJInviteCardView.m */,
+				BF737A7720C66E5A0095F3DF /* NJInviteCardView.xib */,
+				BF737A7920C674090095F3DF /* NJPosterView.h */,
+				BF737A7A20C674090095F3DF /* NJPosterView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -865,6 +887,8 @@
 		BFA7AEF220BFC2320029DE12 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BF737A8220C682310095F3DF /* NJPosterItem.h */,
+				BF737A8320C682310095F3DF /* NJPosterItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -877,6 +901,8 @@
 				BFA7AF1120C022620029DE12 /* NJInviteCodeVC.h */,
 				BFA7AF1220C022620029DE12 /* NJInviteCodeVC.m */,
 				BFA7AF1320C022620029DE12 /* NJInviteCodeVC.xib */,
+				BF737A7C20C67A5F0095F3DF /* NJInviteCodeListVC.h */,
+				BF737A7D20C67A5F0095F3DF /* NJInviteCodeListVC.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -893,6 +919,8 @@
 				BFA7AF0220BFCE450029DE12 /* NJInviteFriendTableHeaderView.h */,
 				BFA7AF0320BFCE450029DE12 /* NJInviteFriendTableHeaderView.m */,
 				BFA7AF0520BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib */,
+				BF737A7F20C67E7D0095F3DF /* NJInviteCardCell.h */,
+				BF737A8020C67E7D0095F3DF /* NJInviteCardCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -997,6 +1025,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFA7AEEE20BFA4B20029DE12 /* NJMethodFooterView.xib in Resources */,
+				BF737A7820C66E5A0095F3DF /* NJInviteCardView.xib in Resources */,
 				BFA7AEFC20BFC80A0029DE12 /* NJInviteRecordCell.xib in Resources */,
 				BF9E18D120BEAE7000B655EC /* NJLoginVC.xib in Resources */,
 				BFA7AED520BF94C90029DE12 /* NJLqcCell.xib in Resources */,
@@ -1094,6 +1123,7 @@
 				BFA7AEEC20BFA4AA0029DE12 /* NJMethodFooterView.m in Sources */,
 				BF9E18BF20BEAD8200B655EC /* NJLoginTool.m in Sources */,
 				BF9E18AB20BEAD8200B655EC /* UITextField+NJPlaceHolder.m in Sources */,
+				BF737A7620C66E530095F3DF /* NJInviteCardView.m in Sources */,
 				BFA7AEF720BFC2520029DE12 /* NJInviteFriendVC.m in Sources */,
 				BF9E18AC20BEAD8200B655EC /* UIView+NJCommon.m in Sources */,
 				BF9E188B20BEAD8200B655EC /* NJSearchController.m in Sources */,
@@ -1109,6 +1139,7 @@
 				BF9E18A320BEAD8200B655EC /* NJNavigationBar.m in Sources */,
 				BF9E188620BEAD8200B655EC /* NetRequest.m in Sources */,
 				BF9E188520BEAD8200B655EC /* FoundationTools.m in Sources */,
+				BF737A8420C682310095F3DF /* NJPosterItem.m in Sources */,
 				BFA7AF1420C022620029DE12 /* NJInviteCodeVC.m in Sources */,
 				BF854D6720BEAFE400064466 /* NJMainVC.m in Sources */,
 				BFA7AF0D20BFECBC0029DE12 /* NJBindInviteCodeVC.m in Sources */,
@@ -1141,6 +1172,7 @@
 				BF9E18BD20BEAD8200B655EC /* NJPayTool.m in Sources */,
 				BF9E189720BEAD8200B655EC /* NJPwdTextField.m in Sources */,
 				BF9E18A720BEAD8200B655EC /* UIImageView+NJDownload.m in Sources */,
+				BF737A8120C67E7D0095F3DF /* NJInviteCardCell.m in Sources */,
 				BF9E18A520BEAD8200B655EC /* NSString+LSCore.m in Sources */,
 				BF9E18B020BEAD8200B655EC /* DesNetUtil.m in Sources */,
 				BF9E18AF20BEAD8200B655EC /* NJGlobalConst.m in Sources */,
@@ -1150,6 +1182,8 @@
 				BF9E18B320BEAD8200B655EC /* LBXScanPermissions.m in Sources */,
 				BF9E188420BEAD8200B655EC /* NJEnumSet.m in Sources */,
 				BF9E189520BEAD8200B655EC /* NJProductDetailHeader.m in Sources */,
+				BF737A7E20C67A5F0095F3DF /* NJInviteCodeListVC.m in Sources */,
+				BF737A7B20C674090095F3DF /* NJPosterView.m in Sources */,
 				BF79E83120C6267E002834B7 /* NJLqcDetailVC.m in Sources */,
 				BF9E188820BEAD8200B655EC /* NJNavigationController.m in Sources */,
 				BF9E188A20BEAD8200B655EC /* NJTableViewController.m in Sources */,

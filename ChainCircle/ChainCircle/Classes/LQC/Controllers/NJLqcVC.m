@@ -22,6 +22,7 @@
 #import "NJScrollTitleItem.h"
 #import "NJLqcDetailVC.h"
 #import "NJPosterVC.h"
+#import "NJInviteCodeListVC.h"
 
 @interface NJLqcVC () <UICollectionViewDataSource, UICollectionViewDelegate>
 /********* <#注释#> *********/
@@ -424,8 +425,9 @@ static NSString * const footerID = @"NJLqcFooterView";
             break;
         case 1://邀请朋友获得2级奖励
         {
-            NJInviteFriendVC * inviteFriendVC = [[NJInviteFriendVC alloc] init];
-            [self.navigationController pushViewController:inviteFriendVC animated:YES];
+            NJInviteCodeListVC * inviteCodeListVC = [[NJInviteCodeListVC alloc] init];
+//            NJInviteFriendVC * inviteFriendVC = [[NJInviteFriendVC alloc] init];
+            [self.navigationController pushViewController:inviteCodeListVC animated:YES];
         }
             break;
         case 2://绑定朋友邀请码获得
