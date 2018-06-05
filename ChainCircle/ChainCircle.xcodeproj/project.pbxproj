@@ -21,6 +21,7 @@
 		BF737A7E20C67A5F0095F3DF /* NJInviteCodeListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A7D20C67A5F0095F3DF /* NJInviteCodeListVC.m */; };
 		BF737A8120C67E7D0095F3DF /* NJInviteCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A8020C67E7D0095F3DF /* NJInviteCardCell.m */; };
 		BF737A8420C682310095F3DF /* NJPosterItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A8320C682310095F3DF /* NJPosterItem.m */; };
+		BF737A8B20C697530095F3DF /* NJMyPosterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A8A20C697530095F3DF /* NJMyPosterVC.m */; };
 		BF79E83120C6267E002834B7 /* NJLqcDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF79E83020C6267E002834B7 /* NJLqcDetailVC.m */; };
 		BF854D6720BEAFE400064466 /* NJMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF854D6620BEAFE400064466 /* NJMainVC.m */; };
 		BF854D6A20BEB03E00064466 /* NJLqcVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF854D6920BEB03E00064466 /* NJLqcVC.m */; };
@@ -140,6 +141,8 @@
 		BF737A8020C67E7D0095F3DF /* NJInviteCardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJInviteCardCell.m; sourceTree = "<group>"; };
 		BF737A8220C682310095F3DF /* NJPosterItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJPosterItem.h; sourceTree = "<group>"; };
 		BF737A8320C682310095F3DF /* NJPosterItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJPosterItem.m; sourceTree = "<group>"; };
+		BF737A8920C697530095F3DF /* NJMyPosterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJMyPosterVC.h; sourceTree = "<group>"; };
+		BF737A8A20C697530095F3DF /* NJMyPosterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJMyPosterVC.m; sourceTree = "<group>"; };
 		BF79E82F20C6267E002834B7 /* NJLqcDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLqcDetailVC.h; sourceTree = "<group>"; };
 		BF79E83020C6267E002834B7 /* NJLqcDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLqcDetailVC.m; sourceTree = "<group>"; };
 		BF854D6520BEAFE400064466 /* NJMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJMainVC.h; sourceTree = "<group>"; };
@@ -374,6 +377,39 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BF737A8520C697410095F3DF /* myPoster */ = {
+			isa = PBXGroup;
+			children = (
+				BF737A8720C697410095F3DF /* Controllers */,
+				BF737A8620C697410095F3DF /* Models */,
+				BF737A8820C697410095F3DF /* Views */,
+			);
+			path = myPoster;
+			sourceTree = "<group>";
+		};
+		BF737A8620C697410095F3DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF737A8720C697410095F3DF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF737A8920C697530095F3DF /* NJMyPosterVC.h */,
+				BF737A8A20C697530095F3DF /* NJMyPosterVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF737A8820C697410095F3DF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BF79E82B20C6266F002834B7 /* LqcDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,6 +579,7 @@
 		BF9E17F120BEACA500B655EC /* LQC */ = {
 			isa = PBXGroup;
 			children = (
+				BF737A8520C697410095F3DF /* myPoster */,
 				BF737A6A20C658B50095F3DF /* Poster */,
 				BF79E82B20C6266F002834B7 /* LqcDetail */,
 				BFA7AF0720BFEC960029DE12 /* BindInviteCode */,
@@ -1119,6 +1156,7 @@
 				BF9E18A620BEAD8200B655EC /* UIView+NJFrame.m in Sources */,
 				BF9E17DD20BEA3C700B655EC /* main.m in Sources */,
 				BF737A7320C665500095F3DF /* NJDetailItem.m in Sources */,
+				BF737A8B20C697530095F3DF /* NJMyPosterVC.m in Sources */,
 				BF9E188F20BEAD8200B655EC /* NJTextView.m in Sources */,
 				BFA7AEEC20BFA4AA0029DE12 /* NJMethodFooterView.m in Sources */,
 				BF9E18BF20BEAD8200B655EC /* NJLoginTool.m in Sources */,

@@ -23,6 +23,7 @@
 #import "NJLqcDetailVC.h"
 #import "NJPosterVC.h"
 #import "NJInviteCodeListVC.h"
+#import "NJMyPosterVC.h"
 
 @interface NJLqcVC () <UICollectionViewDataSource, UICollectionViewDelegate>
 /********* <#注释#> *********/
@@ -555,14 +556,11 @@ static NSString * const footerID = @"NJLqcFooterView";
         return;
     }
     
-    NJPosterVC * posterVC = [[NJPosterVC alloc] init];
-    [self.navigationController pushViewController:posterVC animated:YES];
+    NJMyPosterVC * myPosterVC = [[NJMyPosterVC alloc] init];
+    [self.navigationController pushViewController:myPosterVC animated:YES];
 }
 
 #pragma mark - 其他
-
-
-
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
