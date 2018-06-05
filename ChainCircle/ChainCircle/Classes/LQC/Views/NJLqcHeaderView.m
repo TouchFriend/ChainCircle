@@ -21,6 +21,7 @@
 
 /********* <#注释#> *********/
 @property(nonatomic,weak)NJScrollTitleView * scrollTitleView;
+- (IBAction)postBtnClick;
 
 @end
 @implementation NJLqcHeaderView
@@ -100,5 +101,11 @@
 {
     
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (IBAction)postBtnClick {
+    if(self.posterBlock != nil)
+    {
+        self.posterBlock();
+    }
 }
 @end

@@ -13,6 +13,8 @@
 		BF737A6420C631870095F3DF /* NJDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A6320C631870095F3DF /* NJDetailVC.m */; };
 		BF737A6820C6385B0095F3DF /* NJDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A6620C6385B0095F3DF /* NJDetailCell.m */; };
 		BF737A6920C6385B0095F3DF /* NJDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF737A6720C6385B0095F3DF /* NJDetailCell.xib */; };
+		BF737A7020C658C40095F3DF /* NJPosterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A6F20C658C40095F3DF /* NJPosterVC.m */; };
+		BF737A7320C665500095F3DF /* NJDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A7220C665500095F3DF /* NJDetailItem.m */; };
 		BF79E83120C6267E002834B7 /* NJLqcDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF79E83020C6267E002834B7 /* NJLqcDetailVC.m */; };
 		BF854D6720BEAFE400064466 /* NJMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF854D6620BEAFE400064466 /* NJMainVC.m */; };
 		BF854D6A20BEB03E00064466 /* NJLqcVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF854D6920BEB03E00064466 /* NJLqcVC.m */; };
@@ -117,6 +119,10 @@
 		BF737A6520C6385B0095F3DF /* NJDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJDetailCell.h; sourceTree = "<group>"; };
 		BF737A6620C6385B0095F3DF /* NJDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJDetailCell.m; sourceTree = "<group>"; };
 		BF737A6720C6385B0095F3DF /* NJDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJDetailCell.xib; sourceTree = "<group>"; };
+		BF737A6E20C658C40095F3DF /* NJPosterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJPosterVC.h; sourceTree = "<group>"; };
+		BF737A6F20C658C40095F3DF /* NJPosterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJPosterVC.m; sourceTree = "<group>"; };
+		BF737A7120C665500095F3DF /* NJDetailItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJDetailItem.h; sourceTree = "<group>"; };
+		BF737A7220C665500095F3DF /* NJDetailItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJDetailItem.m; sourceTree = "<group>"; };
 		BF79E82F20C6267E002834B7 /* NJLqcDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJLqcDetailVC.h; sourceTree = "<group>"; };
 		BF79E83020C6267E002834B7 /* NJLqcDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJLqcDetailVC.m; sourceTree = "<group>"; };
 		BF854D6520BEAFE400064466 /* NJMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJMainVC.h; sourceTree = "<group>"; };
@@ -313,6 +319,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BF737A6A20C658B50095F3DF /* Poster */ = {
+			isa = PBXGroup;
+			children = (
+				BF737A6C20C658B50095F3DF /* Controllers */,
+				BF737A6B20C658B50095F3DF /* Models */,
+				BF737A6D20C658B50095F3DF /* Views */,
+			);
+			path = Poster;
+			sourceTree = "<group>";
+		};
+		BF737A6B20C658B50095F3DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF737A6C20C658B50095F3DF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF737A6E20C658C40095F3DF /* NJPosterVC.h */,
+				BF737A6F20C658C40095F3DF /* NJPosterVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BF737A6D20C658B50095F3DF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BF79E82B20C6266F002834B7 /* LqcDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +365,8 @@
 		BF79E82C20C6266F002834B7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BF737A7120C665500095F3DF /* NJDetailItem.h */,
+				BF737A7220C665500095F3DF /* NJDetailItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -480,6 +521,7 @@
 		BF9E17F120BEACA500B655EC /* LQC */ = {
 			isa = PBXGroup;
 			children = (
+				BF737A6A20C658B50095F3DF /* Poster */,
 				BF79E82B20C6266F002834B7 /* LqcDetail */,
 				BFA7AF0720BFEC960029DE12 /* BindInviteCode */,
 				BFA7AEF120BFC2320029DE12 /* InviteFriend */,
@@ -1047,6 +1089,7 @@
 				BF44291320C140D300B5B471 /* NJScrollTitleView.m in Sources */,
 				BF9E18A620BEAD8200B655EC /* UIView+NJFrame.m in Sources */,
 				BF9E17DD20BEA3C700B655EC /* main.m in Sources */,
+				BF737A7320C665500095F3DF /* NJDetailItem.m in Sources */,
 				BF9E188F20BEAD8200B655EC /* NJTextView.m in Sources */,
 				BFA7AEEC20BFA4AA0029DE12 /* NJMethodFooterView.m in Sources */,
 				BF9E18BF20BEAD8200B655EC /* NJLoginTool.m in Sources */,
@@ -1120,6 +1163,7 @@
 				BF9E189120BEAD8200B655EC /* NJHorizontalFlowLayout.m in Sources */,
 				BF9E18B220BEAD8200B655EC /* GTMBase64.m in Sources */,
 				BF9E18BB20BEAD8200B655EC /* NJTimerTool.m in Sources */,
+				BF737A7020C658C40095F3DF /* NJPosterVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

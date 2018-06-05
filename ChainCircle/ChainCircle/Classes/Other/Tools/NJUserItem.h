@@ -71,6 +71,8 @@
 /********* token时间 *********/
 @property(nonatomic,copy)NSString * token_time;
 
+/********* 是否签到 *********/
+@property(nonatomic,strong)NSNumber * is_sign;
 
 
 ///********* 授权类型 *********/

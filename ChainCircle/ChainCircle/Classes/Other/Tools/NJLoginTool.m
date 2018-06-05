@@ -64,20 +64,18 @@
     [userDefaults setBool:NO forKey:NJUserDefaultLoginStatus];
     
     //用户数据
-    NJUserItem * item = [[NJUserItem alloc]init];
-    NSData * userData = [NSKeyedArchiver archivedDataWithRootObject:item];
-    if(userData != nil)
-    {
-        [userDefaults setObject:userData forKey:NJUserDefaultLoginUserData];
-    }
+    [userDefaults removeObjectForKey:NJUserDefaultLoginUserData];
     //用户ID
-    [userDefaults setValue:@"" forKey:NJUserDefaultLoginUserID];
+    [userDefaults removeObjectForKey:NJUserDefaultLoginUserID];
+//    [userDefaults setValue:@"" forKey:NJUserDefaultLoginUserID];
     
     //用户token
-    [userDefaults setValue:@"" forKey:NJUserDefaultLoginUserToken];
+//    [userDefaults setValue:@"" forKey:NJUserDefaultLoginUserToken];
+    [userDefaults removeObjectForKey:NJUserDefaultLoginUserToken];
     
     //用户类型
-    [userDefaults setValue:@"" forKey:NJUserDefaultLoginUserType];
+//    [userDefaults setValue:@"" forKey:NJUserDefaultLoginUserType];
+    [userDefaults removeObjectForKey:NJUserDefaultLoginUserType];
     
     //同步
     [userDefaults synchronize];
@@ -93,10 +91,7 @@
     {
         item = (NJUserItem *)[NSKeyedUnarchiver unarchiveObjectWithData:userData];
     }
-    else
-    {
-        item = [[NJUserItem alloc]init];
-    }
+
     return item;
 }
 

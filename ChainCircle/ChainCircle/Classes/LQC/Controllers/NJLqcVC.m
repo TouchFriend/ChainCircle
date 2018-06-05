@@ -21,6 +21,7 @@
 #import <MJExtension.h>
 #import "NJScrollTitleItem.h"
 #import "NJLqcDetailVC.h"
+#import "NJPosterVC.h"
 
 @interface NJLqcVC () <UICollectionViewDataSource, UICollectionViewDelegate>
 /********* <#注释#> *********/
@@ -297,6 +298,33 @@ static NSString * const footerID = @"NJLqcFooterView";
     }];
 }
 
+- (void)signInRequest
+{
+    [SVProgressHUD show];
+    [NetRequest signInWithCompleted:^(id data, int flag) {
+        [SVProgressHUD dismiss];
+        if(flag == SignIn)
+        {
+            if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
+            {
+                NJUserItem * userItem = [NJLoginTool getCurrentUser];
+                userItem.is_sign = @(1);
+                
+                [NJLoginTool setCurrentUser:userItem];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"NotificationSignInSuccess" object:nil];
+                [SVProgressHUD showSuccessWithStatus:@"签到成功"];
+                [SVProgressHUD dismissWithDelay:1.2];
+            }
+            else
+            {
+                
+                [SVProgressHUD showErrorWithStatus:getStringInDict(data, DictionaryKeyData)];
+                [SVProgressHUD dismissWithDelay:1.5];
+            }
+        }
+    }];
+}
+
 #pragma mark - UICollectionViewDataSource方法
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -328,6 +356,9 @@ static NSString * const footerID = @"NJLqcFooterView";
         headerView.receiveBlock = ^{
             [weakSelf receiveBtnClick];
         };
+        headerView.posterBlock = ^{
+            [weakSelf posterBtnClick];
+        };
         return headerView;
     }
     else
@@ -336,6 +367,9 @@ static NSString * const footerID = @"NJLqcFooterView";
         NJWeakSelf;
         footerView.methodClick = ^(NSInteger index) {
             [weakSelf methodClick:index];
+        };
+        footerView.signInBlock = ^{
+            [weakSelf signInBtnClick];
         };
         return footerView;
     }
@@ -385,7 +419,7 @@ static NSString * const footerID = @"NJLqcFooterView";
     switch (index) {
         case 0://初次登录免费获得
         {
-            [self getAward];
+//            [self getAward];
         }
             break;
         case 1://邀请朋友获得2级奖励
@@ -448,6 +482,18 @@ static NSString * const footerID = @"NJLqcFooterView";
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 
+//签到
+- (void)signInBtnClick
+{
+    if(![NJLoginTool isLogin])
+    {
+        NJLoginVC * loginVC = [[NJLoginVC alloc] init];
+        [self.navigationController pushViewController:loginVC animated:YES];
+        return;
+    }
+    
+    [self signInRequest];
+}
 
 
 #pragma mark - 懒加载
@@ -485,8 +531,7 @@ static NSString * const footerID = @"NJLqcFooterView";
     return _dataArr;
 }
 
-
-#pragma mark - 其他
+#pragma mark - 事件
 - (void)receiveBtnClick
 {
     if(![NJLoginTool isLogin])
@@ -499,6 +544,20 @@ static NSString * const footerID = @"NJLqcFooterView";
     [self getMyAwardRequest];
     
 }
+- (void)posterBtnClick
+{
+    if(![NJLoginTool isLogin])
+    {
+        NJLoginVC * loginVC = [[NJLoginVC alloc] init];
+        [self.navigationController pushViewController:loginVC animated:YES];
+        return;
+    }
+    
+    NJPosterVC * posterVC = [[NJPosterVC alloc] init];
+    [self.navigationController pushViewController:posterVC animated:YES];
+}
+
+#pragma mark - 其他
 
 
 

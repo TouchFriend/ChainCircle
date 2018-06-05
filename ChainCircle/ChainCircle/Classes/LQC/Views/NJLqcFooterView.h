@@ -12,4 +12,6 @@
 /********* <#注释#> *********/
 @property(nonatomic,copy)void (^methodClick)(NSInteger index);
 
+/********* <#注释#> *********/
+@property(nonatomic,copy)void (^signInBlock)(void);
 @end

@@ -10,13 +10,14 @@
 #import "NJMethodCell.h"
 #import "NJMethodHeaderView.h"
 #import "NJMethodFooterView.h"
+#import "NJUserItem.h"
 
 @interface NJLqcFooterView () <UITableViewDataSource, UITableViewDelegate>
 /********* <#注释#> *********/
 @property(nonatomic,weak)UITableView * tableView;
 
 /********* <#注释#> *********/
-@property(nonatomic,strong)NSArray<NSString *> * dataArr;
+@property(nonatomic,strong)NSArray<NSDictionary *> * dataArr;
 
 @end
 @implementation NJLqcFooterView
@@ -29,7 +30,7 @@ static NSString * const footerID = @"NJMethodFooterView";
     if(self = [super initWithFrame:frame])
     {
         [self setupInit];
-        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(signInSuccess) name:@"NotificationSignInSuccess" object:nil];
     }
     return self;
 }
@@ -64,8 +65,12 @@ static NSString * const footerID = @"NJMethodFooterView";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NJMethodCell * cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
-    NSString * titleStr = self.dataArr[indexPath.row];
-    cell.titleStr = titleStr;
+    NSDictionary * dataDic = self.dataArr[indexPath.row];
+    cell.dataDic = dataDic;
+    if(self.signInBlock != nil)
+    {
+        cell.signInBlock = self.signInBlock;
+    }
     return cell;
 }
 
@@ -102,17 +107,54 @@ static NSString * const footerID = @"NJMethodFooterView";
 }
 
 #pragma mark - 懒加载
-- (NSArray<NSString *> *)dataArr
+- (NSArray<NSDictionary *> *)dataArr
 {
     if(_dataArr == nil)
     {
+        NJUserItem * userItem = [NJLoginTool getCurrentUser];
+        NSNumber * siSign = @(0);
+        if(userItem != nil)
+        {
+            siSign = userItem.is_sign;
+        }
         _dataArr = @[
-                     @"初次登录免费获得",
-                     @"邀请朋友获得2级奖励",
-                     @"绑定朋友邀请码获得",
-                     @"提交微信群或者QQ群获得"
+                     @{
+                         @"title" : @"每日签到获得1-5LQC",
+                         @"isBtn" : @(YES),
+                         @"isSign" : siSign
+                         },
+                     @{
+                         @"title" : @"邀请朋友获得2级奖励",
+                         @"isBtn" : @(NO)
+                         },
+                     @{
+                         @"title" : @"绑定朋友邀请码获得",
+                         @"isBtn" : @(NO)
+                         },
+                     @{
+                         @"title" : @"提交微信群或者QQ群获得",
+                         @"isBtn" : @(NO)
+                         }
+                     
+                     
                      ];
     }
     return _dataArr;
+}
+
+
+#pragma mark - 事件和通知
+- (void)signInSuccess
+{
+    self.dataArr = nil;
+    
+    [self.tableView reloadData];
+}
+#pragma mark - 其他
+
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end

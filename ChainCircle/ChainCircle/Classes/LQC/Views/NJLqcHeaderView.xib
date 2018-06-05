@@ -30,7 +30,7 @@
                             <rect key="frame" x="0.0" y="33" width="375" height="168"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的LQC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUp-8p-XL6">
-                                    <rect key="frame" x="0.0" y="30" width="375" height="17"/>
+                                    <rect key="frame" x="159.5" y="30" width="56.5" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -50,18 +50,30 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvu-98-zIU">
+                                    <rect key="frame" x="222" y="23" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="sqN-UQ-GYj"/>
+                                        <constraint firstAttribute="width" constant="30" id="szd-Tl-eUL"/>
+                                    </constraints>
+                                    <state key="normal" image="icon_prompt"/>
+                                    <connections>
+                                        <action selector="postBtnClick" destination="U6b-Vx-4bR" eventType="touchUpInside" id="Q3j-qS-yfQ"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.99215686270000003" green="0.43529411759999997" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="eHO-Mf-dgl" secondAttribute="trailing" id="9uf-a9-yvP"/>
                                 <constraint firstItem="eHO-Mf-dgl" firstAttribute="top" secondItem="jUp-8p-XL6" secondAttribute="bottom" id="EDl-q8-g9Z"/>
                                 <constraint firstItem="eHO-Mf-dgl" firstAttribute="leading" secondItem="FOL-t7-UBx" secondAttribute="leading" id="HqA-YO-Mpf"/>
-                                <constraint firstAttribute="trailing" secondItem="jUp-8p-XL6" secondAttribute="trailing" id="S0N-DF-oSo"/>
                                 <constraint firstAttribute="trailing" secondItem="GaU-ZD-t93" secondAttribute="trailing" id="X2y-fJ-7Qp"/>
+                                <constraint firstItem="Fvu-98-zIU" firstAttribute="centerY" secondItem="jUp-8p-XL6" secondAttribute="centerY" id="awX-XG-McL"/>
                                 <constraint firstItem="GaU-ZD-t93" firstAttribute="leading" secondItem="FOL-t7-UBx" secondAttribute="leading" id="d1h-9J-JL5"/>
+                                <constraint firstItem="Fvu-98-zIU" firstAttribute="leading" secondItem="jUp-8p-XL6" secondAttribute="trailing" constant="6" id="nxZ-Fa-dTR"/>
+                                <constraint firstItem="jUp-8p-XL6" firstAttribute="centerX" secondItem="FOL-t7-UBx" secondAttribute="centerX" id="qhk-qF-HWk"/>
                                 <constraint firstItem="jUp-8p-XL6" firstAttribute="top" secondItem="FOL-t7-UBx" secondAttribute="top" constant="30" id="r7P-69-0dl"/>
                                 <constraint firstItem="GaU-ZD-t93" firstAttribute="top" secondItem="eHO-Mf-dgl" secondAttribute="bottom" constant="10" id="tg6-CQ-M5s"/>
-                                <constraint firstItem="jUp-8p-XL6" firstAttribute="leading" secondItem="FOL-t7-UBx" secondAttribute="leading" id="yNk-E2-S63"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -157,4 +169,7 @@
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </collectionReusableView>
     </objects>
+    <resources>
+        <image name="icon_prompt" width="22" height="22"/>
+    </resources>
 </document>

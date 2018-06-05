@@ -17,4 +17,8 @@
 
 /********* 标题数据 *********/
 @property(nonatomic,strong)NSArray<NSString *> * titleArr;
+
+/********* <#注释#> *********/
+@property(nonatomic,copy)void (^posterBlock)(void);
+
 @end

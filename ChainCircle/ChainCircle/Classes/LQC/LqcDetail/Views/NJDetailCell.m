@@ -7,7 +7,13 @@
 //
 
 #import "NJDetailCell.h"
+#import "NJDetailItem.h"
+@interface NJDetailCell ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numLabel;
 
+@end
 @implementation NJDetailCell
 
 - (void)awakeFromNib {
@@ -27,5 +33,17 @@
 {
     frame.size.height -= 1;
     [super setFrame:frame];
+}
+
+- (void)setItem:(NJDetailItem *)item
+{
+    _item = item;
+    
+    self.titleLabel.text = item.content;
+    
+    self.dateLabel.text = item.created_at;
+    
+    NSString * preStr = item.type.integerValue == 0 ? @"+" : @"-";
+    self.numLabel.text = [preStr stringByAppendingString:item.lqc_num];
 }
 @end

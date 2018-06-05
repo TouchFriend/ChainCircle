@@ -178,6 +178,28 @@
     }];
 }
 
+#pragma mark 签到
++ (void)signInWithCompleted:(completedBlock)completed
+{
+    NSDictionary * parametersDic = @{
+                                     
+                                     };
+    
+    [[NetAPIManager sharedManager] Post:@"/user/sign" parameters:parametersDic completed:^(id data, NSError *error) {
+        if(completed != nil)
+        {
+            if(error == nil)
+            {
+                completed(data, SignIn);
+            }
+            else
+            {
+                completed(data, RequestError);
+            }
+        }
+    }];
+}
+
 #pragma mark - Lqc
 #pragma mark 滚动标题
 + (void)getScrollTitleDataWithCompleted:(completedBlock)completed
@@ -317,4 +339,47 @@
     }];
 }
 
+#pragma mark 获取海报
++ (void)getPosterWithCompleted:(completedBlock)completed
+{
+    NSDictionary * parametersDic = @{
+                                     
+                                     };
+    
+    [[NetAPIManager sharedManager] Post:@"/user/getposter" parameters:parametersDic completed:^(id data, NSError *error) {
+        if(completed != nil)
+        {
+            if(error == nil)
+            {
+                completed(data, GetPoster);
+            }
+            else
+            {
+                completed(data, RequestError);
+            }
+        }
+    }];
+}
+
+#pragma mark 获取海报
++ (void)getIncomeListWithType:(NSString *)type completed:(completedBlock)completed
+{
+    NSDictionary * parametersDic = @{
+                                     @"type" : type
+                                     };
+    
+    [[NetAPIManager sharedManager] Post:@"/user/getlqclist" parameters:parametersDic completed:^(id data, NSError *error) {
+        if(completed != nil)
+        {
+            if(error == nil)
+            {
+                completed(data, GetIncomeList);
+            }
+            else
+            {
+                completed(data, RequestError);
+            }
+        }
+    }];
+}
 @end

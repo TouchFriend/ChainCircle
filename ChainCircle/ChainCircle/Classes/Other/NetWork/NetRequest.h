@@ -35,6 +35,9 @@ typedef enum : NSUInteger {
     GetFirstLoginAward,//获取初次登录奖励
     GetMyAward,//获取可领取奖励
     GetMyAwardNum,//获取可领取奖励LQC数量
+    SignIn,//签到
+    GetPoster, //获取海报
+    GetIncomeList, //收支明细
 
 } NetRequest_enum;
 
@@ -130,4 +133,29 @@ typedef enum : NSUInteger {
  @param completed 回调
  */
 + (void)userPwdLoginWithAccount:(NSString *)account pwd:(NSString *)pwd completed:(completedBlock)completed;
+
+
+/**
+ 签到
+
+ @param completed 回调
+ */
++ (void)signInWithCompleted:(completedBlock)completed;
+
+
+/**
+ 获取海报
+
+ @param completed 回调
+ */
++ (void)getPosterWithCompleted:(completedBlock)completed;
+
+
+/**
+ 获取海报
+
+ @param type 0收入 1支出
+ @param completed 回调
+ */
++ (void)getIncomeListWithType:(NSString *)type completed:(completedBlock)completed;
 @end

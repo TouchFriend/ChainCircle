@@ -10,6 +10,9 @@
 
 @interface NJMethodCell : UITableViewCell
 /********* <#注释#> *********/
-@property(nonatomic,strong)NSString * titleStr;
+@property(nonatomic,strong)NSDictionary * dataDic;
+
+/********* <#注释#> *********/
+@property(nonatomic,copy)void (^signInBlock)(void);
 
 @end

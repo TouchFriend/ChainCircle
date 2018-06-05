@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class NJDetailItem;
 @interface NJDetailCell : UITableViewCell
+/********* <#注释#> *********/
+@property(nonatomic,strong)NJDetailItem * item;
 
 @end

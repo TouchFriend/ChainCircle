@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,16 +28,34 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_right_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="etf-Rr-VGZ">
                         <rect key="frame" x="298" y="15" width="7" height="12"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8U-I6-VPa">
+                        <rect key="frame" x="234" y="6" width="70" height="30"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.43529411759999997" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="Q9s-pk-VhG"/>
+                            <constraint firstAttribute="height" constant="30" id="oll-qP-DOz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="签到"/>
+                        <state key="selected" title="已签到"/>
+                        <connections>
+                            <action selector="signInBtnClick" destination="KGk-i7-Jjw" eventType="touchUpInside" id="k3d-DP-4PJ"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="etf-Rr-VGZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BRT-5f-sxM"/>
                     <constraint firstItem="mgs-9t-i36" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="LCg-Mb-Wml"/>
                     <constraint firstItem="mgs-9t-i36" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zcq-PD-LGn"/>
                     <constraint firstAttribute="trailing" secondItem="etf-Rr-VGZ" secondAttribute="trailing" constant="15" id="lmG-aA-uD8"/>
+                    <constraint firstItem="q8U-I6-VPa" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uz6-DM-G2L"/>
+                    <constraint firstAttribute="trailing" secondItem="q8U-I6-VPa" secondAttribute="trailing" constant="16" id="yxD-bW-AVO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="nextImageV" destination="etf-Rr-VGZ" id="6wL-Ho-qLg"/>
+                <outlet property="signInBtn" destination="q8U-I6-VPa" id="J0k-Fd-gA3"/>
                 <outlet property="titleLabel" destination="mgs-9t-i36" id="gAi-8D-Tu9"/>
             </connections>
         </tableViewCell>

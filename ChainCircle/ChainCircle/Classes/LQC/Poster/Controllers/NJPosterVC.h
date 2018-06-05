@@ -1,5 +1,5 @@
 //
-//  NJDetailVC.h
+//  NJPosterVC.h
 //  ChainCircle
 //
 //  Created by TouchWorld on 2018/6/5.
@@ -8,8 +8,6 @@
 
 #import "NJViewController.h"
 
-@interface NJDetailVC : NJViewController
-/********* <#注释#> *********/
-@property(nonatomic,strong)NSString * typeStr;
+@interface NJPosterVC : NJViewController
 
 @end

@@ -49,7 +49,9 @@
     [self.view addSubview:titleView];
     
     NJDetailVC * incomeDetailVC = [[NJDetailVC alloc] init];
+    incomeDetailVC.typeStr = @"0";
     NJDetailVC * expenseDetailVC = [[NJDetailVC alloc] init];
+    expenseDetailVC.typeStr = @"1";
     
     NSArray * childVCs =@[incomeDetailVC, expenseDetailVC];
     
