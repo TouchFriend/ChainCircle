@@ -20,6 +20,7 @@
 #import "FileManager.h"
 #import <MJExtension.h>
 #import "NJScrollTitleItem.h"
+#import "NJLqcDetailVC.h"
 
 @interface NJLqcVC () <UICollectionViewDataSource, UICollectionViewDelegate>
 /********* <#注释#> *********/
@@ -100,6 +101,15 @@ static NSString * const footerID = @"NJLqcFooterView";
     UIBarButtonItem * personItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginNamed:@"person"] style:UIBarButtonItemStylePlain target:self action:@selector(personBtnClick)];
     
     self.navigationItem.leftBarButtonItems = @[personItem];
+    
+    UIButton * lqcDetailBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [lqcDetailBtn setTitle:@"LQC明细" forState:UIControlStateNormal];
+    [lqcDetailBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [lqcDetailBtn addTarget:self action:@selector(lqcDetailBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    lqcDetailBtn.titleLabel.font = [UIFont systemFontOfSize:16.0];
+    
+    UIBarButtonItem * lqcDetailItem = [[UIBarButtonItem alloc] initWithCustomView:lqcDetailBtn];
+    self.navigationItem.rightBarButtonItems = @[lqcDetailItem];
 }
 
 #pragma mark - collectionView
@@ -423,6 +433,21 @@ static NSString * const footerID = @"NJLqcFooterView";
     
     [self getScrollTitleDataRequest];
 }
+
+//lqc明细
+- (void)lqcDetailBtnClick
+{
+    if(![NJLoginTool isLogin])
+    {
+        NJLoginVC * loginVC = [[NJLoginVC alloc] init];
+        [self.navigationController pushViewController:loginVC animated:YES];
+        return;
+    }
+    
+    NJLqcDetailVC * detailVC = [[NJLqcDetailVC alloc] init];
+    [self.navigationController pushViewController:detailVC animated:YES];
+}
+
 
 
 #pragma mark - 懒加载
