@@ -73,11 +73,11 @@
                                                        @"title" : @"LQC",
                                                        @"image" : @"Lqc",
                                                        },
-                                                   @{
-                                                       @"className" : @"NJCheckGroupVC",
-                                                       @"title" : @"审核群",
-                                                       @"image" : @"CheckGroup",
-                                                       },
+//                                                   @{
+//                                                       @"className" : @"NJCheckGroupVC",
+//                                                       @"title" : @"审核群",
+//                                                       @"image" : @"CheckGroup",
+//                                                       },
                                                    @{
                                                        @"className" : @"NJRobAdVC",
                                                        @"title" : @"抢广告",

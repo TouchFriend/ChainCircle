@@ -7,6 +7,8 @@
 //
 
 #import "NJBindInviteCodeVC.h"
+#import "NJUserItem.h"
+#import "UIImage+NJImage.h"
 
 @interface NJBindInviteCodeVC ()
 /********* <#注释#> *********/
@@ -42,6 +44,9 @@
 #pragma mark - content
 - (void)setupContent
 {
+    NJUserItem * userItem = [NJLoginTool getCurrentUser];
+    
+    
     UIView * seperatorView = [[UIView alloc] init];
     [self.view addSubview:seperatorView];
     [seperatorView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -74,6 +79,7 @@
     self.inviteTextF = inviteTextF;
     inviteTextF.backgroundColor = NJGrayColor(223);
     inviteTextF.borderStyle = UITextBorderStyleRoundedRect;
+    inviteTextF.keyboardType = UIKeyboardTypeNumberPad;
     
     NSDictionary * placeholderDic = @{
                                       NSFontAttributeName : [UIFont systemFontOfSize:14.0],
@@ -81,6 +87,8 @@
                                       };
     NSAttributedString * inviteAttr = [[NSAttributedString alloc] initWithString:@"请输入你的邀请码" attributes:placeholderDic];
     inviteTextF.attributedPlaceholder = inviteAttr;
+    
+    
     
     
     UIButton * bindBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -92,11 +100,23 @@
         make.height.mas_equalTo(42);
     }];
     
-    bindBtn.backgroundColor = NJOrangeColor;
+//    bindBtn.backgroundColor = NJOrangeColor;
     [bindBtn setTitle:@"绑定" forState:UIControlStateNormal];
+    [bindBtn setTitle:@"已绑定" forState:UIControlStateDisabled];
+    [bindBtn setBackgroundImage:[UIImage imageWithColor:NJOrangeColor] forState:UIControlStateNormal];
+    [bindBtn setBackgroundImage:[UIImage imageWithColor:NJGrayColor(136)] forState:UIControlStateDisabled];
     [bindBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
     [bindBtn addTarget:self action:@selector(bindBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [bindBtn addAllCornerRadius:4.0];
+    
+    
+    if(userItem.father_code != nil && userItem.father_code.length > 0)
+    {
+        inviteTextF.text = userItem.father_code;
+        inviteTextF.enabled = NO;
+        bindBtn.enabled = NO;
+    }
 }
 
 
@@ -127,8 +147,10 @@
         {
             if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
             {
-                [SVProgressHUD showSuccessWithStatus:@"绑定成功"];
-                [SVProgressHUD dismissWithDelay:1.5];
+                [SVProgressHUD showSuccessWithStatus:getStringInDict(data, DictionaryKeyData)];
+                [SVProgressHUD dismissWithDelay:1.2 completion:^{
+                    [self.navigationController popViewControllerAnimated:YES];
+                }];
                 
             }
             else

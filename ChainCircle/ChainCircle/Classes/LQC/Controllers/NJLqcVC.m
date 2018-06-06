@@ -24,6 +24,7 @@
 #import "NJPosterVC.h"
 #import "NJInviteCodeListVC.h"
 #import "NJMyPosterVC.h"
+#import <JPUSHService.h>
 
 @interface NJLqcVC () <UICollectionViewDataSource, UICollectionViewDelegate>
 /********* <#注释#> *********/
@@ -61,7 +62,9 @@ static NSString * const footerID = @"NJLqcFooterView";
     
     if([NJLoginTool isLogin])
     {
-        [self getMyAwardNumRequest];
+//        [self getMyAwardNumRequest];
+//        [self.collectionView.mj_header beginRefreshing];
+        [self pwdLoginRequest];
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChange) name:NotificationWifiNetwork object:nil];
@@ -90,9 +93,12 @@ static NSString * const footerID = @"NJLqcFooterView";
     
     [self setupCollectionView];
     
-    [self pwdLoginRequest];
+    [self getScrollTitleDataRequest];
     
-     [self getScrollTitleDataRequest];
+//    if([NJLoginTool isLogin])
+//    {
+//        [self getAward];
+//    }
     
 }
 
@@ -145,7 +151,7 @@ static NSString * const footerID = @"NJLqcFooterView";
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([NJLqcHeaderView class]) bundle:nil] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerID];
     [collectionView registerClass:[NJLqcFooterView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerID];
     
-    collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(getMyAwardNumRequest)];
+    collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(pwdLoginRequest)];
 }
 
 #pragma mark - 网络请求
@@ -157,15 +163,16 @@ static NSString * const footerID = @"NJLqcFooterView";
 
 - (void)pwdLoginRequest
 {
-    
     if(![NJLoginTool isLogin])
     {
+        [self.collectionView.mj_header endRefreshing];
         return;
     }
     
     NJUserItem * userItem = [NJLoginTool getCurrentUser];
     
     [NetRequest userPwdLoginWithAccount:userItem.account pwd:userItem.password completed:^(id data, int flag) {
+        [self.collectionView.mj_header endRefreshing];
         if(flag == PwdLogin)
         {
             if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
@@ -173,6 +180,9 @@ static NSString * const footerID = @"NJLqcFooterView";
                 NSDictionary * dataDic = getDictionaryInDict(data, DictionaryKeyData);
                 NJUserItem * userItem = [NJUserItem mj_objectWithKeyValues:dataDic];
                 [NJLoginTool doLoginWithItem:userItem];
+                
+                //绑定别名
+                [self setAlias];
                 
                 [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginSuccess object:nil];
                 
@@ -202,8 +212,8 @@ static NSString * const footerID = @"NJLqcFooterView";
                 
                 [NJLoginTool setCurrentUser:userItem];
                 
-                [SVProgressHUD showSuccessWithStatus:@"领取成功"];
-                [SVProgressHUD dismissWithDelay:1.5];
+//                [SVProgressHUD showSuccessWithStatus:@"领取成功"];
+//                [SVProgressHUD dismissWithDelay:1.5];
                 
                 [self getMyAwardNumRequest];
             }
@@ -568,5 +578,26 @@ static NSString * const footerID = @"NJLqcFooterView";
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - 设置别名
+- (void)setAlias
+{
+    //设置别名
+    NJUserItem * userItem = [NJLoginTool getCurrentUser];
+    if(userItem != nil && userItem.account.length > 0)
+    {
+        NSInteger seqIndex = 123;
+        //添加别名
+        [JPUSHService setAlias:userItem.account completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
+            if(seq == seqIndex)
+            {
+                if([iAlias isEqualToString:@"0"])
+                {
+                    NSLog(@"设置别名成功");
+                }
+            }
+        } seq:seqIndex];
+    }
 }
 @end

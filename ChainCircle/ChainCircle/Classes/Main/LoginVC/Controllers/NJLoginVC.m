@@ -144,6 +144,8 @@
         {
             if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
             {
+                [SVProgressHUD showSuccessWithStatus:getStringInDict(data, DictionaryKeyData)];
+                [SVProgressHUD dismissWithDelay:1.2];
                 [self startTime];
             }
             else

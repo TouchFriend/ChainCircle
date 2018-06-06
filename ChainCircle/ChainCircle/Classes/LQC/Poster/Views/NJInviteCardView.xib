@@ -37,7 +37,7 @@
                             <color key="textColor" red="1" green="0.31372549020000001" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side" translatesAutoresizingMaskIntoConstraints="NO" id="VQ1-kx-0it">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_qr_code" translatesAutoresizingMaskIntoConstraints="NO" id="VQ1-kx-0it">
                             <rect key="frame" x="102.5" y="131" width="170" height="170"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="170" id="5jL-xB-T0u"/>
@@ -113,6 +113,6 @@
         </view>
     </objects>
     <resources>
-        <image name="side" width="1000" height="600"/>
+        <image name="icon_qr_code" width="80" height="80"/>
     </resources>
 </document>
