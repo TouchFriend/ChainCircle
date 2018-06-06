@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="NJLqcHeaderView">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="369"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="208"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0FF-pz-dai">
@@ -27,7 +27,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOL-t7-UBx">
-                            <rect key="frame" x="0.0" y="33" width="375" height="168"/>
+                            <rect key="frame" x="0.0" y="33" width="375" height="128"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的LQC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUp-8p-XL6">
                                     <rect key="frame" x="159.5" y="30" width="56.5" height="17"/>
@@ -44,7 +44,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的红包：0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaU-ZD-t93">
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的红包：0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaU-ZD-t93">
                                     <rect key="frame" x="0.0" y="124" width="375" height="17"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -70,42 +70,46 @@
                                 <constraint firstAttribute="trailing" secondItem="GaU-ZD-t93" secondAttribute="trailing" id="X2y-fJ-7Qp"/>
                                 <constraint firstItem="Fvu-98-zIU" firstAttribute="centerY" secondItem="jUp-8p-XL6" secondAttribute="centerY" id="awX-XG-McL"/>
                                 <constraint firstItem="GaU-ZD-t93" firstAttribute="leading" secondItem="FOL-t7-UBx" secondAttribute="leading" id="d1h-9J-JL5"/>
+                                <constraint firstAttribute="height" constant="128" id="dAG-5H-s9T"/>
                                 <constraint firstItem="Fvu-98-zIU" firstAttribute="leading" secondItem="jUp-8p-XL6" secondAttribute="trailing" constant="6" id="nxZ-Fa-dTR"/>
                                 <constraint firstItem="jUp-8p-XL6" firstAttribute="centerX" secondItem="FOL-t7-UBx" secondAttribute="centerX" id="qhk-qF-HWk"/>
                                 <constraint firstItem="jUp-8p-XL6" firstAttribute="top" secondItem="FOL-t7-UBx" secondAttribute="top" constant="30" id="r7P-69-0dl"/>
                                 <constraint firstItem="GaU-ZD-t93" firstAttribute="top" secondItem="eHO-Mf-dgl" secondAttribute="bottom" constant="10" id="tg6-CQ-M5s"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VY5-Xb-Xe6">
+                            <rect key="frame" x="0.0" y="161" width="375" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LQC用途：持续持有LQC可获得链圈广告商投放的广告金额分红" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rq2-ql-feH">
+                                    <rect key="frame" x="15" y="13" width="345" height="14.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="rq2-ql-feH" firstAttribute="leading" secondItem="VY5-Xb-Xe6" secondAttribute="leading" constant="15" id="bA9-3c-NTF"/>
+                                <constraint firstAttribute="trailing" secondItem="rq2-ql-feH" secondAttribute="trailing" constant="15" id="lmn-rC-9E1"/>
+                                <constraint firstItem="rq2-ql-feH" firstAttribute="centerY" secondItem="VY5-Xb-Xe6" secondAttribute="centerY" id="mDe-6W-Obp"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <constraints>
                         <constraint firstAttribute="height" constant="201" id="0EK-s8-Zom"/>
                         <constraint firstItem="FOL-t7-UBx" firstAttribute="leading" secondItem="0FF-pz-dai" secondAttribute="leading" id="0g1-wa-bf2"/>
+                        <constraint firstAttribute="bottom" secondItem="VY5-Xb-Xe6" secondAttribute="bottom" id="13x-XJ-MAI"/>
                         <constraint firstItem="5tp-o3-lnA" firstAttribute="leading" secondItem="0FF-pz-dai" secondAttribute="leading" id="1q4-sw-4SE"/>
                         <constraint firstAttribute="trailing" secondItem="5tp-o3-lnA" secondAttribute="trailing" id="Cnh-1Q-wGH"/>
+                        <constraint firstItem="VY5-Xb-Xe6" firstAttribute="top" secondItem="FOL-t7-UBx" secondAttribute="bottom" id="GMH-l8-H4F"/>
                         <constraint firstItem="FOL-t7-UBx" firstAttribute="top" secondItem="5tp-o3-lnA" secondAttribute="bottom" id="GqV-ra-POl"/>
-                        <constraint firstAttribute="bottom" secondItem="FOL-t7-UBx" secondAttribute="bottom" id="H8t-WA-zCZ"/>
                         <constraint firstAttribute="trailing" secondItem="FOL-t7-UBx" secondAttribute="trailing" id="MBR-CJ-zcj"/>
                         <constraint firstItem="5tp-o3-lnA" firstAttribute="top" secondItem="0FF-pz-dai" secondAttribute="top" id="NEQ-j3-7Zl"/>
+                        <constraint firstItem="VY5-Xb-Xe6" firstAttribute="leading" secondItem="0FF-pz-dai" secondAttribute="leading" id="NwN-o5-fAE"/>
+                        <constraint firstAttribute="trailing" secondItem="VY5-Xb-Xe6" secondAttribute="trailing" id="m8r-Vm-g9D"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VY5-Xb-Xe6">
-                    <rect key="frame" x="0.0" y="325" width="375" height="42"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LQC用途：持续持有LQC可获得链圈广告商投放的广告金额分红" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rq2-ql-feH">
-                            <rect key="frame" x="15" y="14" width="345" height="14.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="rq2-ql-feH" firstAttribute="leading" secondItem="VY5-Xb-Xe6" secondAttribute="leading" constant="15" id="bA9-3c-NTF"/>
-                        <constraint firstAttribute="trailing" secondItem="rq2-ql-feH" secondAttribute="trailing" constant="15" id="lmn-rC-9E1"/>
-                        <constraint firstItem="rq2-ql-feH" firstAttribute="centerY" secondItem="VY5-Xb-Xe6" secondAttribute="centerY" id="mDe-6W-Obp"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXK-jU-htd">
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXK-jU-htd">
                     <rect key="frame" x="0.0" y="211" width="375" height="104"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可领取的LQC：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ML-Ru-isE">
@@ -147,15 +151,11 @@
                 </view>
             </subviews>
             <constraints>
-                <constraint firstItem="VY5-Xb-Xe6" firstAttribute="top" secondItem="fXK-jU-htd" secondAttribute="bottom" constant="10" id="0h0-ZP-7rr"/>
                 <constraint firstItem="fXK-jU-htd" firstAttribute="top" secondItem="0FF-pz-dai" secondAttribute="bottom" constant="10" id="Dzf-hZ-Gld"/>
-                <constraint firstItem="9Gg-ye-v9C" firstAttribute="trailing" secondItem="VY5-Xb-Xe6" secondAttribute="trailing" id="RUb-zB-7KC"/>
                 <constraint firstItem="0FF-pz-dai" firstAttribute="top" secondItem="9Gg-ye-v9C" secondAttribute="top" id="Rlt-gD-iih"/>
-                <constraint firstItem="VY5-Xb-Xe6" firstAttribute="leading" secondItem="9Gg-ye-v9C" secondAttribute="leading" id="Wed-M4-vYm"/>
                 <constraint firstItem="fXK-jU-htd" firstAttribute="leading" secondItem="9Gg-ye-v9C" secondAttribute="leading" id="Zsd-GI-glN"/>
                 <constraint firstItem="9Gg-ye-v9C" firstAttribute="trailing" secondItem="0FF-pz-dai" secondAttribute="trailing" id="jeH-Vu-6uG"/>
                 <constraint firstItem="0FF-pz-dai" firstAttribute="leading" secondItem="9Gg-ye-v9C" secondAttribute="leading" id="lZw-pR-FDY"/>
-                <constraint firstAttribute="bottom" secondItem="VY5-Xb-Xe6" secondAttribute="bottom" constant="2" id="pgN-le-ARf"/>
                 <constraint firstItem="9Gg-ye-v9C" firstAttribute="trailing" secondItem="fXK-jU-htd" secondAttribute="trailing" id="s1s-YT-YIp"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
@@ -166,7 +166,7 @@
                 <outlet property="receiveBtn" destination="SxI-2t-j7n" id="oUk-6O-uxu"/>
                 <outlet property="topView" destination="5tp-o3-lnA" id="KGm-cW-IrN"/>
             </connections>
-            <point key="canvasLocation" x="33.5" y="53.5"/>
+            <point key="canvasLocation" x="34.5" y="-36"/>
         </collectionReusableView>
     </objects>
     <resources>

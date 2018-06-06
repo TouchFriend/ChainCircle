@@ -123,7 +123,8 @@ static NSString * const footerID = @"NJLqcFooterView";
     flowLayout.itemSize = CGSizeMake(itemWidth, itemWidth / 0.847);
     flowLayout.minimumLineSpacing = 2;
     flowLayout.minimumInteritemSpacing = 2;
-    flowLayout.headerReferenceSize = CGSizeMake(NJScreenW, 369);
+//    flowLayout.headerReferenceSize = CGSizeMake(NJScreenW, 369);
+    flowLayout.headerReferenceSize = CGSizeMake(NJScreenW, 208);
     flowLayout.footerReferenceSize = CGSizeMake(NJScreenW, 460);
     
     UICollectionView * collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
@@ -175,7 +176,7 @@ static NSString * const footerID = @"NJLqcFooterView";
                 
                 [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginSuccess object:nil];
                 
-                NJLog(@"再次登录成功");
+//                NJLog(@"再次登录成功");
                 
             }
             else
@@ -313,7 +314,7 @@ static NSString * const footerID = @"NJLqcFooterView";
                 userItem.is_sign = @(1);
                 
                 [NJLoginTool setCurrentUser:userItem];
-                [[NSNotificationCenter defaultCenter] postNotificationName:@"NotificationSignInSuccess" object:nil];
+                [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginSuccess object:nil];
                 [SVProgressHUD showSuccessWithStatus:@"签到成功"];
                 [SVProgressHUD dismissWithDelay:1.2];
             }

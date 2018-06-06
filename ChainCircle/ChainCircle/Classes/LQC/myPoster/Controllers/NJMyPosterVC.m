@@ -83,7 +83,7 @@
         make.top.mas_equalTo(self.posterView.mas_top).mas_offset(30);
         make.centerX.mas_equalTo(self.posterView);
     }];
-    iconImageV.image = [UIImage imageNamed:@"side"];
+    iconImageV.image = [UIImage imageNamed:@"icon_myPoster"];
     
     
     UILabel * appNameLabel = [[UILabel alloc] init];

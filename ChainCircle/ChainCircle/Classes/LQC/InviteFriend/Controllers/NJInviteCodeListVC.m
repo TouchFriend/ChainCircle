@@ -10,6 +10,7 @@
 #import "NJInviteCardCell.h"
 #import "NJPosterItem.h"
 #import <MJExtension.h>
+#import <iCarousel.h>
 
 @interface NJInviteCodeListVC () <UICollectionViewDataSource, UICollectionViewDelegate>
 /********* <#注释#> *********/
@@ -20,6 +21,10 @@
 
 /********* <#注释#> *********/
 @property(nonatomic,weak)UICollectionView * collectionView;
+
+/********* <#注释#> *********/
+@property(nonatomic,strong)iCarousel * carousel;
+
 @end
 
 @implementation NJInviteCodeListVC
@@ -156,5 +161,14 @@ static NSString * const ID = @"NJInviteCardCell";
         _posterArr = @[];
     }
     return _posterArr;
+}
+
+- (iCarousel *)carousel
+{
+    if(_carousel == nil)
+    {
+        _carousel = [[iCarousel alloc] init];
+    }
+    return _carousel;
 }
 @end
