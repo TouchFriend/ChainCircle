@@ -31,6 +31,8 @@ static NSString * const footerID = @"NJMethodFooterView";
     {
         [self setupInit];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(signInSuccess) name:NotificationLoginSuccess object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(signInSuccess) name:NotificationUserLogout object:nil];
     }
     return self;
 }

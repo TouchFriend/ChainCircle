@@ -315,7 +315,8 @@ static NSString * const footerID = @"NJLqcFooterView";
                 
                 [NJLoginTool setCurrentUser:userItem];
                 [[NSNotificationCenter defaultCenter] postNotificationName:NotificationLoginSuccess object:nil];
-                [SVProgressHUD showSuccessWithStatus:@"签到成功"];
+                [SVProgressHUD showSuccessWithStatus:getStringInDict(data, DictionaryKeyData)];
+                [self pwdLoginRequest];
                 [SVProgressHUD dismissWithDelay:1.2];
             }
             else
@@ -405,6 +406,8 @@ static NSString * const footerID = @"NJLqcFooterView";
 {
     //退出登录
     [NJLoginTool doLoginOut];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:NotificationUserLogout object:nil];
     
     NJLoginVC * loginVC = [[NJLoginVC alloc] init];
     [self.navigationController pushViewController:loginVC animated:YES];

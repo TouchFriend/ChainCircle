@@ -171,7 +171,6 @@ static NSString * const ID = @"NJInviteCardCell";
     }
     
     
-    
     NSArray<UICollectionViewCell *> * cellArr = [self.collectionView visibleCells];
     NSInteger currentIndex = [self currentIndex];
     __block UIImage * shareImage = nil;

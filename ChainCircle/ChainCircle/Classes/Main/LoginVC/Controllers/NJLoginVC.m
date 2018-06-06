@@ -201,14 +201,20 @@
 }
 #pragma mark - 事件
 - (IBAction)getVeriCodeBtnClick {
-    if(self.phoneNumTextF.text.length == 0)
+    NSString * phoneNum = [self.phoneNumTextF.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    self.phoneNumTextF.text = phoneNum;
+    
+    if(phoneNum.length == 0 )
     {
         [SVProgressHUD showErrorWithStatus:@"手机号不能为空"];
         [SVProgressHUD dismissWithDelay:1.5];
         return;
     }
     
-    if(self.phoneNumTextF.text.length != 11)
+    NSString * MOBILE = @"\\d{11}";
+    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
+    BOOL res = [regextestmobile evaluateWithObject:phoneNum];
+    if(phoneNum.length != 11 || !res)
     {
         [SVProgressHUD showErrorWithStatus:@"请检查所填号码是否有误"];
         [SVProgressHUD dismissWithDelay:1.5];
@@ -220,12 +226,18 @@
 }
 
 - (IBAction)loginBtnClick {
-    if(self.phoneNumTextF.text.length == 0)
+    
+    NSString * phoneNum = [self.phoneNumTextF.text stringByReplacingOccurrencesOfString:@" " withString:@""];
+    self.phoneNumTextF.text = phoneNum;
+    
+    if(phoneNum.length == 0)
     {
         [SVProgressHUD showErrorWithStatus:@"请输入手机号"];
         [SVProgressHUD dismissWithDelay:1.5];
         return;
     }
+    
+    
     
     if(self.verificationCodeTextF.text.length == 0)
     {

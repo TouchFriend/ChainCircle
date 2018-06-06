@@ -36,7 +36,7 @@
     [self setupScrollTitleView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess) name:NotificationLoginSuccess object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess) name:NotificationUserLogout object:nil];
     
 }
 
@@ -53,18 +53,19 @@
 
 - (void)setPersonalInfo
 {
-    if(![NJLoginTool isLogin])
-    {
-        return;
-    }
+//    if(![NJLoginTool isLogin])
+//    {
+//        return;
+//    }
     
     NJUserItem * userItem = [NJLoginTool getCurrentUser];
     
-    self.myLqcNumLabel.text = userItem.lqc_num;
+
+    self.myLqcNumLabel.text = userItem != nil ? userItem.lqc_num : @"0";
     
-    self.myRedBagLabel.text = [NSString stringWithFormat:@"我的红包：%@", userItem.red_num.stringValue];
+//    self.myRedBagLabel.text = [NSString stringWithFormat:@"我的红包：%@", userItem.red_num.stringValue];
     
-    self.canReceiveNumLabel.text = userItem.total_get.stringValue;
+//    self.canReceiveNumLabel.text = userItem.total_get.stringValue;
 }
 
 - (void)setTitleArr:(NSArray<NSString *> *)titleArr
