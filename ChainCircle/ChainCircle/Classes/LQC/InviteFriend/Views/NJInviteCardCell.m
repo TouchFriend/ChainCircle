@@ -31,9 +31,8 @@
     NJPosterView * posterView = [[NJPosterView alloc] init];
     [self.contentView addSubview:posterView];
     
-    CGFloat margin = NJScreenW == 320 ? 30 : 48;
     [posterView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self).mas_offset(UIEdgeInsetsMake(0, margin, 0, margin));
+        make.edges.mas_equalTo(self).mas_offset(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
     
     
@@ -74,8 +73,7 @@
     return nil;
 }
 
-- (UIImage *)
-getShareImage
+- (UIImage *)getShareImage
 {
     return [self.posterView getShareImage];
 }

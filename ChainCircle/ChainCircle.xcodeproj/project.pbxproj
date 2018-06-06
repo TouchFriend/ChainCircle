@@ -10,6 +10,7 @@
 		2818A3F660E62775B085C3E5 /* libPods-ChainCircle.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4A7286E85B60157A5A8671 /* libPods-ChainCircle.a */; };
 		BF44291320C140D300B5B471 /* NJScrollTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF44291220C140D300B5B471 /* NJScrollTitleView.m */; };
 		BF44291620C1445D00B5B471 /* NJScrollTitleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BF44291520C1445D00B5B471 /* NJScrollTitleItem.m */; };
+		BF729F5520C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BF729F5420C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.m */; };
 		BF737A6420C631870095F3DF /* NJDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A6320C631870095F3DF /* NJDetailVC.m */; };
 		BF737A6820C6385B0095F3DF /* NJDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF737A6620C6385B0095F3DF /* NJDetailCell.m */; };
 		BF737A6920C6385B0095F3DF /* NJDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF737A6720C6385B0095F3DF /* NJDetailCell.xib */; };
@@ -109,6 +110,8 @@
 		BFA7AF0D20BFECBC0029DE12 /* NJBindInviteCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AF0C20BFECBC0029DE12 /* NJBindInviteCodeVC.m */; };
 		BFA7AF1420C022620029DE12 /* NJInviteCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AF1220C022620029DE12 /* NJInviteCodeVC.m */; };
 		BFA7AF1520C022620029DE12 /* NJInviteCodeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AF1320C022620029DE12 /* NJInviteCodeVC.xib */; };
+		BFCC7DFB20C787B6008490AB /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCC7DF820C787B6008490AB /* iCarousel.m */; };
+		BFCC7DFC20C787B6008490AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFCC7DFA20C787B6008490AB /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +124,8 @@
 		BF47E45120C0FA4B002C1747 /* ChainCircle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChainCircle.entitlements; sourceTree = "<group>"; };
 		BF68B81E20C0EDE10085FA0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		BF68B81F20C0EDE20085FA0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		BF729F5320C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NJCollectionViewFlowLayout.h; path = ChainCircle/Classes/Other/subClass/NJCollectionViewFlowLayout.h; sourceTree = SOURCE_ROOT; };
+		BF729F5420C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NJCollectionViewFlowLayout.m; path = ChainCircle/Classes/Other/subClass/NJCollectionViewFlowLayout.m; sourceTree = SOURCE_ROOT; };
 		BF737A6220C631870095F3DF /* NJDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJDetailVC.h; sourceTree = "<group>"; };
 		BF737A6320C631870095F3DF /* NJDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJDetailVC.m; sourceTree = "<group>"; };
 		BF737A6520C6385B0095F3DF /* NJDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJDetailCell.h; sourceTree = "<group>"; };
@@ -307,6 +312,9 @@
 		BFA7AF1120C022620029DE12 /* NJInviteCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJInviteCodeVC.h; sourceTree = "<group>"; };
 		BFA7AF1220C022620029DE12 /* NJInviteCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJInviteCodeVC.m; sourceTree = "<group>"; };
 		BFA7AF1320C022620029DE12 /* NJInviteCodeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJInviteCodeVC.xib; sourceTree = "<group>"; };
+		BFCC7DF820C787B6008490AB /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		BFCC7DF920C787B6008490AB /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		BFCC7DFA20C787B6008490AB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA4A7286E85B60157A5A8671 /* libPods-ChainCircle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainCircle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -651,6 +659,7 @@
 		BF9E17FF20BEAD8100B655EC /* subClass */ = {
 			isa = PBXGroup;
 			children = (
+				BFCC7DF720C787B6008490AB /* iCarousel */,
 				BF44291120C140D300B5B471 /* NJScrollTitleView.h */,
 				BF44291220C140D300B5B471 /* NJScrollTitleView.m */,
 				BF9E180020BEAD8100B655EC /* NJVerticalButton.h */,
@@ -995,6 +1004,18 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BFCC7DF720C787B6008490AB /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				BF729F5320C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.h */,
+				BF729F5420C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.m */,
+				BFCC7DF820C787B6008490AB /* iCarousel.m */,
+				BFCC7DF920C787B6008490AB /* iCarousel.h */,
+				BFCC7DFA20C787B6008490AB /* Info.plist */,
+			);
+			path = iCarousel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1071,6 +1092,7 @@
 				BFA7AF1520C022620029DE12 /* NJInviteCodeVC.xib in Resources */,
 				BFA7AF0620BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib in Resources */,
 				BFA7AEE920BFA3570029DE12 /* NJMethodHeaderView.xib in Resources */,
+				BFCC7DFC20C787B6008490AB /* Info.plist in Resources */,
 				BFA7AF0120BFCA990029DE12 /* NJInviteRecordHeaderView.xib in Resources */,
 				BF737A6920C6385B0095F3DF /* NJDetailCell.xib in Resources */,
 				BF9E17D720BEA3C700B655EC /* Assets.xcassets in Resources */,
@@ -1163,6 +1185,7 @@
 				BF9E18AB20BEAD8200B655EC /* UITextField+NJPlaceHolder.m in Sources */,
 				BF737A7620C66E530095F3DF /* NJInviteCardView.m in Sources */,
 				BFA7AEF720BFC2520029DE12 /* NJInviteFriendVC.m in Sources */,
+				BF729F5520C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.m in Sources */,
 				BF9E18AC20BEAD8200B655EC /* UIView+NJCommon.m in Sources */,
 				BF9E188B20BEAD8200B655EC /* NJSearchController.m in Sources */,
 				BF9E18AD20BEAD8200B655EC /* UIButton+NJCommon.m in Sources */,
@@ -1187,6 +1210,7 @@
 				BFA7AED420BF94C90029DE12 /* NJLqcCell.m in Sources */,
 				BFA7AED920BF98440029DE12 /* NJLqcHeaderView.m in Sources */,
 				BF9E18B620BEAD8200B655EC /* UIActionSheet+LBXAlertAction.m in Sources */,
+				BFCC7DFB20C787B6008490AB /* iCarousel.m in Sources */,
 				BF9E188D20BEAD8200B655EC /* XLPaymentLoadingHUD.m in Sources */,
 				BF9E17F020BEAC8C00B655EC /* AppDelegate.m in Sources */,
 				BFA7AEE720BFA3490029DE12 /* NJMethodHeaderView.m in Sources */,

@@ -10,7 +10,7 @@
 #import "NJInviteCardCell.h"
 #import "NJPosterItem.h"
 #import <MJExtension.h>
-#import <iCarousel.h>
+#import "NJCollectionViewFlowLayout.h"
 
 @interface NJInviteCodeListVC () <UICollectionViewDataSource, UICollectionViewDelegate>
 /********* <#注释#> *********/
@@ -21,9 +21,6 @@
 
 /********* <#注释#> *********/
 @property(nonatomic,weak)UICollectionView * collectionView;
-
-/********* <#注释#> *********/
-@property(nonatomic,strong)iCarousel * carousel;
 
 @end
 
@@ -43,6 +40,7 @@ static NSString * const ID = @"NJInviteCardCell";
     [self setupNaviBar];
     
     [self setupBottomBtn];
+    
     
     [self setupCollectionView];
     
@@ -80,12 +78,18 @@ static NSString * const ID = @"NJInviteCardCell";
 #pragma mark - collectionView
 - (void)setupCollectionView
 {
-    UICollectionViewFlowLayout * flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.itemSize = CGSizeMake(NJScreenW, NJScreenH - 112 - NAVIGATION_BAR_Max_Y);
+    NJCollectionViewFlowLayout * flowLayout = [[NJCollectionViewFlowLayout alloc] init];
+    
+    CGFloat margin = NJScreenW == 320 ? 30 : 48;
+    
+    flowLayout.itemSize = CGSizeMake(NJScreenW - 2 * margin, NJScreenH - 112 - NAVIGATION_BAR_Max_Y);
     flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     flowLayout.minimumLineSpacing = 0;
     flowLayout.minimumInteritemSpacing = 0;
     
+    //设置左右内边距
+    NSInteger insetW = (NJScreenW - flowLayout.itemSize.width ) / 2.0;
+    flowLayout.sectionInset = UIEdgeInsetsMake(0, insetW, 0, insetW);
     
     UICollectionView * collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
     [self.view addSubview:collectionView];
@@ -163,12 +167,5 @@ static NSString * const ID = @"NJInviteCardCell";
     return _posterArr;
 }
 
-- (iCarousel *)carousel
-{
-    if(_carousel == nil)
-    {
-        _carousel = [[iCarousel alloc] init];
-    }
-    return _carousel;
-}
+
 @end

@@ -14,7 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - iCarousel (1.8.3)
   - IQKeyboardManager (5.0.8)
   - JCore (1.2.0)
   - JPush (3.0.9):
@@ -57,7 +56,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.0)
-  - iCarousel (~> 1.8.3)
   - IQKeyboardManager (~> 5.0.8)
   - JPush (~> 3.0.9)
   - LBXScan/LBXNative (~> 2.3)
@@ -80,7 +78,6 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
   IQKeyboardManager: 266cb7b1d11f94a3e71229d77f960f9a1b538e5b
   JCore: b52e3dd73625eec70afd1244bb9c41038aa06087
   JPush: 48041e8c5ad2ef9b48709eb0888af9640b36e9b0
@@ -97,6 +94,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: 472d3f80bb80c5b44b9bdc94185bdf3043aaa070
+PODFILE CHECKSUM: 50da63228f5d652713d0a595b32a9599a20a14b1
 
 COCOAPODS: 1.4.0
