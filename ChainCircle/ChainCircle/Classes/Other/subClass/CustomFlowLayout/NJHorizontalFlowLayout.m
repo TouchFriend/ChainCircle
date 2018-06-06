@@ -26,7 +26,7 @@
     return self;
 }
 
-
+//CollectionView第一次布局时调用，刷新时调用
 - (void)prepareLayout
 {
     [super prepareLayout];
@@ -40,7 +40,7 @@
         //获取每个section的cell个数
         NSUInteger count = [self.collectionView numberOfItemsInSection:sec];
         
-        for (NSUInteger item = 0; item<count; item++) {
+        for (NSUInteger item = 0; item < count; item++) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForItem:item inSection:sec];
             //重新排列
             UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:indexPath];
@@ -149,7 +149,6 @@
     
     //    UICollectionViewLayoutAttributes *attr = [UICollectionViewLayoutAttributes  layoutAttributesForCellWithIndexPath:indexPath];
     UICollectionViewLayoutAttributes *attr = [super layoutAttributesForItemAtIndexPath:indexPath].copy;
-    
     [self applyLayoutAttributes:attr];
     return attr;
 }

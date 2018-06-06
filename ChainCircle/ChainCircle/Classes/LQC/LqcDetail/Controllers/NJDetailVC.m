@@ -11,8 +11,9 @@
 #import "NJDetailItem.h"
 #import <MJExtension.h>
 #import <MJRefresh.h>
+#import <UIScrollView+EmptyDataSet.h>
 
-@interface NJDetailVC () <UITableViewDataSource, UITableViewDelegate>
+@interface NJDetailVC () <UITableViewDataSource, UITableViewDelegate, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 /********* <#注释#> *********/
 @property(nonatomic,weak)UITableView * tableView;
 
@@ -55,6 +56,9 @@ static NSString * const ID = @"NJDetailCell";
     tableView.rowHeight = 72;
     tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableView.backgroundColor = NJBgColor;
+    
+    tableView.emptyDataSetSource = self;
+    tableView.emptyDataSetDelegate = self;
     
     [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([NJDetailCell class]) bundle:nil] forCellReuseIdentifier:ID];
     
@@ -99,6 +103,40 @@ static NSString * const ID = @"NJDetailCell";
     NJDetailItem * item = self.dataArr[indexPath.row];
     cell.item = item;
     return cell;
+}
+
+#pragma mark - DZNEmptyDataSetSource方法
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
+    NSString * text = @"暂无数据";
+    NSDictionary * attrDic = @{
+                               NSForegroundColorAttributeName : NJGrayColor(51),
+                               NSFontAttributeName : [UIFont systemFontOfSize:18.0]
+                               };
+    return [[NSAttributedString alloc] initWithString:text attributes:attrDic];
+}
+#pragma mark - DZNEmptyDataSetDelegate方法
+//是否允许显示
+- (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView
+{
+    return YES;
+}
+//是否允许点击
+- (BOOL)emptyDataSetShouldAllowTouch:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+//是否允许滚动
+- (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView
+{
+    return YES;
+}
+
+//点击了view
+- (void)emptyDataSet:(UIScrollView *)scrollView didTapView:(UIView *)view
+{
+//    [self.tableView.mj_header beginRefreshing];
 }
 
 #pragma mark - 懒加载

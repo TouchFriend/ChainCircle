@@ -124,8 +124,8 @@
 		BF47E45120C0FA4B002C1747 /* ChainCircle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChainCircle.entitlements; sourceTree = "<group>"; };
 		BF68B81E20C0EDE10085FA0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		BF68B81F20C0EDE20085FA0B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		BF729F5320C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NJCollectionViewFlowLayout.h; path = ChainCircle/Classes/Other/subClass/NJCollectionViewFlowLayout.h; sourceTree = SOURCE_ROOT; };
-		BF729F5420C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NJCollectionViewFlowLayout.m; path = ChainCircle/Classes/Other/subClass/NJCollectionViewFlowLayout.m; sourceTree = SOURCE_ROOT; };
+		BF729F5320C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NJCollectionViewFlowLayout.h; path = ChainCircle/Classes/Other/subClass/CustomFlowLayout/NJCollectionViewFlowLayout.h; sourceTree = SOURCE_ROOT; };
+		BF729F5420C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NJCollectionViewFlowLayout.m; path = ChainCircle/Classes/Other/subClass/CustomFlowLayout/NJCollectionViewFlowLayout.m; sourceTree = SOURCE_ROOT; };
 		BF737A6220C631870095F3DF /* NJDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJDetailVC.h; sourceTree = "<group>"; };
 		BF737A6320C631870095F3DF /* NJDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJDetailVC.m; sourceTree = "<group>"; };
 		BF737A6520C6385B0095F3DF /* NJDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJDetailCell.h; sourceTree = "<group>"; };
@@ -345,6 +345,17 @@
 				EA4A7286E85B60157A5A8671 /* libPods-ChainCircle.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF729F5620C792A400ADDAB8 /* CustomFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				BF729F5320C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.h */,
+				BF729F5420C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.m */,
+				BF9E180320BEAD8100B655EC /* NJHorizontalFlowLayout.h */,
+				BF9E181B20BEAD8100B655EC /* NJHorizontalFlowLayout.m */,
+			);
+			path = CustomFlowLayout;
 			sourceTree = "<group>";
 		};
 		BF737A6A20C658B50095F3DF /* Poster */ = {
@@ -659,13 +670,13 @@
 		BF9E17FF20BEAD8100B655EC /* subClass */ = {
 			isa = PBXGroup;
 			children = (
+				BF729F5620C792A400ADDAB8 /* CustomFlowLayout */,
 				BFCC7DF720C787B6008490AB /* iCarousel */,
 				BF44291120C140D300B5B471 /* NJScrollTitleView.h */,
 				BF44291220C140D300B5B471 /* NJScrollTitleView.m */,
 				BF9E180020BEAD8100B655EC /* NJVerticalButton.h */,
 				BF9E180120BEAD8100B655EC /* NJTextView.h */,
 				BF9E180220BEAD8100B655EC /* NJCenterButton.h */,
-				BF9E180320BEAD8100B655EC /* NJHorizontalFlowLayout.h */,
 				BF9E180420BEAD8100B655EC /* NJProductDetailFooter.h */,
 				BF9E180520BEAD8100B655EC /* NJProductDetailHeader.h */,
 				BF9E180620BEAD8100B655EC /* NJPwdTextField.h */,
@@ -673,7 +684,6 @@
 				BF9E181420BEAD8100B655EC /* XLPaymentHUD */,
 				BF9E181920BEAD8100B655EC /* NJTextView.m */,
 				BF9E181A20BEAD8100B655EC /* NJVerticalButton.m */,
-				BF9E181B20BEAD8100B655EC /* NJHorizontalFlowLayout.m */,
 				BF9E181C20BEAD8100B655EC /* HooDatePicker */,
 				BF9E182120BEAD8100B655EC /* NJCenterButton.m */,
 				BF9E182220BEAD8100B655EC /* NJProductDetailHeader.m */,
@@ -1007,8 +1017,6 @@
 		BFCC7DF720C787B6008490AB /* iCarousel */ = {
 			isa = PBXGroup;
 			children = (
-				BF729F5320C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.h */,
-				BF729F5420C78B9E00ADDAB8 /* NJCollectionViewFlowLayout.m */,
 				BFCC7DF820C787B6008490AB /* iCarousel.m */,
 				BFCC7DF920C787B6008490AB /* iCarousel.h */,
 				BFCC7DFA20C787B6008490AB /* Info.plist */,

@@ -103,7 +103,7 @@ static NSString * const ID = @"NJInviteCardCell";
     collectionView.backgroundColor = [UIColor clearColor];
     collectionView.dataSource = self;
     collectionView.delegate = self;
-    collectionView.pagingEnabled = YES;
+
     collectionView.showsVerticalScrollIndicator = NO;
     collectionView.showsHorizontalScrollIndicator = NO;
     
@@ -122,6 +122,11 @@ static NSString * const ID = @"NJInviteCardCell";
             {
                 NSArray * dataArr = getArrayInDict(data, DictionaryKeyData);
                 self.posterArr = [NJPosterItem mj_objectArrayWithKeyValuesArray:dataArr];
+//                NSMutableArray * arrM = [NSMutableArray array];
+//                for (NSInteger i = 0; i < 6; i++) {
+//                    [arrM addObject:self.posterArr.firstObject];
+//                }
+//                self.posterArr = [NSArray arrayWithArray:arrM];
                 [self.collectionView reloadData];
             }
             else
@@ -148,15 +153,55 @@ static NSString * const ID = @"NJInviteCardCell";
     return cell;
 }
 
+#pragma mark - UICollectionViewDelegate方法
+
+
 #pragma mark - 事件
 - (void)shareBtnClick
 {
-    NJInviteCardCell * cell = (NJInviteCardCell *)[self.collectionView visibleCells].lastObject;
-    UIImage * shareImage = [cell getShareImage];
+    if(self.posterArr.count == 0)
+    {
+        [SVProgressHUD showInfoWithStatus:@"没有可分享的海报"];
+        [SVProgressHUD dismissWithDelay:1.2];
+        return;
+    }
+    if([self.collectionView isDecelerating])
+    {
+        return;
+    }
+    
+    
+    
+    NSArray<UICollectionViewCell *> * cellArr = [self.collectionView visibleCells];
+    NSInteger currentIndex = [self currentIndex];
+    __block UIImage * shareImage = nil;
+    [cellArr enumerateObjectsUsingBlock:^(UICollectionViewCell * _Nonnull cell, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSIndexPath * indexPath = [self.collectionView indexPathForCell:cell];
+        if(indexPath.row == currentIndex)
+        {
+            NJInviteCardCell * cardCell = (NJInviteCardCell *)cell;
+            shareImage = [cardCell getShareImage];
+            BOOL isStop = YES;
+            stop = &isStop;
+        }
+    }];
+    
+//    UIImage * shareImage = [cell getShareImage];
+    if(shareImage == nil)
+    {
+        return;
+    }
     
     [self socialShareWithContent:@"加入LQC" images:@[shareImage] url:nil title:@"加入LQC"];
 }
 
+- (NSInteger)currentIndex
+{
+    NSInteger margin = NJScreenW == 320 ? 30 : 48;
+    CGFloat itemWidth = NJScreenW - 2 * margin;
+    NSInteger currentIndex = self.collectionView.contentOffset.x / itemWidth;
+    return currentIndex;
+}
 #pragma mark - 懒加载
 - (NSArray<NJPosterItem *> *)posterArr
 {
