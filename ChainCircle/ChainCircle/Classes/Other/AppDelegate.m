@@ -314,7 +314,7 @@
     
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     
-    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    [application setApplicationIconBadgeNumber:0];
 }
     
 #pragma mark - 处理接收的消息
