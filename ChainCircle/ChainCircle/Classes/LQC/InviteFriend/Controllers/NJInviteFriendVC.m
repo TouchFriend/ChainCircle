@@ -14,6 +14,7 @@
 #import "NJInviteCodeVC.h"
 #import "NJUserItem.h"
 #import "NJInviteCodeListVC.h"
+#import "NJInviteRecordFooterView.h"
 
 @interface NJInviteFriendVC () <UITableViewDataSource, UITableViewDelegate>
 /********* <#注释#> *********/
@@ -26,6 +27,7 @@
 @implementation NJInviteFriendVC
 static NSString * const ID = @"NJInviteRecordCell";
 static NSString * const headerID = @"NJInviteRecordHeaderView";
+static NSString * const footerID = @"NJInviteRecordFooterView";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -65,7 +67,8 @@ static NSString * const headerID = @"NJInviteRecordHeaderView";
     UITableView * tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     [self.view addSubview:tableView];
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self.view).mas_equalTo(UIEdgeInsetsMake(0, 15, 0, 15));
+//        make.edges.mas_equalTo(self.view).mas_equalTo(UIEdgeInsetsMake(0, 15, 0, 15));
+        make.edges.mas_equalTo(self.view);
     }];
     
     self.tableView = tableView;
@@ -77,10 +80,10 @@ static NSString * const headerID = @"NJInviteRecordHeaderView";
 //    tableView.contentInset = UIEdgeInsetsMake(30, 0, 0, 0);
     tableView.tableHeaderView = self.tableHeaderView;
     
-    
     [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([NJInviteRecordCell class]) bundle:nil] forCellReuseIdentifier:ID];
     
     [tableView registerNib:[UINib nibWithNibName:NSStringFromClass([NJInviteRecordHeaderView class]) bundle:nil] forHeaderFooterViewReuseIdentifier:headerID];
+    [tableView registerClass:[NJInviteRecordFooterView class] forHeaderFooterViewReuseIdentifier:footerID];
 }
 
 #pragma mark - UITableViewDataSource方法
@@ -110,18 +113,19 @@ static NSString * const headerID = @"NJInviteRecordHeaderView";
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    UIView * footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, NJScreenW, 71)];
-//    [footerView addAllCornerRadius:8.0];
-    footerView.backgroundColor = [UIColor clearColor];
-    
-    CAShapeLayer * circleCornerLayer = [CAShapeLayer layer];
-    
-    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, NJScreenW - 30, 38) byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadii:CGSizeMake(8.0, 8.0)];
-    
-    circleCornerLayer.path = path.CGPath;
-    
-    circleCornerLayer.fillColor = [UIColor whiteColor].CGColor;
-    [footerView.layer addSublayer:circleCornerLayer];
+//    UIView * footerView = [[UIView alloc] initWithFrame:CGRectMake(15, 0, NJScreenW, 71)];
+////    [footerView addAllCornerRadius:8.0];
+//    footerView.backgroundColor = [UIColor clearColor];
+//
+//    CAShapeLayer * circleCornerLayer = [CAShapeLayer layer];
+//
+//    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, NJScreenW - 30, 38) byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadii:CGSizeMake(8.0, 8.0)];
+//
+//    circleCornerLayer.path = path.CGPath;
+//
+//    circleCornerLayer.fillColor = [UIColor whiteColor].CGColor;
+//    [footerView.layer addSublayer:circleCornerLayer];
+    NJInviteRecordFooterView * footerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:footerID];
     
     return footerView;
 }
