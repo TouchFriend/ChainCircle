@@ -592,7 +592,7 @@ static NSString * const footerID = @"NJLqcFooterView";
         [JPUSHService setAlias:userItem.account completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
             if(seq == seqIndex)
             {
-                if([iAlias isEqualToString:@"0"])
+                if([iAlias isEqualToString:userItem.account])
                 {
                     NSLog(@"设置别名成功");
                 }
