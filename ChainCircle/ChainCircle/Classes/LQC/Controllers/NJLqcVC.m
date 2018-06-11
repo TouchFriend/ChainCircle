@@ -585,6 +585,7 @@ static NSString * const footerID = @"NJLqcFooterView";
     NJScrollTitleItem * item = self.titleArr[index];
     
     NJWebVC * webVC = [[NJWebVC alloc] init];
+    webVC.titleStr = @"活动详情";
     webVC.urlStr = [@"http://lianquan.chongdx.com/wap/living.html?id=" stringByAppendingString:item.ID.stringValue];
     [self.navigationController pushViewController:webVC animated:YES];
 }

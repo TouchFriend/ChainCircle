@@ -27,6 +27,7 @@
 }
 - (void)setupInit
 {
+    self.title = @"链圈15亿LQC免费领取说明";
     
     UIScrollView * scrollView = [[UIScrollView alloc] init];
     [self.view addSubview:scrollView];
@@ -64,7 +65,7 @@
     [scrollView addSubview:inviteCardView];
     [inviteCardView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(posterView.mas_bottom);
-        make.left.bottom.mas_equalTo(contentView).mas_offset(15);
+        make.left.mas_equalTo(contentView).mas_offset(15);
         make.right.bottom.mas_equalTo(contentView).mas_offset(-15);
         make.height.mas_equalTo(442);
     }];

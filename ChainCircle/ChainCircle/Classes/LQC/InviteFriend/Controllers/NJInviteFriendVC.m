@@ -69,9 +69,9 @@ static NSString * const footerID = @"NJInviteRecordFooterView";
 {
     self.title = @"邀请朋友";
     
-    UIBarButtonItem * shareItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginNamed:@"share_inviteFriend"] style:UIBarButtonItemStylePlain target:self action:@selector(shareItemClick)];
-    
-    self.navigationItem.rightBarButtonItems = @[shareItem];
+//    UIBarButtonItem * shareItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginNamed:@"share_inviteFriend"] style:UIBarButtonItemStylePlain target:self action:@selector(shareItemClick)];
+//    
+//    self.navigationItem.rightBarButtonItems = @[shareItem];
 }
 
 #pragma mark - tableView

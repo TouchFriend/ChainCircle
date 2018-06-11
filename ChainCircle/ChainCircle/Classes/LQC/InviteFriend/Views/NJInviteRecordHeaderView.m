@@ -80,7 +80,7 @@
             
         }
     }
-    bandHisFriendNum = bandFriendNum * scale / 100.0;
+    bandHisFriendNum = scale;
     
     NSString * text = [NSString stringWithFormat:@"邀请朋友可以获得二级奖励：\n每邀请一个好友获得%.2lfLQC，好友成功邀请TA的好友你还可以再获得%.2lfLQC", bandFriendNum, bandHisFriendNum];
     

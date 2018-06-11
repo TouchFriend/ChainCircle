@@ -116,14 +116,14 @@
         return;
     }
     
-//    NSLog(@"%@", NSStringFromCGPoint(offset));
+    NSLog(@"%@", NSStringFromCGPoint(offset));
     
     if(offset.y == 0)
     {
         scrollView.contentOffset = CGPointMake(offset.x, scrollViewHeight * (self.dataArr.count - 2));
     }
     
-    if(offset.y == scrollViewHeight * (self.dataArr.count - 1))
+    if(offset.y >= scrollViewHeight * (self.dataArr.count - 1))
     {
         scrollView.contentOffset = CGPointMake(offset.x, scrollViewHeight);
     }

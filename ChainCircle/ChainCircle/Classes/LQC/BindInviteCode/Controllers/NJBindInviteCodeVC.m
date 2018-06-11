@@ -73,7 +73,7 @@
     }];
     
     self.titleLabel = titleLabel;
-    titleLabel.text = @"";
+    titleLabel.text = @"新用户绑定朋友邀请码获得LQC";
     titleLabel.textColor = NJGrayColor(106);
     titleLabel.font = [UIFont systemFontOfSize:14.0];
     
