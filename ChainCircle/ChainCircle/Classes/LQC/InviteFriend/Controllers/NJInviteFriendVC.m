@@ -15,12 +15,21 @@
 #import "NJUserItem.h"
 #import "NJInviteCodeListVC.h"
 #import "NJInviteRecordFooterView.h"
+#import "NJRecordItem.h"
+#import <MJExtension.h>
+#import "NJSettingItem.h"
 
 @interface NJInviteFriendVC () <UITableViewDataSource, UITableViewDelegate>
 /********* <#注释#> *********/
 @property(nonatomic,weak)UITableView * tableView;
 /********* <#注释#> *********/
 @property(nonatomic,strong)UIView * tableHeaderView;
+
+/********* <#注释#> *********/
+@property(nonatomic,strong)NSArray<NJRecordItem *> * recordArr;
+
+/********* <#注释#> *********/
+@property(nonatomic,strong)NSArray<NJSettingItem *> * settingArr;
 
 @end
 
@@ -49,6 +58,10 @@ static NSString * const footerID = @"NJInviteRecordFooterView";
     
     
     [self setupTableView];
+    
+    [self getInviteRecordListRequest];
+    
+    [self getSettingRequest];
 }
 
 #pragma mark - 导航条
@@ -86,15 +99,65 @@ static NSString * const footerID = @"NJInviteRecordFooterView";
     [tableView registerClass:[NJInviteRecordFooterView class] forHeaderFooterViewReuseIdentifier:footerID];
 }
 
+#pragma mark - 网络请求
+- (void)getInviteRecordListRequest
+{
+    [SVProgressHUD show];
+    [NetRequest getInviteInfoWithCompleted:^(id data, int flag) {
+        [SVProgressHUD dismiss];
+        if(flag == GetInviteInfo)
+        {
+            if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
+            {
+                NSDictionary * dataDic = getDictionaryInDict(data, DictionaryKeyData);
+                NSArray * dataArr = getArrayInDict(dataDic, @"list");
+                self.recordArr = [NJRecordItem mj_objectArrayWithKeyValuesArray:dataArr];
+                [self.tableView reloadData];
+            }
+            else
+            {
+                
+                [SVProgressHUD showErrorWithStatus:getStringInDict(data, DictionaryKeyData)];
+                [SVProgressHUD dismissWithDelay:1.5];
+            }
+        }
+    }];
+}
+
+//获取配置
+- (void)getSettingRequest
+{
+    [NetRequest getSettingWithCompleted:^(id data, int flag) {
+        if(flag == GetSetting)
+        {
+            if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
+            {
+                NSArray * dataArr = getArrayInDict(data, DictionaryKeyData);
+                self.settingArr = [NJSettingItem mj_objectArrayWithKeyValuesArray:dataArr];
+                [self.tableView reloadData];
+            }
+            else
+            {
+                
+                [SVProgressHUD showErrorWithStatus:getStringInDict(data, DictionaryKeyData)];
+                [SVProgressHUD dismissWithDelay:1.5];
+            }
+        }
+    }];
+}
+
 #pragma mark - UITableViewDataSource方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 30;
+    return self.recordArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NJInviteRecordCell * cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
+    
+    NJRecordItem * item = self.recordArr[indexPath.row];
+    cell.item = item;
     return cell;
 }
 
@@ -103,7 +166,8 @@ static NSString * const footerID = @"NJInviteRecordFooterView";
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     NJInviteRecordHeaderView * headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:headerID];
-    
+    headerView.invitedNum = self.recordArr.count;
+    headerView.settingArr = self.settingArr;
     NJWeakSelf;
     headerView.myInviteBlock = ^{
         [weakSelf myInviteBtnClick];
@@ -170,4 +234,21 @@ static NSString * const footerID = @"NJInviteRecordFooterView";
     return _tableHeaderView;
 }
 
+- (NSArray<NJRecordItem *> *)recordArr
+{
+    if(_recordArr == nil)
+    {
+        _recordArr = [NSArray array];
+    }
+    return _recordArr;
+}
+
+- (NSArray<NJSettingItem *> *)settingArr
+{
+    if(_settingArr == nil)
+    {
+        _settingArr = [NSArray array];
+    }
+    return _settingArr;
+}
 @end

@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class NJRecordItem;
 @interface NJInviteRecordCell : UITableViewCell
+/********* <#注释#> *********/
+@property(nonatomic,strong)NJRecordItem * item;
 
 @end

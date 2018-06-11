@@ -25,6 +25,8 @@
 #import "NJInviteCodeListVC.h"
 #import "NJMyPosterVC.h"
 #import <JPUSHService.h>
+#import "NJWebVC.h"
+
 
 @interface NJLqcVC () <UICollectionViewDataSource, UICollectionViewDelegate>
 /********* <#注释#> *********/
@@ -65,11 +67,8 @@ static NSString * const footerID = @"NJLqcFooterView";
 //        [self getMyAwardNumRequest];
 //        [self.collectionView.mj_header beginRefreshing];
         [self pwdLoginRequest];
+        
     }
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChange) name:NotificationWifiNetwork object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChange) name:NotificationWWAN_Networkd object:nil];
     
 }
 
@@ -99,7 +98,11 @@ static NSString * const footerID = @"NJLqcFooterView";
 //    {
 //        [self getAward];
 //    }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getScrollTitleDataRequest) name:@"NotificationRefreshAd" object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChange) name:NotificationWifiNetwork object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChange) name:NotificationWWAN_Networkd object:nil];
 }
 
 #pragma mark - 导航条
@@ -373,6 +376,9 @@ static NSString * const footerID = @"NJLqcFooterView";
         headerView.posterBlock = ^{
             [weakSelf posterBtnClick];
         };
+        headerView.adBlock = ^(NSInteger index) {
+            [weakSelf adBtnClick:index];
+        };
         return headerView;
     }
     else
@@ -438,17 +444,17 @@ static NSString * const footerID = @"NJLqcFooterView";
 //            [self getAward];
         }
             break;
-        case 1://邀请朋友获得2级奖励
-        {
-            NJInviteCodeListVC * inviteCodeListVC = [[NJInviteCodeListVC alloc] init];
-//            NJInviteFriendVC * inviteFriendVC = [[NJInviteFriendVC alloc] init];
-            [self.navigationController pushViewController:inviteCodeListVC animated:YES];
-        }
-            break;
-        case 2://绑定朋友邀请码获得
+        case 1://绑定朋友邀请码获得
         {
             NJBindInviteCodeVC * bindInviteCodeVC = [[NJBindInviteCodeVC alloc] init];
             [self.navigationController pushViewController:bindInviteCodeVC animated:YES];
+        }
+            break;
+        case 2://邀请朋友获得2级奖励
+        {
+            //            NJInviteCodeListVC * inviteCodeListVC = [[NJInviteCodeListVC alloc] init];
+            NJInviteFriendVC * inviteFriendVC = [[NJInviteFriendVC alloc] init];
+            [self.navigationController pushViewController:inviteFriendVC animated:YES];
         }
             break;
         case 3://提交微信群或者QQ群获得
@@ -519,29 +525,29 @@ static NSString * const footerID = @"NJLqcFooterView";
     if(_dataArr == nil)
     {
         _dataArr = @[
-                     @{
-                         @"icon" : @"1_Lqc",
-                         @"title" : @"夺宝iPhoneX"
-                         },
-                     @{
-                         @"icon" : @"2_Lqc",
-                         @"title" : @"手机充值"
-                         },
+//                     @{
+//                         @"icon" : @"1_Lqc",
+//                         @"title" : @"夺宝iPhoneX"
+//                         },
+//                     @{
+//                         @"icon" : @"2_Lqc",
+//                         @"title" : @"手机充值"
+//                         },
                      @{
                          @"icon" : @"3_Lqc",
-                         @"title" : @"交易出售"
+                         @"title" : @"C2C交易"
                          },
-                     @{
-                         @"icon" : @"4_Lqc",
-                         @"title" : @"在线购物"
-                         },
-                     @{
-                         @"icon" : @"5_Lqc",
-                         @"title" : @"线下消费"
-                         },
+//                     @{
+//                         @"icon" : @"4_Lqc",
+//                         @"title" : @"在线购物"
+//                         },
+//                     @{
+//                         @"icon" : @"5_Lqc",
+//                         @"title" : @"线下消费"
+//                         },
                      @{
                          @"icon" : @"6_Lqc",
-                         @"title" : @"投放广告"
+                         @"title" : @"自主推广"
                          },
                      ];
     }
@@ -563,15 +569,24 @@ static NSString * const footerID = @"NJLqcFooterView";
 }
 - (void)posterBtnClick
 {
-    if(![NJLoginTool isLogin])
-    {
-        NJLoginVC * loginVC = [[NJLoginVC alloc] init];
-        [self.navigationController pushViewController:loginVC animated:YES];
-        return;
-    }
+//    if(![NJLoginTool isLogin])
+//    {
+//        NJLoginVC * loginVC = [[NJLoginVC alloc] init];
+//        [self.navigationController pushViewController:loginVC animated:YES];
+//        return;
+//    }
     
     NJMyPosterVC * myPosterVC = [[NJMyPosterVC alloc] init];
     [self.navigationController pushViewController:myPosterVC animated:YES];
+}
+
+- (void)adBtnClick:(NSInteger)index
+{
+    NJScrollTitleItem * item = self.titleArr[index];
+    
+    NJWebVC * webVC = [[NJWebVC alloc] init];
+    webVC.urlStr = [@"http://lianquan.chongdx.com/wap/living.html?id=" stringByAppendingString:item.ID.stringValue];
+    [self.navigationController pushViewController:webVC animated:YES];
 }
 
 #pragma mark - 其他

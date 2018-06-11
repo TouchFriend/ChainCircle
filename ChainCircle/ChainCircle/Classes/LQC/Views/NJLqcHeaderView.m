@@ -79,6 +79,10 @@
 - (void)scrollTitleView:(NJScrollTitleView *)scrollTitleView didSelectItemAtIndex:(NSInteger)index
 {
     NSLog(@"%s--%ld", __func__, index);
+    if(self.adBlock != nil)
+    {
+        self.adBlock(index);
+    }
 }
 
 - (void)scrollTitleView:(NJScrollTitleView *)scrollTitleView didScrollToIndex:(NSInteger)index

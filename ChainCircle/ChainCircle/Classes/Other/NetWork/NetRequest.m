@@ -382,4 +382,26 @@
         }
     }];
 }
+
+#pragma mark - 获取配置
++ (void)getSettingWithCompleted:(completedBlock)completed
+{
+    NSDictionary * parametersDic = @{
+
+                                     };
+    
+    [[NetAPIManager sharedManager] Post:@"/user/getConfig" parameters:parametersDic completed:^(id data, NSError *error) {
+        if(completed != nil)
+        {
+            if(error == nil)
+            {
+                completed(data, GetSetting);
+            }
+            else
+            {
+                completed(data, RequestError);
+            }
+        }
+    }];
+}
 @end

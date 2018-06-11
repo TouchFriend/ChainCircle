@@ -38,6 +38,7 @@ typedef enum : NSUInteger {
     SignIn,//签到
     GetPoster, //获取海报
     GetIncomeList, //收支明细
+    GetSetting, //获取配置
 
 } NetRequest_enum;
 
@@ -158,4 +159,12 @@ typedef enum : NSUInteger {
  @param completed 回调
  */
 + (void)getIncomeListWithType:(NSString *)type completed:(completedBlock)completed;
+
+
+/**
+ 获取配置
+
+ @param completed 回调
+ */
++ (void)getSettingWithCompleted:(completedBlock)completed;
 @end

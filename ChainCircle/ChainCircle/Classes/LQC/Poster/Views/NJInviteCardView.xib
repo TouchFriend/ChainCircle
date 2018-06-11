@@ -50,14 +50,14 @@
                             <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="免费获得LQC币，夺宝iPhoneX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciW-7H-hd1">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15亿LQC免费领取" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ciW-7H-hd1">
                             <rect key="frame" x="0.0" y="348" width="375" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" red="0.3921568627" green="0.25098039220000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZ0-XX-cQ0">
-                            <rect key="frame" x="0.0" y="375" width="375" height="33"/>
+                            <rect key="frame" x="0.0" y="380" width="375" height="33"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="33" id="zAj-HB-DgU"/>
                             </constraints>
@@ -65,8 +65,8 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已累计发出红包2388万" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4G-8C-B4A">
-                            <rect key="frame" x="0.0" y="415" width="375" height="17"/>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已累计发出红包2388万" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4G-8C-B4A">
+                            <rect key="frame" x="0.0" y="420" width="375" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
@@ -91,7 +91,7 @@
                         <constraint firstItem="LQP-JF-mi8" firstAttribute="top" secondItem="VQ1-kx-0it" secondAttribute="bottom" constant="10" id="hsK-Cr-vdD"/>
                         <constraint firstAttribute="trailing" secondItem="t4G-8C-B4A" secondAttribute="trailing" id="iLa-Xb-tOF"/>
                         <constraint firstItem="6CI-YE-ukY" firstAttribute="leading" secondItem="yK9-da-8F8" secondAttribute="leading" id="ocg-4m-Fll"/>
-                        <constraint firstItem="BZ0-XX-cQ0" firstAttribute="top" secondItem="ciW-7H-hd1" secondAttribute="bottom" constant="10" id="qWL-16-qWh"/>
+                        <constraint firstItem="BZ0-XX-cQ0" firstAttribute="top" secondItem="ciW-7H-hd1" secondAttribute="bottom" constant="15" id="qWL-16-qWh"/>
                         <constraint firstAttribute="trailing" secondItem="BZ0-XX-cQ0" secondAttribute="trailing" id="rcH-aS-haa"/>
                         <constraint firstItem="BZ0-XX-cQ0" firstAttribute="leading" secondItem="yK9-da-8F8" secondAttribute="leading" id="sZc-mY-vcf"/>
                     </constraints>
@@ -107,7 +107,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="inviteCodeImageTopConstraint" destination="Q0b-tj-GE4" id="32b-zF-nft"/>
                 <outlet property="inviteCodeLabel" destination="d1p-Iy-jjk" id="7xn-MR-nXw"/>
+                <outlet property="inviteTitleLabel" destination="6CI-YE-ukY" id="akF-kB-IYd"/>
                 <outlet property="totalPersonLabel" destination="BZ0-XX-cQ0" id="Wjz-4x-CPq"/>
             </connections>
         </view>

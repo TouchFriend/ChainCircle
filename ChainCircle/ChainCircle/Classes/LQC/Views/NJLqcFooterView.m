@@ -119,23 +119,25 @@ static NSString * const footerID = @"NJMethodFooterView";
         {
             siSign = userItem.is_sign;
         }
+        //0按钮 1next 2文字
         _dataArr = @[
                      @{
-                         @"title" : @"每日签到获得1-5LQC",
-                         @"isBtn" : @(YES),
+                         @"title" : @"每日签到",
+                         @"type" : @(0),
                          @"isSign" : siSign
                          },
                      @{
-                         @"title" : @"邀请朋友获得2级奖励",
-                         @"isBtn" : @(NO)
+                         @"title" : @"绑定朋友邀请码获得",
+                         @"type" : @(1),
                          },
                      @{
-                         @"title" : @"绑定朋友邀请码获得",
-                         @"isBtn" : @(NO)
+                         @"title" : @"邀请朋友获得2级奖励",
+                         @"type" : @(1),
                          },
                      @{
                          @"title" : @"提交微信群或者QQ群获得",
-                         @"isBtn" : @(NO)
+                         @"type" : @(2),
+                         @"text" : @"即将上线",
                          }
                      
                      

@@ -7,7 +7,14 @@
 //
 
 #import "NJInviteRecordCell.h"
+#import "NJRecordItem.h"
+@interface NJInviteRecordCell ()
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *accountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *numLabel;
 
+@end
 @implementation NJInviteRecordCell
 
 - (void)awakeFromNib {
@@ -30,4 +37,14 @@
     [super setFrame:frame];
 }
 
+
+- (void)setItem:(NJRecordItem *)item
+{
+    _item = item;
+    
+    self.dateLabel.text = item.created_at;
+    self.accountLabel.text = item.account;
+    self.contentLabel.text = item.content;
+    self.numLabel.text = item.lqc_num;
+}
 @end

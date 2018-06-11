@@ -15,6 +15,7 @@
 
 - (IBAction)signInBtnClick;
 @property (weak, nonatomic) IBOutlet UIImageView *nextImageV;
+@property (weak, nonatomic) IBOutlet UILabel *tipLabel;
 
 @end
 @implementation NJMethodCell
@@ -40,16 +41,39 @@
     _dataDic = dataDic;
     
     self.titleLabel.text = dataDic[@"title"];
-    NSNumber * isBtnNum = dataDic[@"isBtn"];
+    NSNumber * typeNum = dataDic[@"type"];
     
-    self.nextImageV.hidden = isBtnNum.boolValue;
-    self.signInBtn.hidden = !isBtnNum.boolValue;
-    
-    if(isBtnNum.boolValue)
-    {
-        NSNumber * isSignNum = dataDic[@"isSign"];
-        self.signInBtn.selected = isSignNum.integerValue == 1;
+    switch (typeNum.integerValue) {
+        case 0://按钮
+        {
+            self.signInBtn.hidden = NO;
+            self.nextImageV.hidden = YES;
+            self.tipLabel.hidden = YES;
+            NSNumber * isSignNum = dataDic[@"isSign"];
+            self.signInBtn.selected = isSignNum.integerValue == 1;
+        }
+            break;
+        case 1://图片
+        {
+            self.signInBtn.hidden = YES;
+            self.nextImageV.hidden = NO;
+            self.tipLabel.hidden = YES;
+        }
+            break;
+        case 2://文字
+        {
+            self.signInBtn.hidden = YES;
+            self.nextImageV.hidden = YES;
+            self.tipLabel.hidden = NO;
+            self.tipLabel.text = dataDic[@"text"];
+        }
+            break;
+            
+        default:
+            break;
     }
+    
+    
     
     
 }

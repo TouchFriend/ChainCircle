@@ -8,9 +8,13 @@
 
 #import "NJInviteRecordHeaderView.h"
 #import "UIView+NJCommon.h"
+#import "NJSettingItem.h"
+
 @interface NJInviteRecordHeaderView ()
 @property (weak, nonatomic) IBOutlet UIButton *myInviteBtn;
 - (IBAction)myInviteBtnClick;
+@property (weak, nonatomic) IBOutlet UILabel *inviteNumLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
 @implementation NJInviteRecordHeaderView
@@ -27,8 +31,17 @@
     
     [self.contentView.layer addSublayer:circleCornerLayer];
     
-    [self.myInviteBtn addBorderWidth:1.0 color:[UIColor blackColor] cornerRadius:4.0];
+    [self.myInviteBtn addAllCornerRadius:4.0];
     
+    
+    
+}
+
+- (void)setInvitedNum:(NSInteger)invitedNum
+{
+    _invitedNum = invitedNum;
+    
+    self.inviteNumLabel.text = [NSString stringWithFormat:@"%ld", invitedNum];
 }
 
 - (IBAction)myInviteBtnClick {
@@ -43,5 +56,40 @@
     frame.origin.x = 15;
     frame.size.width -= 30;
     [super setFrame:frame];
+}
+
+- (void)setSettingArr:(NSArray<NJSettingItem *> *)settingArr
+{
+    _settingArr = settingArr;
+    if(settingArr.count == 0)
+    {
+        return;
+    }
+    
+    NSInteger bandFriendNum = 0;
+    CGFloat scale = 0;
+    NSInteger bandHisFriendNum = 0;
+    for (NJSettingItem * item in settingArr) {
+        if([item.name isEqualToString:@"band_lqc_user"])
+        {
+            bandFriendNum = item.value.integerValue;
+        }
+        if([item.name isEqualToString:@"fx_get"])
+        {
+            scale = item.value.floatValue;
+            
+        }
+    }
+    bandHisFriendNum = bandFriendNum * scale / 100.0;
+    
+    NSString * text = [NSString stringWithFormat:@"邀请朋友可以获得二级奖励：\n每邀请一个好友获得%ldLQC，好友成功邀请TA的好友你还可以再获得%ldLQC", bandFriendNum, bandHisFriendNum];
+    
+    NSMutableParagraphStyle * paraStyleM = [[NSMutableParagraphStyle alloc] init];
+    paraStyleM.lineSpacing = 4.0;
+    NSDictionary * attrDic = @{
+                               NSParagraphStyleAttributeName : paraStyleM
+                               };
+    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithString:text attributes:attrDic];
+    self.titleLabel.attributedText = attrStr;
 }
 @end

@@ -110,6 +110,12 @@
 		BFA7AF0D20BFECBC0029DE12 /* NJBindInviteCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AF0C20BFECBC0029DE12 /* NJBindInviteCodeVC.m */; };
 		BFA7AF1420C022620029DE12 /* NJInviteCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA7AF1220C022620029DE12 /* NJInviteCodeVC.m */; };
 		BFA7AF1520C022620029DE12 /* NJInviteCodeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7AF1320C022620029DE12 /* NJInviteCodeVC.xib */; };
+		BFBB3F7420CE174F00DDE23B /* NJAdDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBB3F7320CE174F00DDE23B /* NJAdDetailVC.m */; };
+		BFBB3F7820CE1B4000DDE23B /* NJWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBB3F7720CE1B4000DDE23B /* NJWebVC.m */; };
+		BFBB3F7B20CE1DF500DDE23B /* NJInviteCardLogoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBB3F7A20CE1DF500DDE23B /* NJInviteCardLogoutView.m */; };
+		BFBB3F7D20CE1DFE00DDE23B /* NJInviteCardLogoutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFBB3F7C20CE1DFE00DDE23B /* NJInviteCardLogoutView.xib */; };
+		BFBB3F8020CE215D00DDE23B /* NJRecordItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBB3F7F20CE215D00DDE23B /* NJRecordItem.m */; };
+		BFBB3F8320CE273700DDE23B /* NJSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBB3F8220CE273700DDE23B /* NJSettingItem.m */; };
 		BFCC7DFB20C787B6008490AB /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCC7DF820C787B6008490AB /* iCarousel.m */; };
 		BFCC7DFC20C787B6008490AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFCC7DFA20C787B6008490AB /* Info.plist */; };
 		BFDE2BFE20C926B00095033E /* NJInviteRecordFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDE2BFD20C926B00095033E /* NJInviteRecordFooterView.m */; };
@@ -313,6 +319,17 @@
 		BFA7AF1120C022620029DE12 /* NJInviteCodeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJInviteCodeVC.h; sourceTree = "<group>"; };
 		BFA7AF1220C022620029DE12 /* NJInviteCodeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJInviteCodeVC.m; sourceTree = "<group>"; };
 		BFA7AF1320C022620029DE12 /* NJInviteCodeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJInviteCodeVC.xib; sourceTree = "<group>"; };
+		BFBB3F7220CE174F00DDE23B /* NJAdDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJAdDetailVC.h; sourceTree = "<group>"; };
+		BFBB3F7320CE174F00DDE23B /* NJAdDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJAdDetailVC.m; sourceTree = "<group>"; };
+		BFBB3F7620CE1B4000DDE23B /* NJWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJWebVC.h; sourceTree = "<group>"; };
+		BFBB3F7720CE1B4000DDE23B /* NJWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJWebVC.m; sourceTree = "<group>"; };
+		BFBB3F7920CE1DF500DDE23B /* NJInviteCardLogoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJInviteCardLogoutView.h; sourceTree = "<group>"; };
+		BFBB3F7A20CE1DF500DDE23B /* NJInviteCardLogoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJInviteCardLogoutView.m; sourceTree = "<group>"; };
+		BFBB3F7C20CE1DFE00DDE23B /* NJInviteCardLogoutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NJInviteCardLogoutView.xib; sourceTree = "<group>"; };
+		BFBB3F7E20CE215D00DDE23B /* NJRecordItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJRecordItem.h; sourceTree = "<group>"; };
+		BFBB3F7F20CE215D00DDE23B /* NJRecordItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJRecordItem.m; sourceTree = "<group>"; };
+		BFBB3F8120CE273700DDE23B /* NJSettingItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJSettingItem.h; sourceTree = "<group>"; };
+		BFBB3F8220CE273700DDE23B /* NJSettingItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJSettingItem.m; sourceTree = "<group>"; };
 		BFCC7DF820C787B6008490AB /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		BFCC7DF920C787B6008490AB /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		BFCC7DFA20C787B6008490AB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -395,6 +412,9 @@
 				BF737A7720C66E5A0095F3DF /* NJInviteCardView.xib */,
 				BF737A7920C674090095F3DF /* NJPosterView.h */,
 				BF737A7A20C674090095F3DF /* NJPosterView.m */,
+				BFBB3F7920CE1DF500DDE23B /* NJInviteCardLogoutView.h */,
+				BFBB3F7A20CE1DF500DDE23B /* NJInviteCardLogoutView.m */,
+				BFBB3F7C20CE1DFE00DDE23B /* NJInviteCardLogoutView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -601,6 +621,7 @@
 		BF9E17F120BEACA500B655EC /* LQC */ = {
 			isa = PBXGroup;
 			children = (
+				BFBB3F6E20CE173D00DDE23B /* AdDetail */,
 				BF737A8520C697410095F3DF /* myPoster */,
 				BF737A6A20C658B50095F3DF /* Poster */,
 				BF79E82B20C6266F002834B7 /* LqcDetail */,
@@ -673,6 +694,7 @@
 		BF9E17FF20BEAD8100B655EC /* subClass */ = {
 			isa = PBXGroup;
 			children = (
+				BFBB3F7520CE1B4000DDE23B /* webVC */,
 				BF729F5620C792A400ADDAB8 /* CustomFlowLayout */,
 				BFCC7DF720C787B6008490AB /* iCarousel */,
 				BF44291120C140D300B5B471 /* NJScrollTitleView.h */,
@@ -948,6 +970,10 @@
 			children = (
 				BF737A8220C682310095F3DF /* NJPosterItem.h */,
 				BF737A8320C682310095F3DF /* NJPosterItem.m */,
+				BFBB3F7E20CE215D00DDE23B /* NJRecordItem.h */,
+				BFBB3F7F20CE215D00DDE23B /* NJRecordItem.m */,
+				BFBB3F8120CE273700DDE23B /* NJSettingItem.h */,
+				BFBB3F8220CE273700DDE23B /* NJSettingItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1017,6 +1043,48 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BFBB3F6E20CE173D00DDE23B /* AdDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BFBB3F7020CE173D00DDE23B /* Controllers */,
+				BFBB3F6F20CE173D00DDE23B /* Models */,
+				BFBB3F7120CE173D00DDE23B /* Views */,
+			);
+			path = AdDetail;
+			sourceTree = "<group>";
+		};
+		BFBB3F6F20CE173D00DDE23B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFBB3F7020CE173D00DDE23B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFBB3F7220CE174F00DDE23B /* NJAdDetailVC.h */,
+				BFBB3F7320CE174F00DDE23B /* NJAdDetailVC.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BFBB3F7120CE173D00DDE23B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BFBB3F7520CE1B4000DDE23B /* webVC */ = {
+			isa = PBXGroup;
+			children = (
+				BFBB3F7620CE1B4000DDE23B /* NJWebVC.h */,
+				BFBB3F7720CE1B4000DDE23B /* NJWebVC.m */,
+			);
+			path = webVC;
 			sourceTree = "<group>";
 		};
 		BFCC7DF720C787B6008490AB /* iCarousel */ = {
@@ -1105,6 +1173,7 @@
 				BFA7AED520BF94C90029DE12 /* NJLqcCell.xib in Resources */,
 				BFA7AEE420BFA0BD0029DE12 /* NJMethodCell.xib in Resources */,
 				BF9E17DA20BEA3C700B655EC /* LaunchScreen.storyboard in Resources */,
+				BFBB3F7D20CE1DFE00DDE23B /* NJInviteCardLogoutView.xib in Resources */,
 				BFA7AF1520C022620029DE12 /* NJInviteCodeVC.xib in Resources */,
 				BFA7AF0620BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib in Resources */,
 				BFA7AEE920BFA3570029DE12 /* NJMethodHeaderView.xib in Resources */,
@@ -1210,6 +1279,7 @@
 				BF9E188720BEAD8200B655EC /* NJViewController.m in Sources */,
 				BF9E18BC20BEAD8200B655EC /* FileManager.m in Sources */,
 				BF9E18A420BEAD8200B655EC /* UITextView+Placeholder.m in Sources */,
+				BFBB3F8320CE273700DDE23B /* NJSettingItem.m in Sources */,
 				BF9E188920BEAD8200B655EC /* NJCollectionViewController.m in Sources */,
 				BF9E18B920BEAD8200B655EC /* ValuePickerView.m in Sources */,
 				BF9E189620BEAD8200B655EC /* NJProductDetailFooter.m in Sources */,
@@ -1230,6 +1300,7 @@
 				BFCC7DFB20C787B6008490AB /* iCarousel.m in Sources */,
 				BF9E188D20BEAD8200B655EC /* XLPaymentLoadingHUD.m in Sources */,
 				BF9E17F020BEAC8C00B655EC /* AppDelegate.m in Sources */,
+				BFBB3F7820CE1B4000DDE23B /* NJWebVC.m in Sources */,
 				BFA7AEE720BFA3490029DE12 /* NJMethodHeaderView.m in Sources */,
 				BF854D6D20BEB04F00064466 /* NJCheckGroupVC.m in Sources */,
 				BF9E188C20BEAD8200B655EC /* NJTabBarController.m in Sources */,
@@ -1243,9 +1314,11 @@
 				BF9E189020BEAD8200B655EC /* NJVerticalButton.m in Sources */,
 				BF44291620C1445D00B5B471 /* NJScrollTitleItem.m in Sources */,
 				BF9E188E20BEAD8200B655EC /* XLPaymentSuccessHUD.m in Sources */,
+				BFBB3F7420CE174F00DDE23B /* NJAdDetailVC.m in Sources */,
 				BFA7AEFB20BFC80A0029DE12 /* NJInviteRecordCell.m in Sources */,
 				BF9E18A820BEAD8200B655EC /* UIImage+NJImage.m in Sources */,
 				BF9E18B520BEAD8200B655EC /* UIWindow+LBXHierarchy.m in Sources */,
+				BFBB3F8020CE215D00DDE23B /* NJRecordItem.m in Sources */,
 				BF9E18A920BEAD8200B655EC /* UILabel+NJChangeLineSpaceAndWordSpace.m in Sources */,
 				BF737A6820C6385B0095F3DF /* NJDetailCell.m in Sources */,
 				BF9E18BD20BEAD8200B655EC /* NJPayTool.m in Sources */,
@@ -1265,6 +1338,7 @@
 				BF737A7B20C674090095F3DF /* NJPosterView.m in Sources */,
 				BF79E83120C6267E002834B7 /* NJLqcDetailVC.m in Sources */,
 				BF9E188820BEAD8200B655EC /* NJNavigationController.m in Sources */,
+				BFBB3F7B20CE1DF500DDE23B /* NJInviteCardLogoutView.m in Sources */,
 				BF9E188A20BEAD8200B655EC /* NJTableViewController.m in Sources */,
 				BF9E18C020BEAD8200B655EC /* NJCIQRCodeTool.m in Sources */,
 				BF9E18B720BEAD8200B655EC /* UIAlertView+LBXAlertAction.m in Sources */,

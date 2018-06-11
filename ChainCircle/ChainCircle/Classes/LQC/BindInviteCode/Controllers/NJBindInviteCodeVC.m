@@ -9,12 +9,18 @@
 #import "NJBindInviteCodeVC.h"
 #import "NJUserItem.h"
 #import "UIImage+NJImage.h"
+#import <MJExtension.h>
+#import "NJSettingItem.h"
 
 @interface NJBindInviteCodeVC ()
 /********* <#注释#> *********/
 @property(nonatomic,weak)UITextField * inviteTextF;
 
+/********* <#注释#> *********/
+@property(nonatomic,strong)NSArray<NJSettingItem *> * settingArr;
 
+/********* <#注释#> *********/
+@property(nonatomic,weak)UILabel * titleLabel;
 @end
 
 @implementation NJBindInviteCodeVC
@@ -33,6 +39,8 @@
     [self setupNaviBar];
     
     [self setupContent];
+    
+    [self getSettingRequest];
 }
 
 #pragma mark - 导航条
@@ -64,7 +72,8 @@
         make.height.mas_equalTo(20);
     }];
     
-    titleLabel.text = @"绑定双方都可以获得LQC一次性奖励";
+    self.titleLabel = titleLabel;
+    titleLabel.text = @"";
     titleLabel.textColor = NJGrayColor(106);
     titleLabel.font = [UIFont systemFontOfSize:14.0];
     
@@ -164,4 +173,51 @@
     }];
 }
 
+
+//获取配置
+- (void)getSettingRequest
+{
+    [NetRequest getSettingWithCompleted:^(id data, int flag) {
+        if(flag == GetSetting)
+        {
+            if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
+            {
+                NSArray * dataArr = getArrayInDict(data, DictionaryKeyData);
+                self.settingArr = [NJSettingItem mj_objectArrayWithKeyValuesArray:dataArr];
+                
+                if(self.settingArr.count == 0)
+                {
+                    return ;
+                }
+                
+                NSInteger bandFriendNum = 0;
+                for (NJSettingItem * item in self.settingArr) {
+                    if([item.name isEqualToString:@"band_lqc_user"])
+                    {
+                        bandFriendNum = item.value.integerValue;
+                    }
+                
+                }
+                
+                self.titleLabel.text = [NSString stringWithFormat:@"新用户绑定朋友邀请码获得%ldLQC", bandFriendNum];
+                
+            }
+            else
+            {
+                
+                [SVProgressHUD showErrorWithStatus:getStringInDict(data, DictionaryKeyData)];
+                [SVProgressHUD dismissWithDelay:1.5];
+            }
+        }
+    }];
+}
+#pragma mark - 懒加载
+- (NSArray<NJSettingItem *> *)settingArr
+{
+    if(_settingArr == nil)
+    {
+        _settingArr = [NSArray array];
+    }
+    return _settingArr;
+}
 @end

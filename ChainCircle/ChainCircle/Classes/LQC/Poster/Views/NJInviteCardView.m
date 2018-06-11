@@ -16,6 +16,9 @@
 
 /********* <#注释#> *********/
 @property(nonatomic,copy)NSString * totalPersonStr;
+@property (weak, nonatomic) IBOutlet UILabel *inviteTitleLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *inviteCodeImageTopConstraint;
+
 @end
 
 @implementation NJInviteCardView
@@ -44,9 +47,20 @@
     
     self.totalPersonLabel.attributedText = attrStrM;
     
-    NJUserItem * userItem = [NJLoginTool getCurrentUser];
+    if([NJLoginTool isLogin])
+    {
+        NJUserItem * userItem = [NJLoginTool getCurrentUser];
+        
+        self.inviteCodeLabel.text = userItem.invite_code;
+    }
+    else
+    {
+        self.inviteTitleLabel.hidden = YES;
+        self.inviteCodeLabel.hidden = YES;
+        self.inviteCodeImageTopConstraint.constant = 0;
+    }
     
-    self.inviteCodeLabel.text = userItem.invite_code;
+    
     
 }
 

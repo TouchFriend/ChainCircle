@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NJInviteCardLogoutView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="442"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9q-a1-XHN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="442"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_qr_code" translatesAutoresizingMaskIntoConstraints="NO" id="ZZN-B3-o10">
+                            <rect key="frame" x="102.5" y="80" width="170" height="170"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="170" id="Kdy-mS-jI4"/>
+                                <constraint firstAttribute="width" constant="170" id="hDc-bw-k2S"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扫码下载链圈APP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcT-9c-KcX">
+                            <rect key="frame" x="0.0" y="270" width="375" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15亿LQC免费领取" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsB-WQ-Jh6">
+                            <rect key="frame" x="0.0" y="317" width="375" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.3921568627" green="0.25098039220000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56Y-qc-pHE">
+                            <rect key="frame" x="0.0" y="349" width="375" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="qkG-qB-oQl"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已累计发出红包2388万" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3v-vk-Ixd">
+                            <rect key="frame" x="0.0" y="389" width="375" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ZZN-B3-o10" firstAttribute="centerX" secondItem="f9q-a1-XHN" secondAttribute="centerX" id="0sn-bT-fKS"/>
+                        <constraint firstAttribute="trailing" secondItem="UcT-9c-KcX" secondAttribute="trailing" id="1RX-mU-wQx"/>
+                        <constraint firstItem="d3v-vk-Ixd" firstAttribute="top" secondItem="56Y-qc-pHE" secondAttribute="bottom" constant="7" id="5yz-1p-mfD"/>
+                        <constraint firstItem="lsB-WQ-Jh6" firstAttribute="top" secondItem="UcT-9c-KcX" secondAttribute="bottom" constant="30" id="7aT-k4-cpR"/>
+                        <constraint firstAttribute="trailing" secondItem="d3v-vk-Ixd" secondAttribute="trailing" id="9eK-x5-HUc"/>
+                        <constraint firstItem="lsB-WQ-Jh6" firstAttribute="leading" secondItem="f9q-a1-XHN" secondAttribute="leading" id="Iir-Mx-09M"/>
+                        <constraint firstItem="UcT-9c-KcX" firstAttribute="leading" secondItem="f9q-a1-XHN" secondAttribute="leading" id="Mdz-IL-wKT"/>
+                        <constraint firstItem="ZZN-B3-o10" firstAttribute="top" secondItem="f9q-a1-XHN" secondAttribute="top" constant="80" id="Tyh-p2-aKU"/>
+                        <constraint firstItem="56Y-qc-pHE" firstAttribute="top" secondItem="lsB-WQ-Jh6" secondAttribute="bottom" constant="15" id="UY1-zv-WA5"/>
+                        <constraint firstItem="UcT-9c-KcX" firstAttribute="top" secondItem="ZZN-B3-o10" secondAttribute="bottom" constant="20" id="Vbh-er-exy"/>
+                        <constraint firstItem="d3v-vk-Ixd" firstAttribute="leading" secondItem="f9q-a1-XHN" secondAttribute="leading" id="fpR-Kd-Aqm"/>
+                        <constraint firstItem="56Y-qc-pHE" firstAttribute="leading" secondItem="f9q-a1-XHN" secondAttribute="leading" id="h2G-RG-NCf"/>
+                        <constraint firstAttribute="trailing" secondItem="56Y-qc-pHE" secondAttribute="trailing" id="heb-Bp-DYb"/>
+                        <constraint firstAttribute="trailing" secondItem="lsB-WQ-Jh6" secondAttribute="trailing" id="j8h-tu-9at"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="f9q-a1-XHN" secondAttribute="trailing" id="Pcu-mT-Bur"/>
+                <constraint firstItem="f9q-a1-XHN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="i2q-QL-mtC"/>
+                <constraint firstAttribute="bottom" secondItem="f9q-a1-XHN" secondAttribute="bottom" id="nvm-GP-q8o"/>
+                <constraint firstItem="f9q-a1-XHN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="o0q-6n-Jax"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_qr_code" width="80" height="80"/>
+    </resources>
+</document>

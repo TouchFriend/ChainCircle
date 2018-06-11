@@ -149,8 +149,8 @@
     
     
     //接收自定义消息
-//    NSNotificationCenter * defaultCenter = [NSNotificationCenter defaultCenter];
-//    [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];
+    NSNotificationCenter * defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter addObserver:self selector:@selector(networkDidReceiveMessage:) name:kJPFNetworkDidReceiveMessageNotification object:nil];
 }
 
 #pragma mark - 监听网络状态
@@ -321,7 +321,27 @@
 - (void)dealtMsg:(NSDictionary *)userInfo
 {
     NSLog(@"userInfo:%@", userInfo);
+    
 }
 
+//自定义消息
+- (void)networkDidReceiveMessage:(NSNotification *)notification {
+    NSDictionary * userInfo = [notification userInfo];
+//    NSString *content = [userInfo valueForKey:@"content"];
+    NSDictionary *extras = [userInfo valueForKey:@"extras"];
+    NSNumber * state = extras[@"State"];
+    switch (state.integerValue) {
+        case 1:
+        {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"NotificationRefreshAd" object:nil];
+        }
+            break;
+        
+        default:
+            break;
+    }
+    
+    
+}
 
 @end

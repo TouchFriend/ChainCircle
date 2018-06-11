@@ -21,4 +21,8 @@
 /********* <#注释#> *********/
 @property(nonatomic,copy)void (^posterBlock)(void);
 
+/********* <#注释#> *********/
+@property(nonatomic,copy)void (^adBlock)(NSInteger index);
+
+
 @end

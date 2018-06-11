@@ -42,9 +42,17 @@
                             <action selector="signInBtnClick" destination="KGk-i7-Jjw" eventType="touchUpInside" id="k3d-DP-4PJ"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNA-Sm-T4g">
+                        <rect key="frame" x="269.5" y="13" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="lNA-Sm-T4g" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BOW-NQ-8Bf"/>
                     <constraint firstItem="etf-Rr-VGZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BRT-5f-sxM"/>
+                    <constraint firstAttribute="trailing" secondItem="lNA-Sm-T4g" secondAttribute="trailing" constant="15" id="EcW-Po-iQw"/>
                     <constraint firstItem="mgs-9t-i36" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="LCg-Mb-Wml"/>
                     <constraint firstItem="mgs-9t-i36" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Zcq-PD-LGn"/>
                     <constraint firstAttribute="trailing" secondItem="etf-Rr-VGZ" secondAttribute="trailing" constant="15" id="lmG-aA-uD8"/>
@@ -56,6 +64,7 @@
             <connections>
                 <outlet property="nextImageV" destination="etf-Rr-VGZ" id="6wL-Ho-qLg"/>
                 <outlet property="signInBtn" destination="q8U-I6-VPa" id="J0k-Fd-gA3"/>
+                <outlet property="tipLabel" destination="lNA-Sm-T4g" id="BwS-WU-70Z"/>
                 <outlet property="titleLabel" destination="mgs-9t-i36" id="gAi-8D-Tu9"/>
             </connections>
         </tableViewCell>
