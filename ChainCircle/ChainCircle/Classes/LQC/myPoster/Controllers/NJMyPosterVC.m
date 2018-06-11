@@ -83,7 +83,7 @@
         make.top.mas_equalTo(self.posterView.mas_top).mas_offset(30);
         make.centerX.mas_equalTo(self.posterView);
     }];
-    iconImageV.image = [UIImage imageNamed:@"icon_myPoster"];
+    iconImageV.image = [UIImage imageNamed:@"launImage"];
     
     
     UILabel * appNameLabel = [[UILabel alloc] init];
@@ -110,21 +110,24 @@
     desLabel.font = [UIFont systemFontOfSize:14.0];
     desLabel.textAlignment = NSTextAlignmentCenter;
     
-    UIImageView * titleImageV = [[UIImageView alloc] init];
-    [self.posterView addSubview:titleImageV];
-    [titleImageV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.size.mas_equalTo(CGSizeMake(289, 43));
+    UILabel * titleLabel = [[UILabel alloc] init];
+    [self.posterView addSubview:titleLabel];
+    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(self.posterView);
         make.top.mas_equalTo(desLabel.mas_bottom).mas_offset(10);
-        make.centerX.mas_equalTo(self.posterView);
+        make.height.mas_equalTo(43);
     }];
-    titleImageV.image = [UIImage imageNamed:@"title_myPoster"];
+    titleLabel.text = @"15亿LQC免费大放送";
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = [UIFont boldSystemFontOfSize:32];
+    titleLabel.textColor = NJOrangeColor;
     
     CGFloat margin = 15;
     
     UILabel * nameDesLabel = [[UILabel alloc] init];
     [self.posterView addSubview:nameDesLabel];
     [nameDesLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(titleImageV.mas_bottom).mas_offset(30);
+        make.top.mas_equalTo(titleLabel.mas_bottom).mas_offset(30);
         make.left.mas_equalTo(self.posterView).mas_offset(margin);
         make.height.mas_equalTo(25);
     }];

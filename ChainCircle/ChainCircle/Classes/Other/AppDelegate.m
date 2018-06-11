@@ -206,8 +206,7 @@
 {
     
     [ShareSDK registerActivePlatforms:@[
-                                        @(SSDKPlatformTypeWechat),
-                                        @(SSDKPlatformTypeQQ),
+                                        @(SSDKPlatformTypeWechat)
                                         ]
                              onImport:^(SSDKPlatformType platformType)
      {

@@ -28,8 +28,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXT-Mg-rim">
                     <rect key="frame" x="0.0" y="64" width="375" height="293"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="SWa-5d-1oU">
-                            <rect key="frame" x="138" y="75" width="100" height="100"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launImage" translatesAutoresizingMaskIntoConstraints="NO" id="SWa-5d-1oU">
+                            <rect key="frame" x="133" y="50" width="110" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="110" id="5Ut-QH-Z3h"/>
+                                <constraint firstAttribute="height" constant="110" id="OPp-Rm-8Kk"/>
+                            </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="链圈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkq-Sc-Ehs">
                             <rect key="frame" x="169" y="175" width="37" height="22"/>
@@ -41,7 +45,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="jXT-Mg-rim" secondAttribute="height" multiplier="375:293" id="88f-fo-5HZ"/>
-                        <constraint firstItem="wkq-Sc-Ehs" firstAttribute="top" secondItem="SWa-5d-1oU" secondAttribute="bottom" id="I8Z-WM-ELX"/>
+                        <constraint firstItem="wkq-Sc-Ehs" firstAttribute="top" secondItem="SWa-5d-1oU" secondAttribute="bottom" constant="15" id="I8Z-WM-ELX"/>
                         <constraint firstItem="wkq-Sc-Ehs" firstAttribute="centerX" secondItem="jXT-Mg-rim" secondAttribute="centerX" id="Xqg-7l-TAz"/>
                         <constraint firstAttribute="bottom" secondItem="wkq-Sc-Ehs" secondAttribute="bottom" constant="96" id="hkR-iW-aaC"/>
                         <constraint firstItem="SWa-5d-1oU" firstAttribute="centerX" secondItem="jXT-Mg-rim" secondAttribute="centerX" id="vgX-1N-oti"/>
@@ -125,6 +129,6 @@
         </view>
     </objects>
     <resources>
-        <image name="launchIcon" width="100" height="100"/>
+        <image name="launImage" width="120" height="120"/>
     </resources>
 </document>

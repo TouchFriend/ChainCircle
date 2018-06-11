@@ -14,6 +14,10 @@
 @interface NJPosterVC ()
 /********* <#注释#> *********/
 @property(nonatomic,weak)NJPosterView * posterView;
+
+/********* <#注释#> *********/
+@property(nonatomic,strong)UIImage * shareImage;
+
 @end
 
 @implementation NJPosterVC
@@ -34,6 +38,11 @@
     [self setupNaviBar];
     
     [self setupPoster];
+    
+    NJWeakSelf;
+    self.customItemBlock = ^(NSInteger index) {
+        [weakSelf customItemBtnClick:index];
+    };
 }
 
 #pragma mark - 导航条
@@ -64,6 +73,63 @@
 {
     UIImage * shareImage = [self.posterView getShareImage];
     
-    [self socialShareWithContent:@"加入LQC" images:@[shareImage] url:nil title:@"加入LQC"];
+    self.shareImage = shareImage;
+    
+    [self socialShareLocalSaveWithContent:@"加入LQC" images:@[shareImage] url:nil title:@"加入LQC"];
+}
+
+- (void)customItemBtnClick:(NSInteger)index
+{
+    NJLog(@"%ld", index);
+    
+    switch (index) {
+        case 0://保存到本地
+        {
+            if(self.shareImage == nil)
+            {
+                return;
+            }
+            
+            [SVProgressHUD show];
+            UIImageWriteToSavedPhotosAlbum(self.shareImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+        }
+            break;
+        case 1://更多
+        {
+            if(self.shareImage == nil)
+            {
+                return;
+            }
+            NSArray * items = @[self.shareImage];;
+            
+            UIActivityViewController * activityVC = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
+            [self presentViewController:activityVC animated:YES completion:nil];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error
+  contextInfo:(void *)contextInfo
+{
+    
+    if(error == nil)
+    {
+        [SVProgressHUD showSuccessWithStatus:@"保存成功"];
+        [SVProgressHUD dismissWithDelay:1.2];
+        NSLog(@"保存成功");
+    }
+    else
+    {
+        [SVProgressHUD showErrorWithStatus:@"保存失败"];
+        [SVProgressHUD dismissWithDelay:1.2];
+        NSLog(@"%@",error.localizedDescription);
+    }
+    
+    
 }
 @end

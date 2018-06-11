@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -76,11 +76,11 @@
                                             <constraint firstAttribute="height" constant="40" id="z5N-7E-JJP"/>
                                         </constraints>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="0bK-OJ-a50">
-                                        <rect key="frame" x="138" y="114.5" width="100" height="100"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launImage" translatesAutoresizingMaskIntoConstraints="NO" id="0bK-OJ-a50">
+                                        <rect key="frame" x="143" y="109.5" width="90" height="90"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="8Ed-iX-g4L"/>
-                                            <constraint firstAttribute="height" constant="100" id="mAi-EW-o2C"/>
+                                            <constraint firstAttribute="width" constant="90" id="8Ed-iX-g4L"/>
+                                            <constraint firstAttribute="height" constant="90" id="mAi-EW-o2C"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -91,7 +91,7 @@
                                     <constraint firstItem="RDA-a5-LHo" firstAttribute="leading" secondItem="MKx-2p-iHI" secondAttribute="leading" id="9vB-wk-gLU"/>
                                     <constraint firstAttribute="trailing" secondItem="QLA-35-6gp" secondAttribute="trailing" id="EjA-LS-9sF"/>
                                     <constraint firstAttribute="trailing" secondItem="RDA-a5-LHo" secondAttribute="trailing" id="KdF-zO-CCR"/>
-                                    <constraint firstItem="RDA-a5-LHo" firstAttribute="top" secondItem="0bK-OJ-a50" secondAttribute="bottom" id="P5u-es-nRh"/>
+                                    <constraint firstItem="RDA-a5-LHo" firstAttribute="top" secondItem="0bK-OJ-a50" secondAttribute="bottom" constant="15" id="P5u-es-nRh"/>
                                     <constraint firstItem="QLA-35-6gp" firstAttribute="leading" secondItem="MKx-2p-iHI" secondAttribute="leading" id="gCU-o1-OMq"/>
                                     <constraint firstItem="QLA-35-6gp" firstAttribute="top" secondItem="RDA-a5-LHo" secondAttribute="bottom" constant="10" id="rNh-ej-qGM"/>
                                     <constraint firstItem="0bK-OJ-a50" firstAttribute="centerX" secondItem="MKx-2p-iHI" secondAttribute="centerX" id="rSA-Wk-E64"/>
@@ -115,6 +115,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="launchIcon" width="100" height="100"/>
+        <image name="launImage" width="120" height="120"/>
     </resources>
 </document>
