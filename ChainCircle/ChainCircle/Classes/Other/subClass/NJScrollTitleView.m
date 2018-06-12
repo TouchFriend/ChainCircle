@@ -64,6 +64,7 @@
 - (void)setupScrollView
 {
     UIScrollView * scrollView = [[UIScrollView alloc] init];
+    scrollView.autoresizingMask = UIViewAutoresizingNone;
     
     scrollView.frame = self.bounds;
     [self addSubview:scrollView];
