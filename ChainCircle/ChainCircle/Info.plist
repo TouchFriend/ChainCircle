@@ -2,10 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>链圈需要您的允许，才能访问相册</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>链圈需要您的允许，才能访问相册</string>
+	<key>NSCameraUsageDescription</key>
+	<string>链圈需要获取您的摄像头访问权限，来进行拍照</string>
 	<key>CFBundleDisplayName</key>
 	<string>链圈</string>
 	<key>CFBundleExecutable</key>
@@ -19,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -98,6 +96,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>链圈需要您的允许，才能访问相册</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>链圈需要您的允许，才能访问相册</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

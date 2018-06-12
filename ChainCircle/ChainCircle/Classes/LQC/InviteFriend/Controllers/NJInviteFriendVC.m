@@ -110,6 +110,8 @@ static NSString * const footerID = @"NJInviteRecordFooterView";
             if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
             {
                 NSDictionary * dataDic = getDictionaryInDict(data, DictionaryKeyData);
+                NSNumber * firstInviteNum = dataDic[@"invite_num"];
+                NSNumber * secondeInviteNium = dataDic[@"second_num"];
                 NSArray * dataArr = getArrayInDict(dataDic, @"list");
                 self.recordArr = [NJRecordItem mj_objectArrayWithKeyValuesArray:dataArr];
                 [self.tableView reloadData];
