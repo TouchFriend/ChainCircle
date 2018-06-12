@@ -46,6 +46,7 @@ PODS:
     - mob_sharesdk/ShareSDK
     - MOBFoundation
   - MOBFoundation (3.1.6)
+  - QIYU_iOS_SDK (4.1.0)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
   - SDWebImage (4.3.3):
@@ -72,6 +73,7 @@ DEPENDENCIES:
   - mob_sharesdk/ShareSDKPlatforms/WeChat
   - mob_sharesdk/ShareSDKUI
   - MOBFoundation (~> 3.1.2)
+  - QIYU_iOS_SDK (~> 4.1.0)
   - SDCycleScrollView (~> 1.75)
   - SDWebImage (~> 4.3.3)
   - SGPagingView (~> 1.3.6)
@@ -91,12 +93,13 @@ SPEC CHECKSUMS:
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   mob_sharesdk: e859de6ace7542f3395ce055682f7cd40efdfaa1
   MOBFoundation: a87c5f11fb87f873337189c3ec0add4d3ec6221a
+  QIYU_iOS_SDK: c127ee51f8eb810c79efeff04fae67be58b882da
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SGPagingView: 475a2330a833a21633ed94a41680be9d54f08974
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
 
-PODFILE CHECKSUM: e4789b6929e0c281d4421a0580e31dd7d2426e6f
+PODFILE CHECKSUM: c6dd3bfe51d723e098d363aee85ec30af063a8b1
 
 COCOAPODS: 1.4.0

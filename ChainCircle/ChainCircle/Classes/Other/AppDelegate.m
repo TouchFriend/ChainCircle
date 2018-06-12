@@ -31,7 +31,8 @@
 #import <UserNotifications/UserNotifications.h>
 #endif
 
-
+//网易七鱼客服
+#import <QYSDK.h>
 
 @interface AppDelegate () <JPUSHRegisterDelegate>
 
@@ -51,6 +52,8 @@
 
 //极光推送
 #define JPushAppKey @"fc352ef398664fd3a53ad0aa"
+
+#define QiYuAppKey @"09c27e4b6dc2437bd72a82d1c8723382"
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -85,6 +88,9 @@
     //监听网络状态
     [self observeNetworkState];
     
+    //网易七鱼客服
+    [self setupQiYuService];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     NJMainVC * mainVC = [[NJMainVC alloc] init];
@@ -116,6 +122,7 @@
     [IQKeyboardManager sharedManager].toolbarDoneBarButtonItemText = @"完成";
     
     [IQKeyboardManager sharedManager].shouldShowToolbarPlaceholder = NO;
+    [[IQKeyboardManager sharedManager].disabledDistanceHandlingClasses addObject:[QYSessionViewController class]];
 }
 
 #pragma mark - SVProgressHUD
@@ -199,6 +206,12 @@
         
     }];
     
+}
+
+#pragma mark - 网易七鱼客服
+- (void)setupQiYuService
+{
+    [[QYSDK sharedSDK] registerAppId:QiYuAppKey appName:@"链圈"];
 }
 
 #pragma mark - 社交分享
@@ -329,6 +342,7 @@
 //    NSString *content = [userInfo valueForKey:@"content"];
     NSDictionary *extras = [userInfo valueForKey:@"extras"];
     NSNumber * state = extras[@"State"];
+    NJLog(@"自定义消息：%@", userInfo);
     switch (state.integerValue) {
         case 1:
         {

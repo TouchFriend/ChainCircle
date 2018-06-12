@@ -26,6 +26,7 @@ target 'ChainCircle' do
     pod 'mob_sharesdk/ShareSDKExtension'
 
     pod 'DZNEmptyDataSet', '~> 1.8.1'
+    pod 'QIYU_iOS_SDK', '~> 4.1.0'
 
 end
 

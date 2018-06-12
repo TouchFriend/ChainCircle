@@ -26,6 +26,7 @@
 #import "NJMyPosterVC.h"
 #import <JPUSHService.h>
 #import "NJWebVC.h"
+#import <QYSDK.h>
 
 
 @interface NJLqcVC () <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -97,6 +98,8 @@ static NSString * const footerID = @"NJLqcFooterView";
     
     [self getScrollTitleDataRequest];
     
+    [self setupServiceBtn];
+    
 //    if([NJLoginTool isLogin])
 //    {
 //        [self getAward];
@@ -158,6 +161,26 @@ static NSString * const footerID = @"NJLqcFooterView";
     [collectionView registerClass:[NJLqcFooterView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerID];
     
     collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(pwdLoginRequest)];
+}
+
+#pragma mark - 服务按钮
+- (void)setupServiceBtn
+{
+    UIButton * serviceBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:serviceBtn];
+    [serviceBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        if (@available(iOS 11.0, *)) {
+            make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom).mas_offset(-90);
+        } else {
+            // Fallback on earlier versions
+            make.bottom.mas_equalTo(self.mas_bottomLayoutGuideBottom).mas_offset(-90);
+        }
+        make.right.mas_equalTo(self.view).mas_offset(-26);
+        make.size.mas_equalTo(CGSizeMake(55, 55));
+    }];
+    [serviceBtn setImage:[UIImage imageNamed:@"icon_customer_service"] forState:UIControlStateNormal];
+    
+    [serviceBtn addTarget:self action:@selector(serviceBtnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark - 网络请求
@@ -550,7 +573,7 @@ static NSString * const footerID = @"NJLqcFooterView";
 //                         },
                      @{
                          @"icon" : @"6_Lqc",
-                         @"title" : @"自主推广"
+                         @"title" : @"自助推广"
                          },
                      ];
     }
@@ -592,6 +615,20 @@ static NSString * const footerID = @"NJLqcFooterView";
     webVC.contentStr = item.intro == nil ? @"" : item.intro;
     webVC.urlStr = [@"http://lianquan.chongdx.com/wap/living.html?id=" stringByAppendingString:item.ID.stringValue];
     [self.navigationController pushViewController:webVC animated:YES];
+}
+
+- (void)serviceBtnClick
+{
+    QYSessionViewController * sessionVC = [[QYSDK sharedSDK] sessionViewController];
+    QYSource * source = [[QYSource alloc] init];
+    source.title = @"链圈";
+    source.urlString = @"https://8.163.com/";
+    sessionVC.source = source;
+    sessionVC.sessionTitle = @"链圈客服";
+    sessionVC.hidesBottomBarWhenPushed = YES;
+    
+    
+    [self.navigationController pushViewController:sessionVC animated:YES];
 }
 
 #pragma mark - 其他

@@ -195,6 +195,7 @@
 
     //定时器无效
     [self invaditeTimer];
+    self.scrollView.contentOffset = CGPointZero;
     
     //清除scrollView子view
     [self.scrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
