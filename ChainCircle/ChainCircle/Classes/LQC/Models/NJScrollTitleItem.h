@@ -18,4 +18,10 @@
 /********* 文字 *********/
 @property(nonatomic,copy)NSString * title;
 
+/********* 内容 *********/
+@property(nonatomic,copy)NSString * content;
+
+/********* 简介 *********/
+@property(nonatomic,copy)NSString * intro;
+
 @end

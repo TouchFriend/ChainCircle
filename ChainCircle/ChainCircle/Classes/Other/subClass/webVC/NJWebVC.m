@@ -67,7 +67,7 @@
 #pragma mark - 事件
 - (void)shareItemClick
 {
-    [self socialShareAndMoreWithContent:@"" images:@[@"icon"] url:self.urlStr title:self.titleStr];
+    [self socialShareAndMoreWithContent:self.contentStr images:@[[UIImage imageNamed:@"icon"]] url:self.urlStr title:self.titleStr];
 }
 
 - (void)customBtnClick:(NSInteger)index
@@ -75,9 +75,10 @@
     if(index == 1)//更多
     {
         NSString * info = self.titleStr;
+        NSString * content = self.contentStr;
         UIImage * image = [UIImage imageNamed:@"icon"];
         NSURL * url = [NSURL URLWithString:self.urlStr];
-        NSArray * items = @[info, image, url];
+        NSArray * items = @[info, content, image, url];
         
         UIActivityViewController * activityVC = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
         

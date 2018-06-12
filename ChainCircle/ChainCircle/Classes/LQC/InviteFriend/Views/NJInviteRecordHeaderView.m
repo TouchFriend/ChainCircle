@@ -13,8 +13,9 @@
 @interface NJInviteRecordHeaderView ()
 @property (weak, nonatomic) IBOutlet UIButton *myInviteBtn;
 - (IBAction)myInviteBtnClick;
-@property (weak, nonatomic) IBOutlet UILabel *inviteNumLabel;
+@property (weak, nonatomic) IBOutlet UILabel *firstNumLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *secondeNumLabel;
 
 @end
 @implementation NJInviteRecordHeaderView
@@ -37,12 +38,19 @@
     
 }
 
-- (void)setInvitedNum:(NSInteger)invitedNum
+- (void)setFirstInviteNum:(NSInteger)firstInviteNum
 {
-    _invitedNum = invitedNum;
-    
-    self.inviteNumLabel.text = [NSString stringWithFormat:@"%ld", invitedNum];
+    _firstInviteNum = firstInviteNum;
+    self.firstNumLabel.text = [NSString stringWithFormat:@"%ld", firstInviteNum];
 }
+
+- (void)setSecondeInviteNum:(NSInteger)secondeInviteNum
+{
+    _secondeInviteNum = secondeInviteNum;
+    self.secondeNumLabel.text = [NSString stringWithFormat:@"%ld", secondeInviteNum];
+}
+
+
 
 - (IBAction)myInviteBtnClick {
     if(self.myInviteBlock != nil)

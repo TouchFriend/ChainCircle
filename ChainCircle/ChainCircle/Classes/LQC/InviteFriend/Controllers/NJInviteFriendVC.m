@@ -31,6 +31,15 @@
 /********* <#注释#> *********/
 @property(nonatomic,strong)NSArray<NJSettingItem *> * settingArr;
 
+/********* <#注释#> *********/
+@property(nonatomic,assign)NSInteger firstInviteNum;
+
+
+/********* <#注释#> *********/
+@property(nonatomic,assign)NSInteger secondeInviteNum;
+
+
+
 @end
 
 @implementation NJInviteFriendVC
@@ -47,6 +56,9 @@ static NSString * const footerID = @"NJInviteRecordFooterView";
 #pragma mark - 设置初始化
 - (void)setupInit
 {
+    self.firstInviteNum = 0;
+    self.secondeInviteNum = 0;
+    
     UIImageView * bgImageV = [[UIImageView alloc] init];
     [self.view addSubview:bgImageV];
     [bgImageV mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -111,7 +123,16 @@ static NSString * const footerID = @"NJInviteRecordFooterView";
             {
                 NSDictionary * dataDic = getDictionaryInDict(data, DictionaryKeyData);
                 NSNumber * firstInviteNum = dataDic[@"invite_num"];
-                NSNumber * secondeInviteNium = dataDic[@"second_num"];
+                NSNumber * secondeInviteNum = dataDic[@"second_num"];
+                if(firstInviteNum != nil)
+                {
+                    self.firstInviteNum = firstInviteNum.integerValue;
+                }
+                if(secondeInviteNum != nil)
+                {
+                    self.secondeInviteNum = secondeInviteNum.integerValue;
+                }
+                
                 NSArray * dataArr = getArrayInDict(dataDic, @"list");
                 self.recordArr = [NJRecordItem mj_objectArrayWithKeyValuesArray:dataArr];
                 [self.tableView reloadData];
@@ -168,8 +189,9 @@ static NSString * const footerID = @"NJInviteRecordFooterView";
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     NJInviteRecordHeaderView * headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:headerID];
-    headerView.invitedNum = self.recordArr.count;
     headerView.settingArr = self.settingArr;
+    headerView.firstInviteNum = self.firstInviteNum;
+    headerView.secondeInviteNum = self.secondeInviteNum;
     NJWeakSelf;
     headerView.myInviteBlock = ^{
         [weakSelf myInviteBtnClick];

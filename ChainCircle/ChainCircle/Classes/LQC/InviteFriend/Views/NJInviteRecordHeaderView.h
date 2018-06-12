@@ -12,9 +12,14 @@
 /********* <#注释#> *********/
 @property(nonatomic,copy)void (^myInviteBlock)(void);
 
-/********* <#注释#> *********/
-@property(nonatomic,assign)NSInteger invitedNum;
 
 /********* <#注释#> *********/
 @property(nonatomic,strong)NSArray<NJSettingItem *> * settingArr;
+
+/********* <#注释#> *********/
+@property(nonatomic,assign)NSInteger firstInviteNum;
+
+
+/********* <#注释#> *********/
+@property(nonatomic,assign)NSInteger secondeInviteNum;
 @end

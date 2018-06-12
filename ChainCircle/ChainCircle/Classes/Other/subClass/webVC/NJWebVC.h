@@ -15,4 +15,7 @@
 /********* 地址 *********/
 @property(nonatomic,strong)NSString * urlStr;
 
+/********* <#注释#> *********/
+@property(nonatomic,strong)NSString * contentStr;
+
 @end

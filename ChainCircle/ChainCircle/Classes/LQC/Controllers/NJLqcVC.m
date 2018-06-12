@@ -589,6 +589,7 @@ static NSString * const footerID = @"NJLqcFooterView";
     
     NJWebVC * webVC = [[NJWebVC alloc] init];
     webVC.titleStr = item.title;
+    webVC.contentStr = item.intro == nil ? @"" : item.intro;
     webVC.urlStr = [@"http://lianquan.chongdx.com/wap/living.html?id=" stringByAppendingString:item.ID.stringValue];
     [self.navigationController pushViewController:webVC animated:YES];
 }

@@ -179,8 +179,9 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="inviteNumLabel" destination="a9e-Hg-SYs" id="1Iu-rh-vFC"/>
+                <outlet property="firstNumLabel" destination="a9e-Hg-SYs" id="mgk-0P-KvC"/>
                 <outlet property="myInviteBtn" destination="042-SS-rJ5" id="6by-Js-cXW"/>
+                <outlet property="secondeNumLabel" destination="7ef-sC-Bsj" id="s0u-FC-RXg"/>
                 <outlet property="titleLabel" destination="tNR-a9-TL9" id="SUm-Q9-soq"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="53.5"/>
