@@ -49,10 +49,30 @@
 
 - (void)socialShareWithContent:(NSString *)content images:(NSArray *)images url:(NSString *)url title:(NSString *)title
 {
+    
+    
     [self socialShareWithContent:content images:images url:url title:title customItems:nil];
 }
 
-//社交分享-保存到本地
+//社交分享-更多
+- (void)socialShareAndMoreWithContent:(NSString *)content images:(NSArray *)images url:(NSString *)url title:(NSString *)title
+{
+    
+    SSUIPlatformItem * moreItem = [[SSUIPlatformItem alloc] init];
+    moreItem.iconSimple = [UIImage imageNamed:@"more_share"];
+    moreItem.iconNormal = [UIImage imageNamed:@"more_share"];
+    moreItem.platformName = @"更多";
+    moreItem.platformId = @"1";
+    
+    
+    [moreItem addTarget:self action:@selector(localSaveClick:)];
+    
+    NSArray * customItems = @[moreItem];
+    
+    [self socialShareWithContent:content images:images url:url title:title customItems:customItems];
+}
+
+//社交分享-保存到本地,更多
 - (void)socialShareLocalSaveWithContent:(NSString *)content images:(NSArray *)images url:(NSString *)url title:(NSString *)title
 {
     //自定义分享菜单项

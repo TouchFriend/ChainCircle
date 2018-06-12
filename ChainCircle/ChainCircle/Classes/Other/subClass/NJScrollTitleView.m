@@ -116,7 +116,7 @@
         return;
     }
     
-    NSLog(@"%@", NSStringFromCGPoint(offset));
+//    NSLog(@"%@", NSStringFromCGPoint(offset));
     
     if(offset.y == 0)
     {

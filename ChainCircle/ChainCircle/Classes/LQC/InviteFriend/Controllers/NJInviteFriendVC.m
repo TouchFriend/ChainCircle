@@ -104,7 +104,7 @@ static NSString * const footerID = @"NJInviteRecordFooterView";
 {
     [SVProgressHUD show];
     [NetRequest getInviteInfoWithCompleted:^(id data, int flag) {
-        [SVProgressHUD dismiss];
+        [SVProgressHUD dismissWithDelay:0.25];
         if(flag == GetInviteInfo)
         {
             if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)

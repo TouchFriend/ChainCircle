@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "launchImage.pic.png",
+      "filename" : "launchImage.png",
       "scale" : "1x"
     },
     {

@@ -8,6 +8,8 @@
 
 #import "NJInviteRecordCell.h"
 #import "NJRecordItem.h"
+#import "NSString+NJNormal.h"
+
 @interface NJInviteRecordCell ()
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *accountLabel;
@@ -42,7 +44,7 @@
 {
     _item = item;
     
-    self.dateLabel.text = item.created_at;
+    self.dateLabel.text = item.formatterStr;
     self.accountLabel.text = item.account;
     self.contentLabel.text = item.content;
     self.numLabel.text = item.lqc_num;

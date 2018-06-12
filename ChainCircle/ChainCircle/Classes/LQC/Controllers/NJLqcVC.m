@@ -62,6 +62,8 @@ static NSString * const footerID = @"NJLqcFooterView";
                                                                       NSForegroundColorAttributeName : [UIColor whiteColor],
                                                                       }];
     
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NotificationViewWillAppear" object:nil];
+    
     if([NJLoginTool isLogin])
     {
 //        [self getMyAwardNumRequest];
@@ -82,6 +84,7 @@ static NSString * const footerID = @"NJLqcFooterView";
     [self.navigationController.navigationBar setTitleTextAttributes:@{
                                                                       NSForegroundColorAttributeName : [UIColor blackColor],
                                                                       }];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"NotificationViewWillDisappear" object:nil];
 }
 
 #pragma mark - 设置初始化
@@ -585,7 +588,7 @@ static NSString * const footerID = @"NJLqcFooterView";
     NJScrollTitleItem * item = self.titleArr[index];
     
     NJWebVC * webVC = [[NJWebVC alloc] init];
-    webVC.titleStr = @"活动详情";
+    webVC.titleStr = item.title;
     webVC.urlStr = [@"http://lianquan.chongdx.com/wap/living.html?id=" stringByAppendingString:item.ID.stringValue];
     [self.navigationController pushViewController:webVC animated:YES];
 }

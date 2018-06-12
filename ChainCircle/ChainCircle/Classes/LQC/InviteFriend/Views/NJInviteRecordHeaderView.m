@@ -66,23 +66,21 @@
         return;
     }
     
-    CGFloat bandFriendNum = 0;
-    CGFloat scale = 0;
-    CGFloat bandHisFriendNum = 0;
+    CGFloat firstReword = 0;
+    CGFloat secondReword = 0;
     for (NJSettingItem * item in settingArr) {
-        if([item.name isEqualToString:@"band_lqc_user"])
-        {
-            bandFriendNum = item.value.integerValue;
-        }
         if([item.name isEqualToString:@"fx_get"])
         {
-            scale = item.value.floatValue;
+            firstReword = item.value.integerValue;
+        }
+        if([item.name isEqualToString:@"fx_father_get"])
+        {
+            secondReword = item.value.floatValue;
             
         }
     }
-    bandHisFriendNum = scale;
     
-    NSString * text = [NSString stringWithFormat:@"邀请朋友可以获得二级奖励：\n每邀请一个好友获得%.2lfLQC，好友成功邀请TA的好友你还可以再获得%.2lfLQC", bandFriendNum, bandHisFriendNum];
+    NSString * text = [NSString stringWithFormat:@"邀请朋友可以获得二级奖励：\n每邀请一个好友获得%.2lfLQC，好友成功邀请TA的好友你还可以再获得%.2lfLQC", firstReword, secondReword];
     
     NSMutableParagraphStyle * paraStyleM = [[NSMutableParagraphStyle alloc] init];
     paraStyleM.lineSpacing = 4.0;

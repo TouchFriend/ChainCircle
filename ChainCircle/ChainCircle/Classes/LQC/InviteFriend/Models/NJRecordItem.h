@@ -21,4 +21,7 @@
 /********* LQC *********/
 @property(nonatomic,copy)NSString * lqc_num;
 
+/********* <#注释#> *********/
+@property(nonatomic,copy)NSString * formatterStr;
+
 @end

@@ -243,7 +243,9 @@ static NSString * const ID = @"NJInviteCardCell";
             {
                 return;
             }
-            NSArray * items = @[self.shareImage];;
+            NSString * info = @"加入LQC";
+            
+            NSArray * items = @[info, self.shareImage];
             
             UIActivityViewController * activityVC = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
             [self presentViewController:activityVC animated:YES completion:nil];

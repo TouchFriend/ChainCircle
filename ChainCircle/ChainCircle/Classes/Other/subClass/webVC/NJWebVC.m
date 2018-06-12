@@ -28,6 +28,11 @@
     [self setupNaviBar];
     
     [self setupWebView];
+    
+    NJWeakSelf;
+    self.customItemBlock = ^(NSInteger index) {
+        [weakSelf customBtnClick:index];
+    };
 }
 #pragma mark - 导航条
 - (void)setupNaviBar
@@ -62,7 +67,22 @@
 #pragma mark - 事件
 - (void)shareItemClick
 {
-    [self socialShareWithContent:@"加入LQC" images:@[@"side"] url:self.urlStr title:@"加入LQC"];
+    [self socialShareAndMoreWithContent:@"" images:@[@"icon"] url:self.urlStr title:self.titleStr];
+}
+
+- (void)customBtnClick:(NSInteger)index
+{
+    if(index == 1)//更多
+    {
+        NSString * info = self.titleStr;
+        UIImage * image = [UIImage imageNamed:@"icon"];
+        NSURL * url = [NSURL URLWithString:self.urlStr];
+        NSArray * items = @[info, image, url];
+        
+        UIActivityViewController * activityVC = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
+        
+        [self presentViewController:activityVC animated:YES completion:nil];
+    }
 }
 
 @end

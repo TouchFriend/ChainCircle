@@ -28,7 +28,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXT-Mg-rim">
                     <rect key="frame" x="0.0" y="64" width="375" height="293"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launImage" translatesAutoresizingMaskIntoConstraints="NO" id="SWa-5d-1oU">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="SWa-5d-1oU">
                             <rect key="frame" x="133" y="50" width="110" height="110"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="110" id="5Ut-QH-Z3h"/>
@@ -129,6 +129,6 @@
         </view>
     </objects>
     <resources>
-        <image name="launImage" width="120" height="120"/>
+        <image name="icon" width="120" height="120"/>
     </resources>
 </document>

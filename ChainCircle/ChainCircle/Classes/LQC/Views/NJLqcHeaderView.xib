@@ -79,20 +79,7 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VY5-Xb-Xe6">
                             <rect key="frame" x="0.0" y="161" width="375" height="40"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LQC用途：持续持有LQC可获得链圈广告商投放的广告金额分红" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rq2-ql-feH">
-                                    <rect key="frame" x="15" y="13" width="345" height="14.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstItem="rq2-ql-feH" firstAttribute="leading" secondItem="VY5-Xb-Xe6" secondAttribute="leading" constant="15" id="bA9-3c-NTF"/>
-                                <constraint firstAttribute="trailing" secondItem="rq2-ql-feH" secondAttribute="trailing" constant="15" id="lmn-rC-9E1"/>
-                                <constraint firstItem="rq2-ql-feH" firstAttribute="centerY" secondItem="VY5-Xb-Xe6" secondAttribute="centerY" id="mDe-6W-Obp"/>
-                            </constraints>
                         </view>
                     </subviews>
                     <constraints>
@@ -164,6 +151,7 @@
                 <outlet property="myLqcNumLabel" destination="eHO-Mf-dgl" id="B0e-nw-dvl"/>
                 <outlet property="myRedBagLabel" destination="GaU-ZD-t93" id="FyP-D8-HPL"/>
                 <outlet property="receiveBtn" destination="SxI-2t-j7n" id="oUk-6O-uxu"/>
+                <outlet property="titleView" destination="VY5-Xb-Xe6" id="DXE-9e-BGz"/>
                 <outlet property="topView" destination="5tp-o3-lnA" id="KGm-cW-IrN"/>
             </connections>
             <point key="canvasLocation" x="34.5" y="-36"/>

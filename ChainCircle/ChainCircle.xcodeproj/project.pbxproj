@@ -118,6 +118,7 @@
 		BFBB3F8320CE273700DDE23B /* NJSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBB3F8220CE273700DDE23B /* NJSettingItem.m */; };
 		BFCC7DFB20C787B6008490AB /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCC7DF820C787B6008490AB /* iCarousel.m */; };
 		BFCC7DFC20C787B6008490AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFCC7DFA20C787B6008490AB /* Info.plist */; };
+		BFD2A4B520CF6B2700797AFB /* launchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BFD2A4B420CF6B2700797AFB /* launchImage.png */; };
 		BFDE2BFE20C926B00095033E /* NJInviteRecordFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDE2BFD20C926B00095033E /* NJInviteRecordFooterView.m */; };
 /* End PBXBuildFile section */
 
@@ -333,6 +334,7 @@
 		BFCC7DF820C787B6008490AB /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		BFCC7DF920C787B6008490AB /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		BFCC7DFA20C787B6008490AB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFD2A4B420CF6B2700797AFB /* launchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImage.png; sourceTree = "<group>"; };
 		BFDE2BFC20C926B00095033E /* NJInviteRecordFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJInviteRecordFooterView.h; sourceTree = "<group>"; };
 		BFDE2BFD20C926B00095033E /* NJInviteRecordFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJInviteRecordFooterView.m; sourceTree = "<group>"; };
 		EA4A7286E85B60157A5A8671 /* libPods-ChainCircle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChainCircle.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -517,6 +519,7 @@
 				BF47E45120C0FA4B002C1747 /* ChainCircle.entitlements */,
 				BF9E17E320BEAB8500B655EC /* Classes */,
 				BF9E17D320BEA3C700B655EC /* Main.storyboard */,
+				BFD2A4B420CF6B2700797AFB /* launchImage.png */,
 				BF9E17D620BEA3C700B655EC /* Assets.xcassets */,
 				BF9E17D820BEA3C700B655EC /* LaunchScreen.storyboard */,
 				BF9E17DB20BEA3C700B655EC /* Info.plist */,
@@ -1178,6 +1181,7 @@
 				BFA7AF0620BFCE540029DE12 /* NJInviteFriendTableHeaderView.xib in Resources */,
 				BFA7AEE920BFA3570029DE12 /* NJMethodHeaderView.xib in Resources */,
 				BFCC7DFC20C787B6008490AB /* Info.plist in Resources */,
+				BFD2A4B520CF6B2700797AFB /* launchImage.png in Resources */,
 				BFA7AF0120BFCA990029DE12 /* NJInviteRecordHeaderView.xib in Resources */,
 				BF737A6920C6385B0095F3DF /* NJDetailCell.xib in Resources */,
 				BF9E17D720BEA3C700B655EC /* Assets.xcassets in Resources */,

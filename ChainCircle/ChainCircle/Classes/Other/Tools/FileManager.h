@@ -28,7 +28,6 @@
 /**
  删除tmp文件夹
 
- @return 是否成功
  */
 + (void)deleteTmpFolder;
 

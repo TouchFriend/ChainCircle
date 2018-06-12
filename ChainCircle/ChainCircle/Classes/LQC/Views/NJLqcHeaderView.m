@@ -22,6 +22,12 @@
 /********* <#注释#> *********/
 @property(nonatomic,weak)NJScrollTitleView * scrollTitleView;
 - (IBAction)postBtnClick;
+@property (weak, nonatomic) IBOutlet UIView *titleView;
+/********* <#注释#> *********/
+@property(nonatomic,weak)UILabel * titleLabel;
+
+/********* <#注释#> *********/
+@property(nonatomic,assign)CGFloat textLength;
 
 @end
 @implementation NJLqcHeaderView
@@ -37,8 +43,12 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess) name:NotificationLoginSuccess object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess) name:NotificationUserLogout object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fatherViewWillAppear) name:@"NotificationViewWillAppear" object:nil];
     
+    [self addTitleLabel];
 }
+
+
 
 - (void)setupScrollTitleView
 {
@@ -50,6 +60,55 @@
     
     [self.topView addSubview:scrollTitleView];
 }
+
+- (void)addTitleLabel
+{
+    UILabel * titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, NJScreenW, 40)];
+    self.titleLabel = titleLabel;
+    titleLabel.font = [UIFont systemFontOfSize:12.0];
+    titleLabel.textColor = NJGrayColor(106);
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.text = @"LQC用途：LQC可用于【C2C交易】出售变现，【自助推广】投放百万微信群广告";
+    
+    [self.titleView addSubview:titleLabel];
+    
+    CGSize userInfoSize = [titleLabel.text sizeWithAttributes:@{
+                                                         NSFontAttributeName : [UIFont systemFontOfSize:15.0],
+                                                         }];
+    
+    self.textLength = userInfoSize.width;
+    
+    CGRect titleLabelFrame = self.titleLabel.frame;
+    titleLabelFrame.size.width = userInfoSize.width;
+    self.titleLabel.frame = titleLabelFrame;
+    
+    [self startAnimation];
+}
+
+- (void)startAnimation
+{
+    if(self.textLength > NJScreenW)
+    {
+        
+        CGRect titleLabelFrame = self.titleLabel.frame;
+        titleLabelFrame.origin.x = NJScreenW;
+        self.titleLabel.frame = titleLabelFrame;
+        
+        NSTimeInterval duration = self.titleLabel.text.length / 3.0;
+        
+        [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveLinear | UIViewAnimationOptionRepeat animations:^{
+            
+            CGRect titleLabelFrame = self.titleLabel.frame;
+            titleLabelFrame.origin.x = -self.textLength;
+            self.titleLabel.frame = titleLabelFrame;
+        } completion:^(BOOL finished) {
+            NSLog(@"完成");
+        }];
+        
+    }
+}
+
+
 
 - (void)setPersonalInfo
 {
@@ -102,15 +161,24 @@
 {
     [self setPersonalInfo];
 }
-- (void)dealloc
-{
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
+
+
 - (IBAction)postBtnClick {
     if(self.posterBlock != nil)
     {
         self.posterBlock();
     }
+}
+
+- (void)fatherViewWillAppear
+{
+//    NJLog(@"%s", __func__);
+    [self startAnimation];
+}
+
+#pragma mark - 其他
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end
