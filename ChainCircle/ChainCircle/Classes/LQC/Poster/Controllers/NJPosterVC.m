@@ -66,6 +66,7 @@
     
     self.posterView = posterView;
     posterView.item = self.item;
+    posterView.invitedNum = self.invitedNum;
 }
 
 

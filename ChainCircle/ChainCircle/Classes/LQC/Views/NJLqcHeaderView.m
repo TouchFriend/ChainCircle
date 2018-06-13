@@ -146,7 +146,7 @@
 
 - (void)scrollTitleView:(NJScrollTitleView *)scrollTitleView didScrollToIndex:(NSInteger)index
 {
-    NSLog(@"%s--%ld", __func__, index);
+//    NSLog(@"%s--%ld", __func__, index);
 }
 
 #pragma mark - 事件 && 通知

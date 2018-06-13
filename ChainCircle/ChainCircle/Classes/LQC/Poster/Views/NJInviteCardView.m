@@ -27,25 +27,9 @@
 {
     [super awakeFromNib];
     
+    _invitedNum = 0;
     
-    
-    
-    self.totalPersonStr = @"当前已有 20110601 人加入链圈社群";
-    
-    NSMutableAttributedString * attrStrM = [[NSMutableAttributedString alloc] initWithString:self.totalPersonStr attributes:@{
-                                                                                                                              NSFontAttributeName : [UIFont systemFontOfSize:16.0],
-                                                                                                                              NSForegroundColorAttributeName : [UIColor blackColor],
-                                                                                                                              }];
-    NSRange range = [self.totalPersonStr rangeOfString:@"20110601" options:kNilOptions];
-    
-    NSDictionary * attrDic = @{
-                               NSFontAttributeName : [UIFont systemFontOfSize:25.0 weight:UIFontWeightBold],
-                               NSForegroundColorAttributeName : [UIColor blackColor],
-                               };
-    
-    [attrStrM addAttributes:attrDic range:range];
-    
-    self.totalPersonLabel.attributedText = attrStrM;
+    [self setTotalPersonLabel];
     
     if([NJLoginTool isLogin])
     {
@@ -60,8 +44,34 @@
         self.inviteCodeImageTopConstraint.constant = 0;
     }
     
+}
+
+- (void)setTotalPersonLabel
+{
+    self.totalPersonStr = [NSString stringWithFormat:@"当前已有 %ld 人加入链圈社群", self.invitedNum];
     
+    NSMutableAttributedString * attrStrM = [[NSMutableAttributedString alloc] initWithString:self.totalPersonStr attributes:@{
+                                                                                                                              NSFontAttributeName : [UIFont systemFontOfSize:16.0],
+                                                                                                                              NSForegroundColorAttributeName : [UIColor blackColor],
+                                                                                                                              }];
+    NSRange range = [self.totalPersonStr rangeOfString:[NSString stringWithFormat:@"%ld", self.invitedNum] options:kNilOptions];
     
+    NSDictionary * attrDic = @{
+                               NSFontAttributeName : [UIFont systemFontOfSize:25.0 weight:UIFontWeightBold],
+                               NSForegroundColorAttributeName : NJOrangeColor,
+                               };
+    
+    [attrStrM addAttributes:attrDic range:range];
+    
+    self.totalPersonLabel.attributedText = attrStrM;
+    
+}
+
+- (void)setInvitedNum:(NSInteger)invitedNum
+{
+    _invitedNum = invitedNum;
+    
+    [self setTotalPersonLabel];
 }
 
 @end

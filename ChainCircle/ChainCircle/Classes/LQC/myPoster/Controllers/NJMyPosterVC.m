@@ -22,6 +22,11 @@
 /********* <#注释#> *********/
 @property(nonatomic,strong)UIImage * shareImage;
 
+/********* 邀请人数 *********/
+@property(nonatomic,assign)NSInteger invitedNum;
+
+/********* <#注释#> *********/
+@property(nonatomic,weak)NJInviteCardView * inviteCardView;
 @end
 
 @implementation NJMyPosterVC
@@ -33,6 +38,8 @@
 }
 - (void)setupInit
 {
+    self.invitedNum = 0;
+    
     [self setupNaviBar];
     
     [self setupScrollView];
@@ -41,6 +48,8 @@
     self.customItemBlock = ^(NSInteger index) {
         [weakSelf customItemBtnClick:index];
     };
+    
+    [self getInviteRecordListRequest];
 }
 
 #pragma mark - 导航条
@@ -97,6 +106,7 @@
         make.height.mas_equalTo(442);
     }];
     
+    self.inviteCardView = inviteCardView;
     [inviteCardView addAllCornerRadius:8.0];
 }
 
@@ -296,6 +306,38 @@
     
     
 }
+
+#pragma mark - 网络请求
+
+- (void)getInviteRecordListRequest
+{
+    [SVProgressHUD show];
+    [NetRequest getInviteInfoWithCompleted:^(id data, int flag) {
+        [SVProgressHUD dismissWithDelay:0.2];
+        if(flag == GetInviteInfo)
+        {
+            if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
+            {
+                NSDictionary * dataDic = getDictionaryInDict(data, DictionaryKeyData);
+                NSNumber * userNum = dataDic[@"user_num"];
+                if(userNum != nil)
+                {
+                    self.invitedNum = userNum.integerValue;
+                    self.inviteCardView.invitedNum = self.invitedNum;
+                }
+            }
+            else
+            {
+                
+                [SVProgressHUD showErrorWithStatus:getStringInDict(data, DictionaryKeyData)];
+                [SVProgressHUD dismissWithDelay:1.5];
+            }
+        }
+    }];
+}
+
+#pragma mark - 事件
+
 
 - (UIImage *)getShareImage
 {

@@ -50,11 +50,17 @@
     self.posterView.item = item;
 }
 
+- (void)setInvitedNum:(NSInteger)invitedNum
+{
+    _invitedNum = invitedNum;
+    self.posterView.invitedNum = invitedNum;
+}
+
 - (void)posterViewClick
 {
- 
     NJPosterVC * posterVC = [[NJPosterVC alloc] init];
     posterVC.item = self.item;
+    posterVC.invitedNum = self.invitedNum;
     [[self viewController].navigationController pushViewController:posterVC animated:YES];
 }
 

@@ -18,6 +18,9 @@
 
 /********* ui *********/
 @property(nonatomic,weak)UIScrollView * scrollView;
+
+/********* <#注释#> *********/
+@property(nonatomic,weak)NJInviteCardView * inviteCardView;
 @end
 @implementation NJPosterView
 
@@ -70,6 +73,7 @@
         make.height.mas_equalTo(442);
     }];
     
+    self.inviteCardView = inviteCardView;
     
 }
 - (void)setItem:(NJPosterItem *)item
@@ -92,6 +96,13 @@
     }];
     
     [self layoutIfNeeded];
+}
+
+- (void)setInvitedNum:(NSInteger)invitedNum
+{
+    _invitedNum = invitedNum;
+    
+    self.inviteCardView.invitedNum = invitedNum;
 }
 
 - (UIImage *)getShareImage

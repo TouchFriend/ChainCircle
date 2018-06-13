@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NJInviteCardView : UIView
+/********* <#注释#> *********/
+@property(nonatomic,assign)NSInteger invitedNum;
 
 @end

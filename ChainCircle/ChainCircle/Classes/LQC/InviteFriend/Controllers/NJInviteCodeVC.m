@@ -34,18 +34,19 @@
 #pragma mark - 设置初始化
 - (void)setupInit
 {
+    self.invitedNum = 0;
     
     [self.containerView addAllCornerRadius:8.0];
     
     [self.duplicateBtn addBorderWidth:1.0 color:[UIColor blackColor] cornerRadius:4.0];
     
-    self.totalPersonStr = @"当前已有 20110601 人加入链圈社群";
+    self.totalPersonStr = [NSString stringWithFormat:@"当前已有 %ld 人加入链圈社群", self.invitedNum];
     
     NSMutableAttributedString * attrStrM = [[NSMutableAttributedString alloc] initWithString:self.totalPersonStr attributes:@{
                                                                                                                               NSFontAttributeName : [UIFont systemFontOfSize:16.0],
                                                                                                                               NSForegroundColorAttributeName : [UIColor blackColor],
                                                                                                                               }];
-    NSRange range = [self.totalPersonStr rangeOfString:@"20110601" options:kNilOptions];
+    NSRange range = [self.totalPersonStr rangeOfString:[NSString stringWithFormat:@"%ld", self.invitedNum] options:kNilOptions];
     
     NSDictionary * attrDic = @{
                                NSFontAttributeName : [UIFont systemFontOfSize:25.0 weight:UIFontWeightBold],

@@ -158,6 +158,7 @@ static NSString * const ID = @"NJInviteCardCell";
     NJInviteCardCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     NJPosterItem * item = self.posterArr[indexPath.row];
     cell.item = item;
+    cell.invitedNum = self.invitedNum;
     return cell;
 }
 
@@ -221,6 +222,7 @@ static NSString * const ID = @"NJInviteCardCell";
     return _posterArr;
 }
 
+#pragma mark - 其他
 
 - (void)customItemBtnClick:(NSInteger)index
 {

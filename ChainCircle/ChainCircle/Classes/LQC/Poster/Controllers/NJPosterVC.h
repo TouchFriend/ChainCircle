@@ -12,4 +12,6 @@
 /********* <#注释#> *********/
 @property(nonatomic,strong)NJPosterItem * item;
 
+/********* <#注释#> *********/
+@property(nonatomic,assign)NSInteger invitedNum;
 @end

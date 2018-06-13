@@ -38,6 +38,8 @@
 /********* <#注释#> *********/
 @property(nonatomic,assign)NSInteger secondeInviteNum;
 
+/********* 总共用户数 *********/
+@property(nonatomic,assign)NSInteger invitedNum;
 
 
 @end
@@ -58,6 +60,7 @@ static NSString * const footerID = @"NJInviteRecordFooterView";
 {
     self.firstInviteNum = 0;
     self.secondeInviteNum = 0;
+    self.invitedNum = 0;
     
     UIImageView * bgImageV = [[UIImageView alloc] init];
     [self.view addSubview:bgImageV];
@@ -124,6 +127,7 @@ static NSString * const footerID = @"NJInviteRecordFooterView";
                 NSDictionary * dataDic = getDictionaryInDict(data, DictionaryKeyData);
                 NSNumber * firstInviteNum = dataDic[@"invite_num"];
                 NSNumber * secondeInviteNum = dataDic[@"second_num"];
+                NSNumber * userNum = dataDic[@"user_num"];
                 if(firstInviteNum != nil)
                 {
                     self.firstInviteNum = firstInviteNum.integerValue;
@@ -131,6 +135,11 @@ static NSString * const footerID = @"NJInviteRecordFooterView";
                 if(secondeInviteNum != nil)
                 {
                     self.secondeInviteNum = secondeInviteNum.integerValue;
+                }
+                
+                if(userNum != nil)
+                {
+                    self.invitedNum = userNum.integerValue;
                 }
                 
                 NSArray * dataArr = getArrayInDict(dataDic, @"list");
@@ -242,6 +251,7 @@ static NSString * const footerID = @"NJInviteRecordFooterView";
 //    NJInviteCodeVC * inviteCodeVC = [[NJInviteCodeVC alloc] init];
 //    [self.navigationController pushViewController:inviteCodeVC animated:YES];
     NJInviteCodeListVC * inviteCodeListVC = [[NJInviteCodeListVC alloc] init];
+    inviteCodeListVC.invitedNum = self.invitedNum;
     [self.navigationController pushViewController:inviteCodeListVC animated:YES];
     
 }

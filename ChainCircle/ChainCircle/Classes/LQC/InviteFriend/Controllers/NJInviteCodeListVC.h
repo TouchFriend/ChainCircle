@@ -10,4 +10,7 @@
 
 @interface NJInviteCodeListVC : NJViewController
 
+/********* <#注释#> *********/
+@property(nonatomic,assign)NSInteger invitedNum;
+
 @end

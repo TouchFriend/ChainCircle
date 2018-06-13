@@ -10,4 +10,7 @@
 
 @interface NJInviteFriendTableHeaderView : UIView
 
+/********* <#注释#> *********/
+@property(nonatomic,assign)NSInteger invitedNum;
+
 @end
