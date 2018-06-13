@@ -8,6 +8,8 @@
 
 #import "NJMyPosterVC.h"
 #import "NJInviteCardView.h"
+#import "UIImage+NJImage.h"
+
 
 @interface NJMyPosterVC ()
 
@@ -16,6 +18,10 @@
 
 /********* <#注释#> *********/
 @property(nonatomic,weak)UIView * posterView;
+
+/********* <#注释#> *********/
+@property(nonatomic,strong)UIImage * shareImage;
+
 @end
 
 @implementation NJMyPosterVC
@@ -27,8 +33,29 @@
 }
 - (void)setupInit
 {
+    [self setupNaviBar];
+    
+    [self setupScrollView];
+    
+    NJWeakSelf;
+    self.customItemBlock = ^(NSInteger index) {
+        [weakSelf customItemBtnClick:index];
+    };
+}
+
+#pragma mark - 导航条
+- (void)setupNaviBar
+{
     self.title = @"链圈15亿LQC免费领取说明";
     
+    UIBarButtonItem * shareItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageOriginNamed:@"share_inviteFriend"] style:UIBarButtonItemStylePlain target:self action:@selector(shareItemClick)];
+
+    self.navigationItem.rightBarButtonItems = @[shareItem];
+}
+
+#pragma mark - 导航条
+- (void)setupScrollView
+{
     UIScrollView * scrollView = [[UIScrollView alloc] init];
     [self.view addSubview:scrollView];
     [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -49,7 +76,7 @@
     [contentView addSubview:bgImageV];
     [bgImageV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.mas_equalTo(contentView);
-//        make.height.mas_equalTo(1000);
+        //        make.height.mas_equalTo(1000);
     }];
     bgImageV.image = [UIImage imageNamed:@"bg_myPoster"];
     
@@ -71,8 +98,6 @@
     }];
     
     [inviteCardView addAllCornerRadius:8.0];
-    
-
 }
 
 - (void)setupPostViewChildView
@@ -203,6 +228,78 @@
     textLabel5.textAlignment = NSTextAlignmentLeft;
     textLabel5.numberOfLines = 0;
     
+}
+
+- (void)shareItemClick
+{
+    UIImage * shareImage = [self getShareImage];
+    
+    self.shareImage = shareImage;
+    
+    [self socialShareLocalSaveWithContent:@"LQC免费领取说明" images:@[shareImage] url:nil title:@"链圈15亿LQC免费领取说明"];
+}
+
+- (void)customItemBtnClick:(NSInteger)index
+{
+    NJLog(@"%ld", index);
+    
+    switch (index) {
+        case 0://保存到本地
+        {
+            if(self.shareImage == nil)
+            {
+                return;
+            }
+            
+            [SVProgressHUD show];
+            UIImageWriteToSavedPhotosAlbum(self.shareImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+        }
+            break;
+        case 1://更多
+        {
+            if(self.shareImage == nil)
+            {
+                return;
+            }
+            
+            NSString * info = @"链圈15亿LQC免费领取说明";
+            
+            NSArray * items = @[info, self.shareImage];;
+            
+            UIActivityViewController * activityVC = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
+            [self presentViewController:activityVC animated:YES completion:nil];
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error
+  contextInfo:(void *)contextInfo
+{
+    
+    if(error == nil)
+    {
+        [SVProgressHUD showSuccessWithStatus:@"保存成功"];
+        [SVProgressHUD dismissWithDelay:1.2];
+        NSLog(@"保存成功");
+    }
+    else
+    {
+        [SVProgressHUD showErrorWithStatus:@"保存失败"];
+        [SVProgressHUD dismissWithDelay:1.2];
+        NSLog(@"%@",error.localizedDescription);
+    }
+    
+    
+}
+
+- (UIImage *)getShareImage
+{
+    return [UIImage longPic:self.scrollView];
 }
 
 @end
