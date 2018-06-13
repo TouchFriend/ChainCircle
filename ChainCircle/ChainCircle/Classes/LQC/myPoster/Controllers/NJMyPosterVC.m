@@ -9,6 +9,8 @@
 #import "NJMyPosterVC.h"
 #import "NJInviteCardView.h"
 #import "UIImage+NJImage.h"
+#import "NJSettingItem.h"
+#import <MJExtension.h>
 
 
 @interface NJMyPosterVC ()
@@ -49,7 +51,7 @@
         [weakSelf customItemBtnClick:index];
     };
     
-    [self getInviteRecordListRequest];
+    [self getSettingRequest];
 }
 
 #pragma mark - 导航条
@@ -309,22 +311,30 @@
 
 #pragma mark - 网络请求
 
-- (void)getInviteRecordListRequest
+//获取配置
+- (void)getSettingRequest
 {
     [SVProgressHUD show];
-    [NetRequest getInviteInfoWithCompleted:^(id data, int flag) {
+    [NetRequest getSettingWithCompleted:^(id data, int flag) {
         [SVProgressHUD dismissWithDelay:0.2];
-        if(flag == GetInviteInfo)
+        if(flag == GetSetting)
         {
             if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
             {
-                NSDictionary * dataDic = getDictionaryInDict(data, DictionaryKeyData);
-                NSNumber * userNum = dataDic[@"user_num"];
-                if(userNum != nil)
-                {
-                    self.invitedNum = userNum.integerValue;
-                    self.inviteCardView.invitedNum = self.invitedNum;
+                NSArray * dataArr = getArrayInDict(data, DictionaryKeyData);
+                NSArray<NJSettingItem *> * settingArr = [NJSettingItem mj_objectArrayWithKeyValuesArray:dataArr];
+                for (NJSettingItem * item in settingArr) {
+                    if([item.name isEqualToString:@"person_num"])
+                    {
+                        if(item.value != nil)
+                        {
+                            self.invitedNum = item.value.integerValue;
+                            self.inviteCardView.invitedNum = self.invitedNum;
+                        }
+                        break;
+                    }
                 }
+                
             }
             else
             {

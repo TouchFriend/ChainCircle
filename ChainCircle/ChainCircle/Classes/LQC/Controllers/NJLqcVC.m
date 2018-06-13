@@ -104,6 +104,9 @@ static NSString * const footerID = @"NJLqcFooterView";
 //    {
 //        [self getAward];
 //    }
+    
+    [self versionUpdateRequest];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getScrollTitleDataRequest) name:@"NotificationRefreshAd" object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChange) name:NotificationWifiNetwork object:nil];
@@ -190,6 +193,7 @@ static NSString * const footerID = @"NJLqcFooterView";
 //    [self pwdLoginRequest];
 }
 
+//密码登录
 - (void)pwdLoginRequest
 {
     if(![NJLoginTool isLogin])
@@ -340,6 +344,7 @@ static NSString * const footerID = @"NJLqcFooterView";
     }];
 }
 
+//签到
 - (void)signInRequest
 {
     [SVProgressHUD show];
@@ -361,6 +366,64 @@ static NSString * const footerID = @"NJLqcFooterView";
             else
             {
                 
+                [SVProgressHUD showErrorWithStatus:getStringInDict(data, DictionaryKeyData)];
+                [SVProgressHUD dismissWithDelay:1.5];
+            }
+        }
+    }];
+}
+
+//版本升级
+- (void)versionUpdateRequest
+{
+#warning 是否在再次提醒更新时间内
+    
+    NSDictionary * infoDic = [[NSBundle mainBundle] infoDictionary];
+    NSString * version = infoDic[@"CFBundleShortVersionString"];
+    NSLog(@"%@", version);
+    
+    [NetRequest versionUpdateWithOldver:version completed:^(id data, int flag) {
+        if(flag == VersionUpdate)
+        {
+            if(getIntInDict(data, DictionaryKeyCode) == ResultTypeSuccess)
+            {
+                NSDictionary * dataDic = getDictionaryInDict(data, DictionaryKeyData);
+                //0不要升级  1要升级
+                NSNumber * isUpdate = dataDic[@"isupdate"];
+                if(isUpdate.integerValue == 0)
+                {
+//                    [SVProgressHUD showInfoWithStatus:@"没有新版本哦"];
+//                    [SVProgressHUD dismissWithDelay:1.5];
+                }
+                else
+                {
+                    NSString * urlStr = dataDic[@"updateurl"];
+                    [LBXAlertAction showAlertWithTitle:@"已有新版本，是否升级？" msg:@"" buttonsStatement:@[@"取消", @"升级"] chooseBlock:^(NSInteger buttonIdx) {
+                        if(buttonIdx == 0)
+                        {
+#warning 设置再次提醒更新时间
+                        
+                        }
+                        else if(buttonIdx == 1)//升级
+                        {
+                            if([urlStr isKindOfClass:[NSNull class]])
+                            {
+                                return ;
+                            }
+                            
+                            if(urlStr != nil && urlStr.length > 0)
+                            {
+                                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlStr]];
+                            }
+                            
+                        }
+                    }];
+                    
+
+                }
+            }
+            else
+            {
                 [SVProgressHUD showErrorWithStatus:getStringInDict(data, DictionaryKeyData)];
                 [SVProgressHUD dismissWithDelay:1.5];
             }
@@ -472,6 +535,15 @@ static NSString * const footerID = @"NJLqcFooterView";
             break;
         case 1://绑定朋友邀请码获得
         {
+            NJUserItem * userItem = [NJLoginTool getCurrentUser];
+            if(userItem.father_code != nil && userItem.father_code.length > 0)
+            {
+                [SVProgressHUD showInfoWithStatus:@"已经绑定"];
+                [SVProgressHUD dismissWithDelay:1.2];
+                
+                return;
+            }
+            
             NJBindInviteCodeVC * bindInviteCodeVC = [[NJBindInviteCodeVC alloc] init];
             [self.navigationController pushViewController:bindInviteCodeVC animated:YES];
         }

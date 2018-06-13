@@ -94,7 +94,7 @@
                                       NSFontAttributeName : [UIFont systemFontOfSize:14.0],
                                       NSForegroundColorAttributeName : NJGrayColor(136),
                                       };
-    NSAttributedString * inviteAttr = [[NSAttributedString alloc] initWithString:@"请输入你的邀请码" attributes:placeholderDic];
+    NSAttributedString * inviteAttr = [[NSAttributedString alloc] initWithString:@"请输入邀请码" attributes:placeholderDic];
     inviteTextF.attributedPlaceholder = inviteAttr;
     
     
