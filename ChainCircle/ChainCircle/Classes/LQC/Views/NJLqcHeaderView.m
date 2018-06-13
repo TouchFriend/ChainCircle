@@ -44,6 +44,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess) name:NotificationLoginSuccess object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginSuccess) name:NotificationUserLogout object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fatherViewWillAppear) name:@"NotificationViewWillAppear" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fatherViewWillAppear) name:UIApplicationWillEnterForegroundNotification object:nil];
     
     [self addTitleLabel];
 }
