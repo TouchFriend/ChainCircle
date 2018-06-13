@@ -98,9 +98,26 @@
 
 - (void)timerSelecter
 {
+    CGFloat scrollHeight = self.scrollView.bounds.size.height;
     CGPoint offset = self.scrollView.contentOffset;
-    offset = CGPointMake(offset.x, offset.y + self.scrollView.bounds.size.height);
+    offset = CGPointMake(offset.x, offset.y + scrollHeight);
+    
+    //取倍数，防止出现bug。
+    NSInteger multiple = floor(offset.y / scrollHeight);
+    offset.y = multiple * scrollHeight;
+    
+
+    if(offset.y <= 0)
+    {
+        offset.y = 0;
+    }
+    else if(offset.y > scrollHeight * self.dataArr.count)
+    {
+        offset.y = scrollHeight * self.dataArr.count;
+    }
+    
 //    NSLog(@"%@", NSStringFromCGPoint(offset));
+    
     [self.scrollView setContentOffset:offset animated:YES];
 }
 

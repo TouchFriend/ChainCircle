@@ -137,7 +137,7 @@
 #pragma mark - NJScrollTitleViewDelegate方法
 - (void)scrollTitleView:(NJScrollTitleView *)scrollTitleView didSelectItemAtIndex:(NSInteger)index
 {
-    NSLog(@"%s--%ld", __func__, index);
+//    NSLog(@"%s--%ld", __func__, index);
     if(self.adBlock != nil)
     {
         self.adBlock(index);
@@ -146,7 +146,7 @@
 
 - (void)scrollTitleView:(NJScrollTitleView *)scrollTitleView didScrollToIndex:(NSInteger)index
 {
-//    NSLog(@"%s--%ld", __func__, index);
+    NSLog(@"%s--%ld", __func__, index);
 }
 
 #pragma mark - 事件 && 通知
